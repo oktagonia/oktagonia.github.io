@@ -56,9 +56,9 @@ $MA = AO$.
 <img src='%{path}%/static/lemma14/lemma14-2.png' 
      align='right'
      style='padding: 10px 0px 0px 0px; max-width: 50%'>
-Notice here that $NAPC$ is a 
+Notice here that $NPOS is a 
 [cyclic quadrilateral](https://en.wikipedia.org/wiki/Cyclic_quadrilateral).
-As such, $\angle NCA$ is equal to $\angle NPS$ which is in turn equal to 
+As such, $\angle NOS$ is equal to $\angle NPS$ which is in turn equal to 
 $\angle NMA$.  %{(Note "Cyclic quadrilaterals are quadrilaterals which have two 
 right angles which are opposite to each other. They also have the rather nice 
 property that the angle made by a side and any diagonal is equal to the angle 
