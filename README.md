@@ -1,1 +1,0 @@
-# oktagonia.github.io
