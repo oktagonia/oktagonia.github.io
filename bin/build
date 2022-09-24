@@ -1,0 +1,19 @@
+#!/bin/bash
+
+arg=$1
+
+b () {
+    for i in $1; do
+        fname=$(echo $i)
+        ext=${fname##*.}
+        bdy=${fname%.*}
+        if [ -d $i ]; then
+          b $i"/*"
+        elif [ $ext = "md" ]; then
+          echo file: $i, output = $bdy".html"
+          ./bin/format.scm $i $arg | ./bin/spost > $bdy".html"
+        fi
+    done
+}
+
+b "site/*"
