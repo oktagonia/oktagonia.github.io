@@ -1,5 +1,5 @@
 
-![](static/newhilbert.png)
+![](/static/newhilbert.png)
 
 # Hilbert's Lamentations
 
