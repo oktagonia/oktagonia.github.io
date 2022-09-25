@@ -12,8 +12,9 @@ div.column{display: inline-block; vertical-align: top; width: 50%;}
 h1 {
     line-height: 32px;
     font-size: 27px;
-    font-family: 'Lora', serif;
+    /*font-family: 'Lora', serif;*/
     letter-spacing: -1.2px;
+    font-weight: normal;
     text-align: center;
 }
 
@@ -21,7 +22,8 @@ body {
     max-width: 500px;
     margin: auto;
     padding: 20px;
-    font-family: vollkorn, serif;
+    /*font-family: vollkorn, serif;*/
+    font-family: "TeX Gyre Schola";
     font-weight: 400;
     line-height: 1.2em;
     background-color: white;
