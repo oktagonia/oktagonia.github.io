@@ -1,0 +1,25 @@
+p { line-height: 1.3; /*text-align: justify;*/ }
+a:hover { font-weight: bold; text-decoration: none; }
+h1, h2, h3, h4 { font-weight: normal; }
+blockquote { font-size: 12pt; }
+h1 { text-align: center; }
+h2 { font-size: 1.3em; }
+a { color: black; }
+img { display: block; margin: auto; }
+code { font-family: "IBM Plex Mono"; }
+ul, ol { line-height: 1.5; }
+
+
+body {
+    background-color: #ffffff;
+    padding-top: 20pt;
+    padding-bottom: 100pt;
+    width: 60ch;
+    margin: auto;
+    font-family: serif /*vollkorn*/;
+    /*font-family: "Syntax LT Std";*/
+    font-size: 13pt;
+    hyphens: auto;
+    font-feature-settings: kern;
+    margin-bottom: 200px;
+}

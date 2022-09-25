@@ -1,5 +1,5 @@
 
-![](newhilbert.png)
+<img src='newhilbert.png' class='center'>
 
 # Hilbert's Lamentations
 

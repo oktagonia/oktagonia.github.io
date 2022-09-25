@@ -1,5 +1,9 @@
 #!/bin/bash
 
+bin/build github
+
 git add --all
 git commit -m 'this is automated'
 git push -u origin main
+
+bin/build host
