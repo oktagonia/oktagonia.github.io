@@ -19,10 +19,11 @@ h1 {
 
 body {
     max-width: 500px;
-    margin: /*auto*/ 20px;
+    margin: auto /*20px*/;
     font-family: vollkorn, serif;
     font-weight: 400;
     line-height: 1.2em;
+    background-color: white;
 }
 
 code {
@@ -32,6 +33,7 @@ code {
 img {
     max-width: 400px;
     padding: 5px;
+    margin: 5px;
     border: 1px solid lightgray;
 }
 

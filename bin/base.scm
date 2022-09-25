@@ -51,3 +51,6 @@
               ((string=? (caddr argc) "host")
                "/home/kiand/fun/website")
         (error "wrong arguments to format.scm" argc)))))
+
+(define (align-img img dir)
+  `(img (@ (src ,img) (style "max-width: 50%") (align ,dir))))
