@@ -19,7 +19,8 @@ h1 {
 
 body {
     max-width: 500px;
-    margin: auto /*20px*/;
+    margin: auto;
+    padding: 20px;
     font-family: vollkorn, serif;
     font-weight: 400;
     line-height: 1.2em;
