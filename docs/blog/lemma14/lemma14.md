@@ -56,7 +56,7 @@ $MA = AO$.
 <img src='lemma14-2.png' 
      align='right'
      style='padding: 10px 0px 0px 0px; max-width: 50%'>
-Notice here that $NPOS is a 
+Notice here that $NPOS$ is a 
 [cyclic quadrilateral](https://en.wikipedia.org/wiki/Cyclic_quadrilateral).
 As such, $\angle NOS$ is equal to $\angle NPS$ which is in turn equal to 
 $\angle NMA$.  %{(Note "Cyclic quadrilaterals are quadrilaterals which have two 
@@ -73,7 +73,7 @@ However, we aren't done yet. In showing that $MA = AO$, I assumed that the
 <img src='lemma14-3.png' 
      align='left'
      style='padding: 0px 10px 10px 10px; max-width: 50%'>
-perpendicular from $N$ meets $d$ at the vertex, $A$;
+perpendicular from $N$ meets $MO$ at the vertex, $A$;
 which I haven't proved yet. So reflect $S$ over $N$ at $S'$. From $N$ drop a 
 perpendicular to $d$ at $R$. Therefore, by definition, $S'N = SN$ and
 $S'R = R'C$. It should be clear now that $\triangle SS'C$ is similar to 
