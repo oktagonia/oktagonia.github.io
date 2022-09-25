@@ -16,4 +16,4 @@ b () {
     done
 }
 
-b "site/*"
+b "docs/*"

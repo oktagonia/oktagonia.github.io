@@ -1,6 +1,6 @@
 #!/usr/bin/bash
 
-cat /home/kiand/fun/website/bin/template.html
+cat $(pwd)/bin/template.html
 markdown $1
 
 echo "

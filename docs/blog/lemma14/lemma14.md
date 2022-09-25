@@ -9,7 +9,7 @@
 tangent, is a mean porportional between the distances of the focus from the 
 point of contact, and from the principal vertex of the figure.
 
-<img src='%{path}%/static/lemma14/lemma14.png' 
+<img src='lemma14.png' 
      align='right'
      style='padding: 10px 0px 10px 10px; max-width: 50%'>
 Newton's original argument is as follows:
@@ -37,7 +37,7 @@ theorems whose truth I take for granted.
 
 To begin, let us prove the equality of $MS$ and $SP$. Let $d$ be the directrix
 of our parabola $S$ be the focus, and $P$, be the point of tangency. As such,
-<img src='%{path}%/static/lemma14/lemma14-1.png' 
+<img src='lemma14-1.png' 
      align='left'
      style='padding: 0px 10px 10px 10px; max-width: 50%'>
 $SP = PI$ where $PI$ is perpendicular to the directrix. At this point we might
@@ -53,7 +53,7 @@ that $MS = SP$. We may also deduce that $MN = PN$.
 By this point things should be a much more clear. Of the three equalities in
 Newton's argument, we have already proven two. But we still need to show that
 $MA = AO$.
-<img src='%{path}%/static/lemma14/lemma14-2.png' 
+<img src='lemma14-2.png' 
      align='right'
      style='padding: 10px 0px 0px 0px; max-width: 50%'>
 Notice here that $NPOS is a 
@@ -70,7 +70,7 @@ $\triangle ONA$. So it is clear that $MA$ is equal to $AO$.
 
 Now we have shown all three of the equalities presumed by Newton in his proof!
 However, we aren't done yet. In showing that $MA = AO$, I assumed that the 
-<img src='%{path}%/static/lemma14/lemma14-3.png' 
+<img src='lemma14-3.png' 
      align='left'
      style='padding: 0px 10px 10px 10px; max-width: 50%'>
 perpendicular from $N$ meets $d$ at the vertex, $A$;
@@ -82,7 +82,7 @@ $A$ is the midpoint of $SC$. As $S$ is the focus and $C$ the intersection of the
 axis of symmetry and the directrix, then $A$ is the vertex of the parabola.
 
 All that remains now is to restate Newton's argument. Since $MS = SP$,
-<img src='%{path}%/static/lemma14/lemma14.png' 
+<img src='lemma14.png' 
      align='right'
      style='padding: 10px 0px 10px 10px; max-width: 50%'>
 $MN = NP$, and $MA = AO$, then $\triangle MNS$ is congruent to $\triangle SNP$.
