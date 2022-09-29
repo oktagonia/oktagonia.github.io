@@ -1,9 +1,10 @@
 %{(Post "A Proof of Lemma XIV of the First Book of Newton's Principia"
    "September 2022")}%
 
-**Lemma XIV.** The prependicular, let fall from the focus of a parabola on its
+<center><b>Lemma XIV</b></center>
+*The prependicular, let fall from the focus of a parabola on its
 tangent, is a mean porportional between the distances of the focus from the 
-point of contact, and from the principal vertex of the figure.
+point of contact, and from the principal vertex of the figure.*
 
 %{(align-img "lemma14.png" "right")}%
 Newton's original argument is as follows:

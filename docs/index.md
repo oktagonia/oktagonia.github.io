@@ -1,5 +1,5 @@
 
-<img src='newhilbert.png' class='center'>
+<img src='static/newhilbert.png' class='center'>
 
 # Hilbert's Lamentations
 
@@ -15,5 +15,5 @@
 
 <h2 style='text-align: center;'>
   <i class="fa fa-github"></i> 
-  <a href='https://github.com/M-CS-ME'>github</a>
+  <a href='https://github.com/oktagonia'>github</a>
 </h2>
