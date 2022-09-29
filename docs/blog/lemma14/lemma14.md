@@ -22,13 +22,12 @@ Though this might seem perfectly convincing, it still left me with several
 questions. Newton's argument relies on the equality of $MS$ and $SP$ as well
 as the equality of $MA$ and $AO$. These he does not prove.%{(Note "I'm not sure
 if he's relying on some theorems found in Apollonius or other writers on Conics 
-here. Since he defers proof of Lemma XIII by stating that: \"This is 
-demonstrated by the writers on the conic sections.\"")}% And within my own 
-investigation of the problem I have only been able to find proofs of these 
-assumptions which utilize the fact that $NA$ is parallel to $PO$, while Newton 
-states that as a corrolary of the present lemma. In this post I intend to 
-provide a more complete demonstration of this fact and provide sources for the 
-theorems whose truth I take for granted.
+here. Since he defers proof of Lemma XIII to \"The writers on the conic 
+sections\"")}% And within my own investigation of the problem I have only been 
+able to find proofs of these assumptions which utilize the fact that $NA$ is 
+parallel to $PO$, while Newton states that as a corrolary of the present lemma. 
+In this post I intend to provide a more complete demonstration of this fact and 
+provide sources for the theorems whose truth I take for granted.
 
 To begin, let us prove the equality of $MS$ and $SP$. Let $d$ be the directrix
 of our parabola $S$ be the focus, and $P$, be the point of tangency. As such,
@@ -61,14 +60,17 @@ $\triangle ONA$. So it is clear that $MA$ is equal to $AO$.
 
 Now we have shown all three of the equalities presumed by Newton in his proof!
 However, we aren't done yet. In showing that $MA = AO$, I assumed that the 
+perpendicular from $N$ meets $MO$ at the vertex. This I haven't proved. So join
 %{(align-img "lemma14-3.png" "left")}%
-perpendicular from $N$ meets $MO$ at the vertex, $A$;
-which I haven't proved yet. So reflect $S$ over $N$ at $S'$. From $N$ drop a 
-perpendicular to $d$ at $R$. Therefore, by definition, $S'N = SN$ and
-$S'R = R'C$. It should be clear now that $\triangle SS'C$ is similar to 
-$\triangle SAN$. Therefore $SA$ is to $AC$ as $SN$ is to $NS'$, meaning that 
-$A$ is the midpoint of $SC$. As $S$ is the focus and $C$ the intersection of the
-axis of symmetry and the directrix, then $A$ is the vertex of the parabola.
+$AN$ and $CN$ where $C$ is the intersection of the axis and the directrix. Then
+drop a perpendicular from $N$ to $d$ and call it $R$. Afterwards reflect $C$ 
+over $R$ and call it $C'$. Notice that $AC$ is parallel to $NR$ and $CC'$ is
+parallel to $NA$. As $CR = C'R$ and $NR$ is shared by them, $\triangle NCR$ is
+congruent to $\triangle C'RN$. Notice as well that $\angle ASN = \angle RNC'$.
+and since both $\angle C'RN$ and $\angle NAS$ are right angles, and that 
+$C'R = NA$, then $\triangle NAS \cong \triangle C'RN \cong \triangle NCR$ which
+is in turn congruent to $\triangle ANC$. Therefore, $\triangle CNS$ is isosceles
+and $CA = AS$. Meaning that $A$ is the midpoint of $CS$; i.e., the vertex.
 
 All that remains now is to restate Newton's argument. Since $MS = SP$,
 %{(align-img "lemma14.png" "right")}%
