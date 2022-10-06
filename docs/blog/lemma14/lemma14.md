@@ -164,6 +164,7 @@ between the vertex and the perpendicular dropped from the point of tangency.*
 
 Now we'll go through these goals step by step and try to achieve them. À la
 [means-ends analysis](https://en.wikipedia.org/wiki/Means%E2%80%93ends_analysis)
+and [GPS](https://en.wikipedia.org/wiki/General_Problem_Solver).
 
 <center><b>Goals 1, 2</b></center>
 *Given that the tangent of a parabola intersects its axis of symmetry at 
@@ -240,8 +241,10 @@ Therefore $\triangle NSA \cong \triangle C'NR$ which is in turn congruent to
 $\triangle CNR$ because they are both right angled and that $C'R = CR$. It
 And since $\triangle NCR \cong \triangle NCA$, then $\triangle NCA$ is congruent
 to $\triangle NSA$. So we can conclude that $CA = AS$. Meaning that $A$ is the
-midpoint of $C$ and $S$, making it the directrix.
+midpoint of $C$ and $S$, making it the directrix. Q.E.D.
 
+
+Now we can finally tick off the last goal.
 
 - [X] *The perpendicular dropped from $N$ meets the axis of symmetry at the
 vertex.*
