@@ -1,0 +1,137 @@
+
+<!doctype html>
+<html lang=en-US>
+<head>
+  <meta charset="utf-8">
+  <link href='/static/style.css' rel='stylesheet'>
+  <link href='/home/kiand/fun/oktagonia.github.io/docs/static/style.css' rel='stylesheet'>
+  <link rel="stylesheet" href="https://use.typekit.net/cnp8pzd.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/aaaakshat/cm-web-fonts@latest/fonts.css">
+
+  <title>Hilbert's Lamentations</title>
+  <!--
+  <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript">
+  </script>
+  <script type='text/x-mathjax-config'>
+    MathJax.Hub.Config({
+      tex2jax: {
+        inlineMath: [['$','$']],
+        processEscapes: true
+      }
+    });
+  </script>
+  -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.2/dist/katex.min.css" integrity="sha384-bYdxxUwYipFNohQlHt0bjN/LCpueqWz13HufFEV1SUatKs1cm4L6fFgCi1jT643X" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.2/dist/katex.min.js" integrity="sha384-Qsn9KnoKISj6dI8g7p1HBlNpVx0I8p1SvlwOldgi3IorMle61nQy4zEahWYtljaz" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.2/dist/contrib/auto-render.min.js" integrity="sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05" crossorigin="anonymous"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        renderMathInElement(document.body, {
+          // customised options
+          // • auto-render specific keys, e.g.:
+          delimiters: [
+              {left: '$$', right: '$$', display: true},
+              {left: '$', right: '$', display: false},
+              {left: '\\(', right: '\\)', display: false},
+              {left: '\\[', right: '\\]', display: true}
+          ],
+          throwOnError : false
+        });
+    });
+</script>
+  <meta name='viewport' content="width=device-width,initial-scale=1.0">  
+  <meta charset="utf-8"/>
+</head>
+<body>
+    <!-- <script src="https://www.geogebra.org/apps/deployggb.js"></script> -->
+<h1 style="text-align: left; font-size: 20pt;">A Proof of Lemma XIV of the First Book of Newton's Principia</h1>
+
+
+<p> September 2022 <br></br></p>
+
+<center><b>Lemma XIV</b></center>
+
+
+<p><em>The prependicular, let fall from the focus of a parabola on its
+tangent, is a mean porportional between the distances of the focus from the
+point of contact, and from the principal vertex of the figure.</em></p>
+
+<p><img src="lemma14.png" style="max-width: 50%" align="right"></img>
+Newton&rsquo;s original argument is as follows:</p>
+
+<blockquote><p>For, let $AP$ be the parabola, $S$ its focus, $A$ its principal vertex, $P$
+the point of contact, $PO$ an ordinate to the principal diameter, $PM$ the
+tangent meeting the principal diameter in $M$, and $SN$ the perpendicular from
+the focus on the tangent. Join $AN$, and because of the equal lines $MS$ and
+$SP$, $MN$ and $NP$, $MA$ and $AO$, the right lines $AN$, $OP$ will be
+parallel; and thence the triangle $SAN$ will be right-angled at $A$, and
+similar to the equal triangles $SNM$, $SNP$; therefore $PS$ is to $SN$ as $SN$
+is to $SA$.</p></blockquote>
+
+<p>Though this might seem perfectly convincing, it still left me with several
+questions. Newton&rsquo;s argument relies on the equality of $MS$ and $SP$ as well
+as the equality of $MA$ and $AO$. These he does not prove.<a href="#footnote-1"><sup id="source-1">[1]</sup></a> And within my own investigation of the problem I have only been
+able to find proofs of these assumptions which utilize the fact that $NA$ is
+parallel to $PO$, while Newton states that as a corrolary of the present lemma.
+In this post I intend to provide a more complete demonstration of this fact and
+provide sources for the theorems whose truth I take for granted.</p>
+
+<p>To begin, let us prove the equality of $MS$ and $SP$. Let $d$ be the directrix
+of our parabola $S$ be the focus, and $P$, be the point of tangency. As such,
+<img src="lemma14-1.png" style="max-width: 50%" align="left"></img>
+$SP = PI$ where $PI$ is perpendicular to the directrix. At this point we might
+as well connect $I$ to the intersection of the tangent and the axis of symmetry,
+$M$. Our resulting picture strongly suggests that $PSMI$ is a rhombus. This can
+be verified by noticing that, since $MS$ and $PI$ are parallel, then
+$\angle PMS = \angle IPM$, $\angle IMP = \angle MPS$, $\angle MIS = \angle ISP$,
+$\angle PIS = \angle ISM$. As such $\angle PIM = \angle PSM$. Therefore, the
+triangles $\triangle IPM$ and $\triangle PSM$ are congruent, as the side $MP$
+is shared by the two of them. As we have shown that $IP = MS$, then it follows
+that $MS = SP$. We may also deduce that $MN = PN$.</p>
+
+<p>By this point things should be a much more clear. Of the three equalities in
+Newton&rsquo;s argument, we have already proven two. But we still need to show that
+$MA = AO$.
+<img src="lemma14-2.png" style="max-width: 50%" align="right"></img>
+Notice here that $NPOS$ is a
+<a href="https://en.wikipedia.org/wiki/Cyclic_quadrilateral">cyclic quadrilateral</a>.
+As such, $\angle NOS$ is equal to $\angle NPS$ which is in turn equal to
+$\angle NMA$.  <a href="#footnote-2"><sup id="source-2">[2]</sup></a> Therefore,
+$\triangle MNO$ is isosceles and as such, $MN = NO$. Since $NA$ is shared by
+the triangles $\triangle MNA$ and $\triangle ONA$, and that $NA$ is
+perpendicular to $MO$, then we may deduce that $\triangle MNA$ is congruent to
+$\triangle ONA$. So it is clear that $MA$ is equal to $AO$.</p>
+
+<p>Now we have shown all three of the equalities presumed by Newton in his proof!
+However, we aren&rsquo;t done yet. In showing that $MA = AO$, I assumed that the
+perpendicular from $N$ meets $MO$ at the vertex. This I haven&rsquo;t proved. So join
+<img src="lemma14-3.png" style="max-width: 50%" align="left"></img>
+$AN$ and $CN$ where $C$ is the intersection of the axis and the directrix. Then
+drop a perpendicular from $N$ to $d$ and call it $R$. Afterwards reflect $C$
+over $R$ and call it $C'$. Notice that $AC$ is parallel to $NR$ and $CC'$ is
+parallel to $NA$. As $CR = C'R$ and $NR$ is shared by them, $\triangle NCR$ is
+congruent to $\triangle C'RN$. Notice as well that $\angle ASN = \angle RNC'$.
+and since both $\angle C'RN$ and $\angle NAS$ are right angles, and that
+$C'R = NA$, then $\triangle NAS \cong \triangle C'RN \cong \triangle NCR$ which
+is in turn congruent to $\triangle ANC$. Therefore, $\triangle CNS$ is isosceles
+and $CA = AS$. Meaning that $A$ is the midpoint of $CS$; i.e., the vertex.</p>
+
+<p>All that remains now is to restate Newton&rsquo;s argument. Since $MS = SP$,
+<img src="lemma14.png" style="max-width: 50%" align="right"></img>
+$MN = NP$, and $MA = AO$, then $\triangle MNS$ is congruent to $\triangle SNP$.
+The triangle $\triangle NAS$, by virtue of sharing $\angle NSA$ with
+$\triangle MNS$ and having a right angle at $\angle NAS$ is similar to
+$\triangle MNS$ and $\triangle SNP$. Therefore $PS$ is to $SN$, as $SN$ is to
+$NA$. This completes our proof of lemma XIV of Newton&rsquo;s Principia. Q.E.D.</p>
+
+<p><br></br> <br></br> <br></br> <b>Notes</b> <ol><li><p id="footnote-1">I&rsquo;m not sure
+if he&rsquo;s relying on some theorems found in Apollonius or other writers on Conics
+here. Since he defers proof of Lemma XIII to &ldquo;The writers on the conic
+sections&rdquo;</p></li> <li><p id="footnote-2">Cyclic quadrilaterals are quadrilaterals which have two
+right angles which are opposite to each other. They also have the rather nice
+property that the angle made by a side and any diagonal is equal to the angle
+made by the opposite side and the other diagonal.</p></li></ol></p>
+
+</body>
+</html>
