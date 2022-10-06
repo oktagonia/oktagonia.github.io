@@ -2,6 +2,8 @@ code{ white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
 span.underline{text-decoration: underline;}
 div.column{display: inline-block; vertical-align: top; width: 50%;}
+a:hover { font-weight: bold; text-decoration: none; }
+a { font-style: normal; }
 
 .center {
     display: block;
@@ -13,6 +15,10 @@ h1 {
     line-height: 32px;
     font-weight: normal;
     text-align: center;
+}
+
+h2, h3, h4, h5, h6 {
+    margin: 3em 0 1em;
 }
 
 body {

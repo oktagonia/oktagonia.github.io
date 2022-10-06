@@ -5,15 +5,15 @@
 
 <br>
 
-<h2 style='text-align: center;'>
+<p style='text-align: center; font-size: 19pt; font-weight: bold'>
   📜 <a href='blog/blog.html'>blog</a>
-</h2>
+</p>
 
-<h2 style='text-align: center;'>
+<p style='text-align: center; font-size: 19pt; font-weight: bold'>
   📚 <a href='archive/archive.html'>archive</a>
-</h2>
+</p>
 
-<h2 style='text-align: center;'>
+<p style='text-align: center; font-size: 19pt; font-weight: bold'>
   <i class="fa fa-github"></i> 
   <a href='https://github.com/oktagonia'>github</a>
-</h2>
+</p>

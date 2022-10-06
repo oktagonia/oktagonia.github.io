@@ -19,35 +19,31 @@ Newton's original argument is as follows:
 >is to $SA$.
 
 Though this might seem to be complete, upon further inspection it is clear that
-Newton has left quite a lot of work for us to do; as this argument relies on 
-the equality of $MS$ and $SP$, $MN$ and $NP$, as well as the equality of $MA$ 
-and $AO$. So if we wish to complete Newton's argument, we need to prove these
-identities. And so we need to prove the following propositions.
+Newton has left quite a lot of work for us to do. For instance, Newton's 
+argument relies on the equality of $MS$ and $SP$ as well as the equality of
+$MA$ and $AO$. So if we wish to complete Newton's argument, we need to prove
+both of these identities. As such we have two propositions in need of proof:
 
 1. *Given that the tangent of a parabola intersects its axis of symmetry 
 at $M$, then the distance between $M$ and the focus is equal to the distance 
 between the focus and the point of tangency.*
 
-2. *Given that the tangent of a parabola intersects its axis of symmetry 
-at $M$, then the perpendicular dropped from the focus onto the tangent is 
-equidistant from $M$ and the point of tangency.*
-
-3. *Given that the tangent of a parabola intersects its axis of symmetry at 
+2. *Given that the tangent of a parabola intersects its axis of symmetry at 
 $M$, then the distance between $M$ and the vertex is equal to the distance 
 between the vertex and the perpendicular dropped from the point of tangency.*
 
 But before we get into this, let me give an introduction to dealing with 
-parabolas geometrically for those who might not be familiar with such things.
+parabolas geometrically for those whou might not be familiar with such things.
 
-## Parabolas done geometrically
+## Parabolas from a geometric perspective
 
 Most people know parabolas as curves traced by the functions of the form
 $f(x) = a[k(x-p)]^2 + q$ where $(p, q)$ is the vertex of the parabola. Though
 this representation of a parabola is very useful in a large variety of 
 problems—notably those in classical mechanics—it is not a useful tool for our
-current problem. The equations get too unwieldy too quickly.  Fortunately, one
-may also study parabolas from a geometric/synthetic perspective which is better
-suited to this task.
+current problem. The equations quickly get too unwieldy too quickly. 
+Fortunately, one may also study parabolas from a geometric/synthetic 
+perspective.
 
 <center><b>Definition 1</b></center>
 *Given a line $d$ and a point $F$, a parabola is defined as the shape such that
@@ -115,60 +111,15 @@ with using these techniques.
 <center><b>Exercise 1</b></center>
 *Suppose that on a parabola with vertex $V$ and a focus $F$ there exists a 
 point $A$ such that $AF = 20$ and $AV = 21$. What is the sum of all possible 
-values of the length $FV$.* (From the AMC 12)
+values of length $FV$.* %{(Note "This problem is from the 2021 AMC 12 A. 
+<a href=\' \'>Source</a>")}%
 
-<details>
-  <summary>
-    Show solution
-  </summary>
-  <center>![](exercise1.png)</center>
-  After drawing the figure described in the question, draw the directrix of the
-  parabola and drop a perpendicular from $A$ onto the directrix at $C$. Let 
-  $x = FV$ and notice that
-  $$AV\^2 - (AC - x)\^2 = AF\^2 - (AC - 2x)\^2$$
-  Now we can solve this equation for $x$. First we substitute the values of 
-  $AF$, $AV$, and since $AC = AF$ by the definition of the parabola, we 
-  substitute that as well.
-  $$
-  441 - (20 - x)\^2 = 400 - (20 - 2x)\^2
-  $$
-  By rearranging we obtain
-  $$
-  \begin{aligned}
-  41 &= (20 - x)\^2 - (20 - 2x)\^2 \\\\
-     &= [(20 - x) + (20 - 2x)][(20 - x) - (20 - 2x)] \\\\
-     &= x(40 - 3x) \\\\
-     &= 40x - 3x\^2
-  \end{aligned}
-  $$
-  And so the solution to our problem is the sum of the two roots of the
-  equation $-3x\^2 + 40x - 41$. This is done easily via Vieta's formulas and
-  more tediously via simply finding the roots. In the end the answer is 
-  $\frac{40}{3}$. Q.E.D.
-</details>
-
-## Back to Newton
-
-Previously I'd stated three goals that have to be achieved for this proof to be
-complete. Those being:
-
-- [ ] *Given that the tangent of a parabola intersects its axis of symmetry 
-at $M$, then the distance between $M$ and the focus is equal to the distance 
-between the focus and the point of tangency.*
-- [ ] *Given that the tangent of a parabola intersects its axis of symmetry 
-at $M$, then the perpendicular dropped from the focus onto the tangent is 
-equidistant from $M$ and the point of tangency.*
-- [ ] *Given that the tangent of a parabola intersects its axis of symmetry at 
-$M$, then the distance between $M$ and the vertex is equal to the distance 
-between the vertex and the perpendicular dropped from the point of tangency.*
-
-Now we'll go through these goals step by step and try to achieve them. À la
-[means-ends analysis](https://en.wikipedia.org/wiki/Means%E2%80%93ends_analysis)
-
-<center><b>Goals 1, 2</b></center>
-*Given that the tangent of a parabola intersects its axis of symmetry at 
+<center><b>Goal 1</b></center>
+1. *Given that the tangent of a parabola intersects its axis of symmetry at 
 $M$, then the distance between $M$ and the focus is equal to the distance 
 between the focus and the point of tangency.*
+2. *The perpendicular dropped from the focus onto the tangent bisects the 
+distance between $M$ and the point of tangency.*
 
 Let $d$ be the directrix of our parabola $S$ be the focus, and $P$, be the 
 point of tangency. As such, $SP = PI$ where $PI$ is perpendicular to the 
@@ -181,80 +132,45 @@ $\angle PMS = \angle IPM$, $\angle IMP = \angle MPS$, $\angle MIS = \angle ISP$,
 $\angle PIS = \angle ISM$. As such $\angle PIM = \angle PSM$. Therefore, the
 triangles $\triangle IPM$ and $\triangle PSM$ are congruent, as the side $MP$
 is shared by the two of them. As we have shown that $IP = MS$, then it follows
-that $MS = SP$. Since the diagonals of a parallelogram bisect eachother, it is
-easy to see that $MN = NP$. Q.E.D.
+that $MS = SP$. We may also deduce that $MN = PN$. Q.E.D.
 
-Well this wasn't too bad. We've already achieved two of our three goals:
+By this point things should be a much more clear. Of the three equalities in
+Newton's argument, we have already proven two. But we still need to show that
+$MA = AO$.
 
-- [X] *Given that the tangent of a parabola intersects its axis of symmetry 
-at $M$, then the distance between $M$ and the focus is equal to the distance 
-between the focus and the point of tangency.*
-- [X] *Given that the tangent of a parabola intersects its axis of symmetry 
-at $M$, then the perpendicular dropped from the focus onto the tangent is 
-equidistant from $M$ and the point of tangency.*
-
-All we need to do now is to achieve the final goal and we'll be done.
-
-<center><b>Goal 3</b></center>
+<center><b>Goal 2</b></center>
 *Given that the tangent of a parabola intersects its axis of symmetry at $M$,
 then the distance between $M$ and the vertex is equal to the distance between
 the vertex and the perpendicular dropped from the point of tangency.*
 
-Drop a perpendicular from $P$ to $O$ and connect the diagonals of $NPOS$. 
-Notice that since $\angle PNS$ and $\angle POS$ are both right angles, then
-%{(align-img "lemma14-2.png" "right")}% 
-$NPOS$ is a cyclic quadrilateral. As such, $\angle SON = \angle NPS$
-which is in turn equal to $\angle NSM$.%{(Note "In cyclic quadrilaterals,
-the angle between any side and a diagonal is equal to the angle between the
-opposite side and diagonal.")}% It should be clear now that $MN = NO$.
+Notice here that $NPOS$ is a 
+%{(align-img "lemma14-2.png" "right")}%
+[cyclic quadrilateral](https://en.wikipedia.org/wiki/Cyclic_quadrilateral).
+As such, $\angle NOS$ is equal to $\angle NPS$ which is in turn equal to 
+$\angle NMA$.  %{(Note "Cyclic quadrilaterals are quadrilaterals which have two 
+right angles which are opposite to each other. They also have the rather nice 
+property that the angle made by a side and any diagonal is equal to the angle 
+made by the opposite side and the other diagonal.")}% Therefore, 
+$\triangle MNO$ is isosceles and as such, $MN = NO$. Since $NA$ is shared by 
+the triangles $\triangle MNA$ and $\triangle ONA$, and that $NA$ is 
+perpendicular to $MO$, then we may deduce that $\triangle MNA$ is congruent to 
+$\triangle ONA$. So it is clear that $MA$ is equal to $AO$.
 
-By this point the clear next step is to show that $\triangle MNA \cong 
-\triangle NOA$. However, this is only possible if the perpendicular from $N$
-intersects the axis of symmetry at $A$—the vertex. However, we don't know if 
-this is true yet. Well whatever. We'll just assume it for now. As such,
-$\triangle MAN \cong \triangle NOA$ and so $MA = AO$. Q.E.D.
-
-Well that's no good. We've technically ticked off goal three, but we've added
-another goal in its stead!
-
-- [X] *Given that the tangent of a parabola intersects its axis of symmetry at 
-$M$, then the distance between $M$ and the vertex is equal to the distance 
-between the vertex and the perpendicular dropped from the point of tangency.*
-- [ ] *The perpendicular dropped from $N$ meets the axis of symmetry at the
-vertex.*
-
-Well we have nothing better to do so might as well try to finish the last goal.
-
-<center><b>Goal 4</b></center>
-*The perpendicular dropped from $N$ meets the axis of symmetry at the
-vertex.*
-
-First and foremost, drop a perpendicular from $N$ to the axis of symmetry and
-call it $A$. I will now show that $A$ is the same thing as the vertex. Let $C$
-be the intersection of the axis of symmetry and the directrix. Then drop a
+Now we have shown all three of the equalities presumed by Newton in his proof!
+However, we aren't done yet. In showing that $MA = AO$, I assumed that the 
+perpendicular from $N$ meets $MO$ at the vertex. This I haven't proved. So join
 %{(align-img "lemma14-3.png" "left")}%
-perpendicular from $N$ to the directrix at $R$ and reflect $C$ over $R$ onto
-$C'$.  Notice that $NA$ is parallel to the directrix and that $NR$ is parallel
-to the axis of symmetry. As such $\angle NSA = \angle C'NR$ and $NA = RC = C'R$.
-Therefore $\triangle NSA \cong \triangle C'NR$ which is in turn congruent to
-$\triangle CNR$ because they are both right angled and that $C'R = CR$. It
-And since $\triangle NCR \cong \triangle NCA$, then $\triangle NCA$ is congruent
-to $\triangle NSA$. So we can conclude that $CA = AS$. Meaning that $A$ is the
-midpoint of $C$ and $S$, making it the directrix.
+$AN$ and $CN$ where $C$ is the intersection of the axis and the directrix. Then
+drop a perpendicular from $N$ to $d$ and call it $R$. Afterwards reflect $C$ 
+over $R$ and call it $C'$. Notice that $AC$ is parallel to $NR$ and $CC'$ is
+parallel to $NA$. As $CR = C'R$ and $NR$ is shared by them, $\triangle NCR$ is
+congruent to $\triangle C'RN$. Notice as well that $\angle ASN = \angle RNC'$.
+and since both $\angle C'RN$ and $\angle NAS$ are right angles, and that 
+$C'R = NA$, then $\triangle NAS \cong \triangle C'RN \cong \triangle NCR$ which
+is in turn congruent to $\triangle ANC$. Therefore, $\triangle CNS$ is isosceles
+and $CA = AS$. Meaning that $A$ is the midpoint of $CS$; i.e., the vertex.
 
-
-- [X] *The perpendicular dropped from $N$ meets the axis of symmetry at the
-vertex.*
-
-And we're done! Having showed all 4 goals, we can now restate Newton's argument
-knowing that the proof is complete.
-
-<center><b>Lemma XIV</b></center>
-*The prependicular, let fall from the focus of a parabola on its
-tangent, is a mean porportional between the distances of the focus from the 
-point of contact, and from the principal vertex of the figure.*
-
-Since $MS = SP$,
+All that remains now is to restate Newton's argument. Since $MS = SP$,
 %{(align-img "lemma14.png" "right")}%
 $MN = NP$, and $MA = AO$, then $\triangle MNS$ is congruent to $\triangle SNP$.
 The triangle $\triangle NAS$, by virtue of sharing $\angle NSA$ with 
