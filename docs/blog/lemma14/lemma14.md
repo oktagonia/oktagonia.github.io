@@ -231,17 +231,15 @@ Well we have nothing better to do so might as well try to finish the last goal.
 vertex.*
 
 First and foremost, drop a perpendicular from $N$ to the axis of symmetry and
-call it $A$. I will now show that $A$ is the same thing as the vertex. Let $C$
-be the intersection of the axis of symmetry and the directrix. Then drop a
+call it $A$. Draw, through $S$, a perpendicular to the axis and mark its 
 %{(align-img "lemma14-3.png" "left")}%
-perpendicular from $N$ to the directrix at $R$ and reflect $C$ over $R$ onto
-$C'$.  Notice that $NA$ is parallel to the directrix and that $NR$ is parallel
-to the axis of symmetry. As such $\angle NSA = \angle C'NR$ and $NA = RC = C'R$.
-Therefore $\triangle NSA \cong \triangle C'NR$ which is in turn congruent to
-$\triangle CNR$ because they are both right angled and that $C'R = CR$. 
-And since $\triangle NCR \cong \triangle NCA$, then $\triangle NCA$ is congruent
-to $\triangle NSA$. So we can conclude that $CA = AS$. Meaning that $A$ is the
-midpoint of $C$ and $S$, making it the directrix. Q.E.D.
+intersection with $ON$ as $E$. From $E$ drop a perpendicular onto the directrix
+at $F$. Notice that since $EF$ is parallel to $MO$, then $\triangle EFN$ is
+similar to $\triangle MNO$. As such we know that it is also isosceles and that
+it is perpendicular to $NA$. Therefore $NA$ bisects $FE$, and since $FE = CS$,
+then $NA$ also bisects $NA$. Meaning that $A$ is the midpoint of the focus and
+the intersection of the axis of symmetry and the directrix; making it the 
+vertex.
 
 Now we can finally tick off the last goal.
 
