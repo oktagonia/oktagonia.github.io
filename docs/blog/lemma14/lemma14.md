@@ -235,8 +235,8 @@ call it $A$. Draw, through $S$, a perpendicular to the axis and mark its
 %{(align-img "lemma14-3.png" "left")}%
 intersection with $ON$ as $E$. From $E$ drop a perpendicular onto the directrix
 at $F$. Notice that since $EF$ is parallel to $MO$, then $\triangle EFN$ is
-similar to $\triangle MNO$. As such we know that it is also isosceles and that
-it is perpendicular to $NA$. Therefore $NA$ bisects $FE$, and since $FE = CS$,
+similar to $\triangle MNO$. As such we know that it is also isosceles. And since
+$FE$ is perpendicular to $NA$, then $NA$ bisects $FE$, and since $FE = CS$,
 then $NA$ also bisects $NA$. Meaning that $A$ is the midpoint of the focus and
 the intersection of the axis of symmetry and the directrix; making it the 
 vertex.
