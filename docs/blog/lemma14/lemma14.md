@@ -147,6 +147,30 @@ values of the length $FV$.* (From the AMC 12)
   $\frac{40}{3}$. Q.E.D.
 </details>
 
+Now let's show a really cool property of parabolas that we'll end up using later
+in our proof. The reflective property of the parabola! This result explains why
+parabolic mirrors work the way they do.
+
+<center><b>Theorem 3</b></center>
+*In a parabola with a tangent at $P$, the angle made by the tangent and the 
+parallel line to the axis of symmetry at $P$ is equal to the angle made by the
+line drawn from the focus to $P$ and the tangent.*
+
+I tried to prove this via synthetic methods, but I failed so here is an analytic
+proof for $y = x\^2$ because I was too lazy to do the general version. Let $P$
+be a point on the aforementioned parabola, so $P = (a, a\^2)$ for some $a$. As
+%{(align-img "theorem3.png" "left")}%
+such, slope of the tangent at $P$ is $2a$. For this parabola, the focus, $F$,
+is at point $(0, \frac{1/4})$ and the intersection of the perpendicular from $P$
+and the directrix is $(a, -\frac{1}{4})$. Therefore slope of $FD$ is
+$$
+\frac{\frac{1}{4} - \frac{-1}{4}}{0 - a} = -\frac{1}{2a}
+$$
+And since the slopes of $AC$ and the tangent at $P$ are negative reciprocals of
+each other, then they are perpendicular. And since $FP = PD$ and the tangent
+is perpendicular to $FD$, then the tangent bisects $FD$ and as such 
+$\angle FPA = \angle DPA$. Which is what we wanted to show. Q.E.D.
+
 ## Back to Newton
 
 Previously I'd stated three goals that have to be achieved for this proof to be
@@ -169,21 +193,24 @@ and [GPS](https://en.wikipedia.org/wiki/General_Problem_Solver).
 <center><b>Goals 1, 2</b></center>
 *Given that the tangent of a parabola intersects its axis of symmetry at 
 $M$, then the distance between $M$ and the focus is equal to the distance 
-between the focus and the point of tangency.*
+between the focus and the point of tangency and that the perpendicular dropped
+from the focus onto the tangent is equidistant from $M$ and the point of 
+tangency.*
 
 Let $d$ be the directrix of our parabola $S$ be the focus, and $P$, be the 
 point of tangency. As such, $SP = PI$ where $PI$ is perpendicular to the 
 directrix. At this point we might as well connect $I$ to the intersection of 
 the tangent and the axis of symmetry,
 %{(align-img "lemma14-1.png" "left")}%
-$M$. Our resulting picture strongly suggests that $PSMI$ is a rhombus. This can
-be verified by noticing that, since $MS$ and $PI$ are parallel, then
-$\angle PMS = \angle IPM$, $\angle IMP = \angle MPS$, $\angle MIS = \angle ISP$,
-$\angle PIS = \angle ISM$. As such $\angle PIM = \angle PSM$. Therefore, the
-triangles $\triangle IPM$ and $\triangle PSM$ are congruent, as the side $MP$
-is shared by the two of them. As we have shown that $IP = MS$, then it follows
-that $MS = SP$. Since the diagonals of a parallelogram bisect eachother, it is
-easy to see that $MN = NP$. Q.E.D.
+$M$. Drop a perpendicular from $S$ onto the tangent at $N$ and connect it to
+$I$. Notice that by the reflective property, $\angle IPN$ is equal to 
+$\angle SPN$. Therefore $\triangle PNI \cong \triangle PNS$ since they share
+$PN$. And since we said that $SN$ is perpendicular to the tangent, then both
+$\angle INP$ and $\angle SNP$ are equal to $90^\circ$ making $I$, $N$ and $S$
+collinear. This also implies that $SN = IN$. We said that $IP$ is perpendicular 
+to the directrix, this makes it parallel to $MS$, which also forms right angles 
+with the directrix. As such $\triangle MNS \cong \triangle IPN$ which in turn
+is congruent to $\triangle PNS$. Therefore, $MN = NP$ and $MS = SP$. Q.E.D.
 
 Well this wasn't too bad. We've already achieved two of our three goals:
 
@@ -230,16 +257,23 @@ Well we have nothing better to do so might as well try to finish the last goal.
 *The perpendicular dropped from $N$ meets the axis of symmetry at the
 vertex.*
 
-First and foremost, drop a perpendicular from $N$ to the axis of symmetry and
-call it $A$. Draw, through $S$, a perpendicular to the axis and mark its 
+Back in goal 1 we showed that $\triangle PIN \cong \triangle PNS \cong 
+\triangle MNS$ by using the reflective property of the parabola. This gives us
+a hint that $PIMS$ might be rhombus. For that to be true we only need to show 
 %{(align-img "lemma14-3.png" "left")}%
-intersection with $ON$ as $E$. From $E$ drop a perpendicular onto the directrix
-at $F$. Notice that since $EF$ is parallel to $MO$, then $\triangle EFN$ is
-similar to $\triangle MNO$. As such we know that it is also isosceles. And since
-$FE$ is perpendicular to $NA$, then $NA$ bisects $FE$, and since $FE = CS$,
-then $NA$ also bisects $CS$. Meaning that $A$ is the midpoint of the focus and
-the intersection of the axis of symmetry and the directrix; making it the 
-vertex.
+that $IM$ is parallel to $PS$. This is easy to show since $\triangle IMN$ is
+congruent to $\triangle SMN$ because $IN = NS$ and $MN$ is shared by the two
+right triangles. As such $\angle IMN = \angle NPS$ which means that $IM$ is 
+parallel to $PS$.
+
+A consequence of this is that—as in all rhombi—the intersection of the
+diagonals $N$ is the midpoint of the altitude. So if we drop a two 
+perpendiculars from $N$, one to the directrix at $E$ and another to the axis of 
+symmetry at $A$, then $IE = NA$. And since we showed in goal 1 that $IN = NS$, 
+then $\triangle IEN \cong \triangle NAS$. Meaning that $CA$, which is equal to 
+$EN$, is equal to $AS$. As such $A$ is the midpoint of the focus and the 
+intersection of the axis and the directrix, making it the vertex of the 
+parabola. Q.E.D.
 
 Now we can finally tick off the last goal.
 
