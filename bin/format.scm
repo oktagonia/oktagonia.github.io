@@ -39,8 +39,7 @@
           (else (loop posts (readdir dir))))))
 
 (define (Post title date) 
-  `((h1 (@ (style "text-align: left; font-size: 20pt;")) ,title)
-    ,date (br "")))
+  `((h1  ,title) ,date (br "")))
 
 (define (post-path post) (caddr post))
 (define (post-date post) (cadr post))

@@ -44,7 +44,7 @@
 </head>
 <body>
     <!-- <script src="https://www.geogebra.org/apps/deployggb.js"></script> -->
-<h1 style="text-align: left; font-size: 20pt;">A Proof of Lemma XIV of the First Book of Newton's Principia</h1>
+<h1>A Proof of Lemma XIV of the First Book of Newton's Principia</h1>
 
 
 <p> September 2022 <br></br></p>
@@ -56,7 +56,7 @@
 tangent, is a mean porportional between the distances of the focus from the
 point of contact, and from the principal vertex of the figure.</em></p>
 
-<p><img src="lemma14.png" style="max-width: 50%" align="right"></img>
+<p><img src="lemma14.png" alt="" />
 Newton&rsquo;s original argument is as follows:</p>
 
 <blockquote><p>For, let $AP$ be the parabola, $S$ its focus, $A$ its principal vertex, $P$
@@ -125,10 +125,10 @@ geometrically as:</p>
 of symmetry. Meaning that if two points are equidistant from the line passing
 through the focus and the vertex, then they are equidistant from the directrix.</em></p>
 
-<p>Trace a parabola with focus $F$ and a directrix through $A$ such that $AF$ is
+<p><img src="theorem1.png" alt="" />
+Trace a parabola with focus $F$ and a directrix through $A$ such that $AF$ is
 perpendicular to the directrix. Pick any point $X_1$ on the directrix and
-reflect it over $A$ at $X_2$ and connect both to the focus. Notice that, since
-<img src="theorem1.png" style="max-width: 50%" align="right"></img>
+reflect it over $A$ at $X_2$. Notice that, since
 $X_1F = X_2F$, then $\angle FX_1A = \angle FX_2A$. And as $\angle Y_1X_1A$
 and $\angle Y_2X_2A$ are right angles, then $\angle Y_1X_1F$ and
 $\angle Y_2X_2F$ are both equal to $90^\circ - \angle FX_1A$. We now use the
@@ -220,10 +220,10 @@ line drawn from the focus to $P$ and the tangent.</em></p>
 <p>I tried to prove this via synthetic methods, but I failed so here is an analytic
 proof for $y = x^2$ because I was too lazy to do the general version. Let $P$
 be a point on the aforementioned parabola, so $P = (a, a^2)$ for some $a$. As
-<img src="theorem3.png" style="max-width: 50%" align="left"></img>
+<img src="theorem3.png" alt="" />
 such, slope of the tangent at $P$ is $2a$. For this parabola, the focus, $F$,
-is at point $(0, \frac{&frac14;})$ and the intersection of the perpendicular from $P$
-and the directrix is $(a, -\frac{1}{4})$. Therefore slope of $FD$ is
+is at point $(0, \frac{1}{4})$ and the intersection of the perpendicular from
+$P$ and the directrix is $(a, -\frac{1}{4})$. Therefore slope of $FD$ is
 $$
 \frac{\frac{1}{4} - \frac{-1}{4}}{0 - a} = -\frac{1}{2a}
 $$
@@ -263,19 +263,17 @@ between the focus and the point of tangency and that the perpendicular dropped
 from the focus onto the tangent is equidistant from $M$ and the point of
 tangency.</em></p>
 
-<p>Let $d$ be the directrix of our parabola $S$ be the focus, and $P$, be the
-point of tangency. As such, $SP = PI$ where $PI$ is perpendicular to the
-directrix. At this point we might as well connect $I$ to the intersection of
-the tangent and the axis of symmetry,
-<img src="lemma14-1.png" style="max-width: 50%" align="left"></img>
-$M$. Drop a perpendicular from $S$ onto the tangent at $N$ and connect it to
-$I$. Notice that by the reflective property, $\angle IPN$ is equal to
-$\angle SPN$. Therefore $\triangle PNI \cong \triangle PNS$ since they share
-$PN$. And since we said that $SN$ is perpendicular to the tangent, then both
-$\angle INP$ and $\angle SNP$ are equal to $90^\circ$ making $I$, $N$ and $S$
-collinear. This also implies that $SN = IN$. We said that $IP$ is perpendicular
-to the directrix, this makes it parallel to $MS$, which also forms right angles
-with the directrix. As such $\triangle MNS \cong \triangle IPN$ which in turn
+<p><img src="lemma14-1.png" alt="Goals 1 and 2" />
+Let $d$ be the directrix of our parabola $S$ be the focus, and $P$, be the
+point of tangency. As such, $SP = PI$ where $PI \perp d$.
+Let $N$ be a point on $MP$ such that $SN \perp MP$. Notice that by the
+reflective property, $\angle IPN = \angle SPN$. Therefore
+$\triangle PNI \cong \triangle PNS$ since they share $PN$. And since we said
+that $SN \perp MP$, then both $\angle INP$ and $\angle SNP$ are equal to
+$90^\circ$ making $I$, $N$ and $S$ collinear. This also implies that $SN = IN$.</p>
+
+<p>We said that $IP \perp d$, this tells us $IP \parallel MS$, which also forms
+right angles with $d$. As such $\triangle MNS \cong \triangle IPN$ which in turn
 is congruent to $\triangle PNS$. Therefore, $MN = NP$ and $MS = SP$. Q.E.D.</p>
 
 <p>Well this wasn&rsquo;t too bad. We&rsquo;ve already achieved two of our three goals:</p>
@@ -299,17 +297,18 @@ equidistant from $M$ and the point of tangency.</em></li>
 then the distance between $M$ and the vertex is equal to the distance between
 the vertex and the perpendicular dropped from the point of tangency.</em></p>
 
-<p>Drop a perpendicular from $P$ to $O$ and connect the diagonals of $NPOS$.
-Notice that since $\angle PNS$ and $\angle POS$ are both right angles, then
-<img src="lemma14-2.png" style="max-width: 50%" align="right"></img>
-$NPOS$ is a cyclic quadrilateral. As such, $\angle SON = \angle NPS$
-which is in turn equal to $\angle NSM$.<a href="#footnote-1"><sup id="source-1">[1]</sup></a> It should be clear now that $MN = NO$.</p>
+<p>Drop a perpendicular from $P$ to $O$.  Notice that since $\angle PNS$ and
+$\angle POS$ are both right angles, then $NPOS$ is a cyclic quadrilateral. As
+such, $\angle SON = \angle NPS$ which is in turn equal to $\angle NSM$.
+<a href="#footnote-1"><sup id="source-1">[1]</sup></a>
+It should be clear now that $MN = NO$.</p>
+
+<p><img src="lemma14-2.png" alt="" /></p>
 
 <p>By this point the clear next step is to show that $\triangle MNA \cong
-\triangle NOA$. However, this is only possible if the perpendicular from $N$
-intersects the axis of symmetry at $A$—the vertex. However, we don&rsquo;t know if
-this is true yet. Well whatever. We&rsquo;ll just assume it for now. As such,
-$\triangle MAN \cong \triangle NOA$ and so $MA = AO$. Q.E.D.</p>
+\triangle NOA$. However, this is only possible if $NA \perp OM$. However, we
+don&rsquo;t know if this is true yet. Well whatever. We&rsquo;ll just assume it for now. As
+such, $\triangle MAN \cong \triangle NOA$ and so $MA = AO$. Q.E.D.</p>
 
 <p>Well that&rsquo;s no good. We&rsquo;ve technically ticked off goal three, but we&rsquo;ve added
 another goal in its stead!</p>
@@ -332,22 +331,13 @@ vertex.</em></li>
 vertex.</em></p>
 
 <p>Back in goal 1 we showed that $\triangle PIN \cong \triangle PNS \cong
-\triangle MNS$ by using the reflective property of the parabola. This gives us
-a hint that $PIMS$ might be rhombus. For that to be true we only need to show
-<img src="lemma14-3.png" style="max-width: 50%" align="left"></img>
-that $IM$ is parallel to $PS$. This is easy to show since $\triangle IMN$ is
-congruent to $\triangle SMN$ because $IN = NS$ and $MN$ is shared by the two
-right triangles. As such $\angle IMN = \angle NPS$ which means that $IM$ is
-parallel to $PS$.</p>
-
-<p>A consequence of this is that—as in all rhombi—the intersection of the
-diagonals $N$ is the midpoint of the altitude. So if we drop a two
-perpendiculars from $N$, one to the directrix at $E$ and another to the axis of
-symmetry at $A$, then $IE = NA$. And since we showed in goal 1 that $IN = NS$,
-then $\triangle IEN \cong \triangle NAS$. Meaning that $CA$, which is equal to
-$EN$, is equal to $AS$. As such $A$ is the midpoint of the focus and the
-intersection of the axis and the directrix, making it the vertex of the
-parabola. Q.E.D.</p>
+\triangle MNS$ by using the reflective property of the parabola. This means that
+$PIMS$ is a rhombus. A consequence of this is that $IE = NA$ where $E$ is a
+point on $d$ such that $NE \perp IC$ and $A$ is a point on $MS$ such that $NA
+\perp MS$. By using goal 1 we may also deduce that $IN = NS$, as such $\triangle
+IEN \cong \triangle NAS$. Therefore $CA = EN = AS$, meaning that $A$ is the
+midpoint of $C$ and $S$, which is the vertex.
+<img src="lemma14-3.png" alt="" /></p>
 
 <p>Now we can finally tick off the last goal.</p>
 
@@ -357,8 +347,8 @@ vertex.</em></li>
 </ul>
 
 
-<p>And we&rsquo;re done! Having showed all 4 goals, we can now restate Newton&rsquo;s argument
-knowing that the proof is complete.</p>
+<p>And we&rsquo;re done! Having showed all four goals, we can now restate Newton&rsquo;s
+argument knowing that the proof is complete.</p>
 
 <center><b>Lemma XIV</b></center>
 
@@ -367,17 +357,16 @@ knowing that the proof is complete.</p>
 tangent, is a mean porportional between the distances of the focus from the
 point of contact, and from the principal vertex of the figure.</em></p>
 
-<p>Since $MS = SP$,
-<img src="lemma14.png" style="max-width: 50%" align="right"></img>
+<p><img src="lemma14.png" alt="" />
+Since $MS = SP$,
 $MN = NP$, and $MA = AO$, then $\triangle MNS$ is congruent to $\triangle SNP$.
 The triangle $\triangle NAS$, by virtue of sharing $\angle NSA$ with
 $\triangle MNS$ and having a right angle at $\angle NAS$ is similar to
 $\triangle MNS$ and $\triangle SNP$. Therefore $PS$ is to $SN$, as $SN$ is to
 $NA$. This completes our proof of lemma XIV of Newton&rsquo;s Principia. Q.E.D.</p>
 
-<p><br></br> <br></br> <br></br> <b>Notes</b> <ol><li><p id="footnote-1">In cyclic quadrilaterals,
-the angle between any side and a diagonal is equal to the angle between the
-opposite side and diagonal.</p></li></ol></p>
+<p><br></br> <br></br> <br></br> <b>Notes</b> <ol><li><p id="footnote-1">In cyclic quadrilaterals, the angle between any side and a diagonal is
+equal to the angle between the opposite side and diagonal.</p></li></ol></p>
 
 </body>
 </html>
