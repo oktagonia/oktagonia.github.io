@@ -2,8 +2,7 @@ code{ white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
 span.underline{text-decoration: underline;}
 div.column{display: inline-block; vertical-align: top; width: 50%;}
-a:hover { font-weight: bold; text-decoration: none; }
-a { font-style: normal; }
+a { color: darkgreen; }
 
 pre {
     font-size: 11pt;

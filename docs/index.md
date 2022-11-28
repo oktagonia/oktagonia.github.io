@@ -1,19 +1,19 @@
 
-<img src='static/newhilbert.png' class='center'>
+<center><h1>Hilbert's Lamentations</h1></center>
 
-# Hilbert's Lamentations
+<img style='border: none' src='static/newhilbert.png' class='center'>
 
 <br>
 
-<p style='text-align: center; font-size: 19pt; font-weight: bold'>
+<p style='text-align: center; font-size: 19pt;'>
   📜 <a href='blog/blog.html'>blog</a>
 </p>
 
-<p style='text-align: center; font-size: 19pt; font-weight: bold'>
+<p style='text-align: center; font-size: 19pt;'>
   📚 <a href='archive/archive.html'>archive</a>
 </p>
 
-<p style='text-align: center; font-size: 19pt; font-weight: bold'>
+<p style='text-align: center; font-size: 19pt;'>
   <i class="fa fa-github"></i> 
   <a href='https://github.com/oktagonia'>github</a>
 </p>
