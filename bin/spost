@@ -4,6 +4,12 @@ cat $(pwd)/bin/template.html
 pandoc -f markdown-tex_math_dollars $1
 
 echo "
+<br>  
+<br>  
+<br>  
+<br>  
+<br>  
+<br>  
 </body>
 </html>
 "
