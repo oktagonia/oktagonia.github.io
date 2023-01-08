@@ -45,3 +45,58 @@
 </head>
 <body>
     <!-- <script src="https://www.geogebra.org/apps/deployggb.js"></script> -->
+<h1>
+Three-Valued Logic in the λ-Calculus
+</h1>
+<p>January 2023 <br></br></p>
+<p>We define our three logical values in a similar fashion to the
+Church-encoding of booleans:</p>
+<ul>
+<li>$\mathbf{T} = \lambda xyz.x$</li>
+<li>$\mathbf{F} = \lambda xyz.y$</li>
+<li>$\mathbf{X} = \lambda xyz.z$</li>
+</ul>
+<p>And these are some common logical connectives:</p>
+<center>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Connective</th>
+<th style="text-align: center;">Implementation</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Negation</td>
+<td style="text-align: center;">$\neg x =
+x\mathbf{F}\mathbf{T}\mathbf{X}$</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Conjunction</td>
+<td style="text-align: center;">$x\land y =
+xyx(y\mathbf{X}\mathbf{F}\mathbf{X})$</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Disjunction</td>
+<td style="text-align: center;">$x\lor y =
+x\mathbf{T}y(y\mathbf{T}\mathbf{X}\mathbf{X})$</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Łukasiewicz implication</td>
+<td style="text-align: center;">$x \to y =
+xy\mathbf{T}(y\mathbf{T}\mathbf{X}\mathbf{T})$</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Kleene implication</td>
+<td style="text-align: center;">$x \to y = \neg x \lor y$</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: center;"></td>
+</tr>
+</tbody>
+</table>
+
+</body>
+</html>
+

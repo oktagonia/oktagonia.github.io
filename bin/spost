@@ -1,7 +1,7 @@
-#!/usr/bin/bash
+#!/usr/bin/env bash
 
 cat $(pwd)/bin/template.html
-markdown $1
+pandoc -f markdown-tex_math_dollars $1
 
 echo "
 </body>

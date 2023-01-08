@@ -72,16 +72,16 @@ through the focus and the vertex, then they are equidistant from the directrix.*
 
 ![](theorem1.png)
 Trace a parabola with focus $F$ and a directrix through $A$ such that $AF$ is
-perpendicular to the directrix. Pick any point $X_1$ on the directrix and 
-reflect it over $A$ at $X_2$. Notice that, since 
-$X_1F = X_2F$, then $\angle FX_1A = \angle FX_2A$. And as $\angle Y_1X_1A$ 
-and $\angle Y_2X_2A$ are right angles, then $\angle Y_1X_1F$ and 
-$\angle Y_2X_2F$ are both equal to $90^\circ - \angle FX_1A$. We now use the
-defining property of the parabola by observing that $\triangle X_1Y_1F$ and 
-$\triangle X_2Y_2F$ are both isosceles. And since two of their angles and two
-of their sides, namely $Y_1X_1F$ and $\angle Y_2X_2F$ and $X_1F$ and $X_2F$
-are equal, then $\triangle X_1Y_1F \cong \triangle X_2Y_2F$. Therefore it is
-clear that $Y_1X_1 = Y_2X_2$. Q.E.D.
+perpendicular to the directrix. Pick any point $X\_1$ on the directrix and 
+reflect it over $A$ at $X\_2$. Notice that, since 
+$X\_1F = X\_2F$, then $\angle FX\_1A = \angle FX\_2A$. And as $\angle Y\_1X\_1A$
+and $\\angle Y\_2X\_2A$ are right angles, then $\\angle Y\_1X\_1F$ and 
+$\\angle Y\_2X\_2F$ are both equal to $90^\\circ - \\angle FX\_1A$. We now use 
+the defining property of the parabola by observing that $\\triangle X\_1Y\_1F$ 
+and $\\triangle X\_2Y\_2F$ are both isosceles. And since two of their angles and
+two of their sides, namely $\\angle Y\_1X\_1F$ and $\\angle Y\_2X\_2F$ and 
+$X\_1F$ and $X\_2F$ are equal, then $\\triangle X\_1Y\_1F \\cong \\triangle 
+X\_2Y\_2F$. Therefore it is clear that $Y\_1X\_1 = Y\_2X\_2$. $\blacksquare$
 
 Now you might rightfully protest and say that this isn't enough. "There are many
 things other than parabolas which are symmetric", I hear you say. So now we'll
@@ -97,15 +97,15 @@ Since we determined that the vertex is the midpoint of the line connecting the
 focus with the axis of symmetry, then it should be clear that in our present
 construction the focus is $F = (0,1)$. Let $P = (x,y)$ be on the parabola. Then
 from our definition we know that $y + 1 = PF$ which is equal to
-$\sqrt{|x|^2 + |y-1|^2}$. So we obtain the equation
+$\\sqrt{|x|^2 + |y-1|^2}$. So we obtain the equation
 $$
-y + 1 = \sqrt{|x|^2 + |y-1|^2}
+y + 1 = \\sqrt{|x|^2 + |y-1|^2}
 $$
 Which we intend to solve for $y$. So square both sides
 $$
 y\^2 + 2y + 1 = x\^2 + y\^2 - 2y + 1
 $$
-And by isolating for $y$ we obtain: $ y = \frac{1}{4}x\^2 $. Q.E.D.
+And by isolating for $y$ we obtain: $ y = \\frac{1}{4}x\^2 $. $\\blacksquare$
 
 By this point you should truly be convinced of the equality of these two 
 defintions. And if not, then feel free to try Newton's lemma by using algebraic
@@ -144,7 +144,7 @@ values of the length $FV$.* (From the AMC 12)
   And so the solution to our problem is the sum of the two roots of the
   equation $-3x\^2 + 40x - 41$. This is done easily via Vieta's formulas and
   more tediously via simply finding the roots. In the end the answer is 
-  $\frac{40}{3}$. Q.E.D.
+  $\\frac{40}{3}$. Q.E.D.
 </details>
 
 Now let's show a really cool property of parabolas that we'll end up using later
@@ -161,15 +161,15 @@ proof for $y = x\^2$ because I was too lazy to do the general version. Let $P$
 be a point on the aforementioned parabola, so $P = (a, a\^2)$ for some $a$. As
 ![](theorem3.png)
 such, slope of the tangent at $P$ is $2a$. For this parabola, the focus, $F$,
-is at point $(0, \frac{1}{4})$ and the intersection of the perpendicular from 
-$P$ and the directrix is $(a, -\frac{1}{4})$. Therefore slope of $FD$ is
+is at point $(0, \\frac{1}{4})$ and the intersection of the perpendicular from 
+$P$ and the directrix is $(a, -\\frac{1}{4})$. Therefore slope of $FD$ is
 $$
-\frac{\frac{1}{4} - \frac{-1}{4}}{0 - a} = -\frac{1}{2a}
+\\frac{\\frac{1}{4} - \\frac{-1}{4}}{0 - a} = -\\frac{1}{2a}
 $$
 And since the slopes of $AC$ and the tangent at $P$ are negative reciprocals of
 each other, then they are perpendicular. And since $FP = PD$ and the tangent
 is perpendicular to $FD$, then the tangent bisects $FD$ and as such 
-$\angle FPA = \angle DPA$. Which is what we wanted to show. Q.E.D.
+$\\angle FPA = \\angle DPA$. Which is what we wanted to show. Q.E.D.
 
 ## Back to Newton
 
@@ -199,16 +199,16 @@ tangency.*
 
 ![Goals 1 and 2](lemma14-1.png)
 Let $d$ be the directrix of our parabola $S$ be the focus, and $P$, be the 
-point of tangency. As such, $SP = PI$ where $PI \perp d$.
-Let $N$ be a point on $MP$ such that $SN \perp MP$. Notice that by the 
-reflective property, $\angle IPN = \angle SPN$. Therefore 
-$\triangle PNI \cong \triangle PNS$ since they share $PN$. And since we said
-that $SN \perp MP$, then both $\angle INP$ and $\angle SNP$ are equal to 
-$90^\circ$ making $I$, $N$ and $S$ collinear. This also implies that $SN = IN$.
+point of tangency. As such, $SP = PI$ where $PI \\perp d$.
+Let $N$ be a point on $MP$ such that $SN \\perp MP$. Notice that by the 
+reflective property, $\\angle IPN = \\angle SPN$. Therefore 
+$\\triangle PNI \\cong \\triangle PNS$ since they share $PN$. And since we said
+that $SN \\perp MP$, then both $\\angle INP$ and $\\angle SNP$ are equal to 
+$90^\\circ$ making $I$, $N$ and $S$ collinear. This also implies that $SN = IN$.
 
-We said that $IP \perp d$, this tells us $IP \parallel MS$, which also forms 
-right angles with $d$. As such $\triangle MNS \cong \triangle IPN$ which in turn
-is congruent to $\triangle PNS$. Therefore, $MN = NP$ and $MS = SP$. Q.E.D.
+We said that $IP \\perp d$, this tells us $IP \\parallel MS$, which also forms 
+right angles with $d$. As such $\\triangle MNS \\cong \\triangle IPN$ which in 
+turn is congruent to $\\triangle PNS$. Therefore, $MN = NP$ and $MS = SP$. Q.E.D.
 
 Well this wasn't too bad. We've already achieved two of our three goals:
 
@@ -226,19 +226,19 @@ All we need to do now is to achieve the final goal and we'll be done.
 then the distance between $M$ and the vertex is equal to the distance between
 the vertex and the perpendicular dropped from the point of tangency.*
 
-Drop a perpendicular from $P$ to $O$.  Notice that since $\angle PNS$ and 
-$\angle POS$ are both right angles, then $NPOS$ is a cyclic quadrilateral. As 
-such, $\angle SON = \angle NPS$ which is in turn equal to $\angle NSM$.
+Drop a perpendicular from $P$ to $O$.  Notice that since $\\angle PNS$ and 
+$\\angle POS$ are both right angles, then $NPOS$ is a cyclic quadrilateral. As 
+such, $\\angle SON = \\angle NPS$ which is in turn equal to $\\angle NSM$.
 %{(Note "In cyclic quadrilaterals, the angle between any side and a diagonal is
 equal to the angle between the opposite side and diagonal.")}%
 It should be clear now that $MN = NO$.
 
 ![](lemma14-2.png)
 
-By this point the clear next step is to show that $\triangle MNA \cong 
-\triangle NOA$. However, this is only possible if $NA \perp OM$. However, we 
+By this point the clear next step is to show that $\\triangle MNA \\cong 
+\\triangle NOA$. However, this is only possible if $NA \\perp OM$. However, we 
 don't know if this is true yet. Well whatever. We'll just assume it for now. As 
-such, $\triangle MAN \cong \triangle NOA$ and so $MA = AO$. Q.E.D.
+such, $\\triangle MAN \\cong \\triangle NOA$ and so $MA = AO$. Q.E.D.
 
 Well that's no good. We've technically ticked off goal three, but we've added
 another goal in its stead!
@@ -255,13 +255,13 @@ Well we have nothing better to do so might as well try to finish the last goal.
 *The perpendicular dropped from $N$ meets the axis of symmetry at the
 vertex.*
 
-Back in goal 1 we showed that $\triangle PIN \cong \triangle PNS \cong 
-\triangle MNS$ by using the reflective property of the parabola. This means that
-$PIMS$ is a rhombus. A consequence of this is that $IE = NA$ where $E$ is a
-point on $d$ such that $NE \perp IC$ and $A$ is a point on $MS$ such that $NA
-\perp MS$. By using goal 1 we may also deduce that $IN = NS$, as such $\triangle
-IEN \cong \triangle NAS$. Therefore $CA = EN = AS$, meaning that $A$ is the
-midpoint of $C$ and $S$, which is the vertex.
+Back in goal 1 we showed that $\\triangle PIN \\cong \\triangle PNS \\cong 
+\\triangle MNS$ by using the reflective property of the parabola. This means 
+that $PIMS$ is a rhombus. A consequence of this is that $IE = NA$ where $E$ is a
+point on $d$ such that $NE \\perp IC$ and $A$ is a point on $MS$ such that $NA
+\\perp MS$. By using goal 1 we may also deduce that $IN = NS$, as such 
+$\\triangle IEN \\cong \\triangle NAS$. Therefore $CA = EN = AS$, meaning that 
+$A$ is the midpoint of $C$ and $S$, which is the vertex.
 ![](lemma14-3.png)
 
 Now we can finally tick off the last goal.
@@ -279,10 +279,10 @@ point of contact, and from the principal vertex of the figure.*
 
 ![](lemma14.png)
 Since $MS = SP$,
-$MN = NP$, and $MA = AO$, then $\triangle MNS$ is congruent to $\triangle SNP$.
-The triangle $\triangle NAS$, by virtue of sharing $\angle NSA$ with 
-$\triangle MNS$ and having a right angle at $\angle NAS$ is similar to 
-$\triangle MNS$ and $\triangle SNP$. Therefore $PS$ is to $SN$, as $SN$ is to
+$MN = NP$, and $MA = AO$, then $\\triangle MNS$ is congruent to $\\triangle SNP$.
+The triangle $\\triangle NAS$, by virtue of sharing $\\angle NSA$ with 
+$\\triangle MNS$ and having a right angle at $\\angle NAS$ is similar to 
+$\\triangle MNS$ and $\\triangle SNP$. Therefore $PS$ is to $SN$, as $SN$ is to
 $NA$. This completes our proof of lemma XIV of Newton's Principia. Q.E.D.
 
 %{(Footnotes)}%

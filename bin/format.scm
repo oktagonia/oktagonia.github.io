@@ -1,4 +1,4 @@
-#!/usr/bin/guile -s
+#!/usr/bin/env guile -s
 !#
 (load "stem.scm")
 (load "base.scm")
