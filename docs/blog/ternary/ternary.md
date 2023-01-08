@@ -11,7 +11,7 @@ of booleans:
 And these are some common logical connectives:
 
 <center>
-Connective                  Implementation
+Connective              Implementation
 ----------------------- --------------------------------
 Negation                $\\neg x = x\\mathbf{F}\\mathbf{T}\\mathbf{X}$
 Conjunction             $x\\land y = xyx(y\\mathbf{X}\\mathbf{F}\\mathbf{X})$
