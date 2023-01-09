@@ -285,4 +285,8 @@ $\\triangle MNS$ and having a right angle at $\\angle NAS$ is similar to
 $\\triangle MNS$ and $\\triangle SNP$. Therefore $PS$ is to $SN$, as $SN$ is to
 $NA$. This completes our proof of lemma XIV of Newton's Principia. Q.E.D.
 
+
 %{(Footnotes)}%
+
+With many thanks to discord user `NO MORE ALGEBRA` for giving me crucial 
+feedback on this writeup.
