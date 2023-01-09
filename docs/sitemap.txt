@@ -1,0 +1,8 @@
+https://oktagonia.github.io
+https://oktagonia.github.io/blog/blog.html
+https://oktagonia.github.io/blog/lemma14/lemma14.html
+https://oktagonia.github.io/blog/ternary/ternary.html
+https://oktagonia.github.io/archive/archive.html
+https://oktagonia.github.io/archive/lambda-notes.pdf
+https://oktagonia.github.io/archive/lambda-pres.pdf
+https://oktagonia.github.io/archive/fib-triangle.pdf
