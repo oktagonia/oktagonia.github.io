@@ -37,20 +37,11 @@
 (define (Footnotes)
   (define (format note c) 
     `(li (p (@ (id ,(string-append "footnote-" (number->string c)))) ,note)))
-  `((br "") (br "") (br "") (b "Notes") 
+  `((p (b "Notes") )
     ,(let loop ((l '(ol)) (notes *footnotes*) (c 1))
        (if (null? notes) l
          (loop (append l (list (format (car notes) c)))
                (cdr notes) (+ c 1))))))
-
-;; System to compile for github
-(define path
-  (let ((argc (command-line)))
-    (if (>= 3 (length argc))
-        (cond ((string=? (caddr argc) "github") "")
-              ((string=? (caddr argc) "host")
-               "/home/kiand/fun/website")
-        (error "wrong arguments to format.scm" argc)))))
 
 (define (align-img img dir)
   `(img (@ (src ,img) (style "max-width: 50%") (align ,dir))))

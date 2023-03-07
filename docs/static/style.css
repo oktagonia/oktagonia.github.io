@@ -8,6 +8,7 @@ a:hover { color: green; text-decoration: underline; }
 
 pre {
     font-size: 11pt;
+    line-height: 1.1;
 }
 
 .center {
@@ -17,13 +18,8 @@ pre {
 }
 
 h1, h2, h3, h4, h5, h6 {
-    margin: 3em 0 1em;
     font-weight: normal;
-    line-height: 1.5;
-}
-
-h2 {
-    font-style: italic;
+    line-height: 1.2;
 }
 
 
@@ -44,14 +40,14 @@ body {
 body {
     width: 87.5%;
     margin: auto;
-    background-color: #fffff9;
+    background-color: #fffff8;
     color: #111;
-    max-width: 620px;
+    max-width: 55ch;
 
-    font-family: schola, serif;
+    font-family: Verdana, schola, serif;
     hyphens: auto;
-    line-height: 1.7rem;
-    font-size: 1.1rem;
+    line-height: 1.5rem;
+    font-size: 11pt;
 }
 
 img {
