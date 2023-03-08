@@ -10,12 +10,10 @@ of booleans:
 
 And these are some common logical connectives:
 
-<center>
-Connective              Implementation
------------------------ --------------------------------
-Negation                $\\neg x = x\\mathbf{F}\\mathbf{T}\\mathbf{X}$
-Conjunction             $x\\land y = xyx(y\\mathbf{X}\\mathbf{F}\\mathbf{X})$
-Disjunction             $x\\lor y = x\\mathbf{T}y(y\\mathbf{T}\\mathbf{X}\\mathbf{X})$
-Łukasiewicz implication $x \\to y = xy\\mathbf{T}(y\\mathbf{T}\\mathbf{X}\\mathbf{T})$
-Kleene implication      $x \\to y = \\neg x \\lor y$
-</center>
+Connective              | Implementation
+----------------------- | --------------------------------
+Negation                | $\\neg x = x\\mathbf{F}\\mathbf{T}\\mathbf{X}$
+Conjunction             | $x\\land y = xyx(y\\mathbf{X}\\mathbf{F}\\mathbf{X})$
+Disjunction             | $x\\lor y = x\\mathbf{T}y(y\\mathbf{T}\\mathbf{X}\\mathbf{X})$
+Łukasiewicz implication | $x \\to y = xy\\mathbf{T}(y\\mathbf{T}\\mathbf{X}\\mathbf{T})$
+Kleene implication      | $x \\to y = \\neg x \\lor y$

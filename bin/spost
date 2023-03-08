@@ -1,7 +1,8 @@
 #!/usr/bin/env bash
 
 cat $(pwd)/bin/template.html
-pandoc -f markdown-tex_math_dollars $1
+# pandoc -f markdown-tex_math_dollars $1
+markdown_py -x tables $1
 
 echo "
 <br>  
