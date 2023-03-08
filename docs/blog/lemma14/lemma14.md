@@ -90,7 +90,7 @@ these two definitions really are equivalent.
 
 <center><b>Theorem 2</b></center>
 *Let the vertex of the parabola be placed at the origin and let the line $y=-1$ 
-be the directrix. The function that traces this parabola is $y = ax\^2$ for 
+be the directrix. The function that traces this parabola is $y = ax^2$ for 
 some $a$.*
 
 Since we determined that the vertex is the midpoint of the line connecting the
@@ -103,9 +103,9 @@ y + 1 = \\sqrt{|x|^2 + |y-1|^2}
 $$
 Which we intend to solve for $y$. So square both sides
 $$
-y\^2 + 2y + 1 = x\^2 + y\^2 - 2y + 1
+y^2 + 2y + 1 = x^2 + y^2 - 2y + 1
 $$
-And by isolating for $y$ we obtain: $ y = \\frac{1}{4}x\^2 $. $\\blacksquare$
+And by isolating for $y$ we obtain: $ y = \\frac{1}{4}x^2 $. $\\blacksquare$
 
 By this point you should truly be convinced of the equality of these two 
 defintions. And if not, then feel free to try Newton's lemma by using algebraic
@@ -121,30 +121,30 @@ values of the length $FV$.* (From the AMC 12)
   <summary>
     Show solution
   </summary>
-  <center>![](exercise1.png)</center>
+  <center><img src='exercise1.png'></center>
   After drawing the figure described in the question, draw the directrix of the
   parabola and drop a perpendicular from $A$ onto the directrix at $C$. Let 
   $x = FV$ and notice that
-  $$AV\^2 - (AC - x)\^2 = AF\^2 - (AC - 2x)\^2$$
+  $$AV^2 - (AC - x)^2 = AF^2 - (AC - 2x)^2$$
   Now we can solve this equation for $x$. First we substitute the values of 
   $AF$, $AV$, and since $AC = AF$ by the definition of the parabola, we 
   substitute that as well.
   $$
-  441 - (20 - x)\^2 = 400 - (20 - 2x)\^2
+  441 - (20 - x)^2 = 400 - (20 - 2x)^2
   $$
   By rearranging we obtain
   $$
   \begin{aligned}
-  41 &= (20 - x)\^2 - (20 - 2x)\^2 \\\\
-     &= [(20 - x) + (20 - 2x)][(20 - x) - (20 - 2x)] \\\\
-     &= x(40 - 3x) \\\\
-     &= 40x - 3x\^2
+  41 &= (20 - x)^2 - (20 - 2x)^2 \\
+     &= [(20 - x) + (20 - 2x)][(20 - x) - (20 - 2x)] \\
+     &= x(40 - 3x) \\
+     &= 40x - 3x^2
   \end{aligned}
   $$
   And so the solution to our problem is the sum of the two roots of the
-  equation $-3x\^2 + 40x - 41$. This is done easily via Vieta's formulas and
+  equation $-3x^2 + 40x - 41$. This is done easily via Vieta's formulas and
   more tediously via simply finding the roots. In the end the answer is 
-  $\\frac{40}{3}$. Q.E.D.
+  $\frac{40}{3}$. Q.E.D.
 </details>
 
 Now let's show a really cool property of parabolas that we'll end up using later
@@ -157,8 +157,8 @@ parallel line to the axis of symmetry at $P$ is equal to the angle made by the
 line drawn from the focus to $P$ and the tangent.*
 
 I tried to prove this via synthetic methods, but I failed so here is an analytic
-proof for $y = x\^2$ because I was too lazy to do the general version. Let $P$
-be a point on the aforementioned parabola, so $P = (a, a\^2)$ for some $a$. As
+proof for $y = x^2$ because I was too lazy to do the general version. Let $P$
+be a point on the aforementioned parabola, so $P = (a, a^2)$ for some $a$. As
 ![](theorem3.png)
 such, slope of the tangent at $P$ is $2a$. For this parabola, the focus, $F$,
 is at point $(0, \\frac{1}{4})$ and the intersection of the perpendicular from 
