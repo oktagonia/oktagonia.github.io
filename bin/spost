@@ -5,12 +5,7 @@ cat $(pwd)/bin/template.html
 markdown_py -x tables $1
 
 echo "
-<br>  
-<br>  
-<br>  
-<br>  
-<br>  
-<br>  
+</div>
 </body>
 </html>
 "
