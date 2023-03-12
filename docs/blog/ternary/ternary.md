@@ -61,7 +61,9 @@ The way ternary logic deals with the principle of explosion is by introducing a 
 value—$\mathbf{X}$, meaning *both true and false*—besides the usual *true* and *false*.
 Then by cleverly defining the usual logical relations, we can obtain a logic which allows
 its user to have contradictictory notions without being punished by Aristotle. The one being
-shown here is Kleene-Priest incantation. Firstly, we allowed $\mathbf{T}$ and $\mathbf{X}$ to
+shown here is Kleene-Priest%{(Note "Priest's <i>The Logic of Paradox</i> is a great paper
+and he (obviously) goes into a lot more detail than I do here. So go read it."}% incantation.
+Firstly, we allowed $\mathbf{T}$ and $\mathbf{X}$ to
 be *designated* values. That is, we are allowed to use a sentence for further deduction if
 its truth-value is either $\mathbf{X}$ or $\mathbf{T}$. Then we define the common logical
 relations as follows:
