@@ -2,6 +2,9 @@ https://oktagonia.github.io
 https://oktagonia.github.io/blog/blog.html
 https://oktagonia.github.io/blog/lemma14/lemma14.html
 https://oktagonia.github.io/blog/ternary/ternary.html
+https://oktagonia.github.io/blog/recur_triangle/recur.html
+https://oktagonia.github.io/blog/optics/optics.html
+https://oktagonia.github.io/blog/lanlifshitz_1/notes.html
 https://oktagonia.github.io/archive/archive.html
 https://oktagonia.github.io/archive/lambda-notes.pdf
 https://oktagonia.github.io/archive/lambda-pres.pdf

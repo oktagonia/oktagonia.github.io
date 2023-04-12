@@ -1,14 +1,24 @@
-code{ white-space: pre-wrap;}
-span.smallcaps{font-variant: small-caps;}
-span.underline{text-decoration: underline;}
+code { white-space: pre-wrap; }
+span.smallcaps {font-variant: small-caps;}
+span.underline {text-decoration: underline;}
 div.column{display: inline-block; vertical-align: top; width: 50%;}
 
 a { color: darkgreen; text-decoration: none; }
 a:hover { color: green; text-decoration: underline; }
 
-pre {
+/* pre {
     font-size: 11pt;
-    line-height: 1.1;
+    line-height: 1;
+} */
+
+pre {
+    page-break-inside: avoid;
+    font-family: monospace;
+    line-height: 1;
+    overflow: auto;
+    padding-left: 1.5em;
+    display: block;
+    word-wrap: break-word;
 }
 
 /* plz update this */
@@ -113,38 +123,32 @@ and (max-device-width : 568px) {
 
 }
 
-/* FONT FACE */
-@font-face {
-    font-family: schola;
-    src: url('texgyreschola-bold-webfont.woff2') format('woff2'),
-         url('texgyreschola-bold-webfont.woff') format('woff');
-    font-weight: bold;
-    font-style: normal;
-}
+@media (prefers-color-scheme: dark) {
+    img {
+        opacity: .75;
+        transition: opacity .5s ease-in-out;
+    }
+    body {
+        width: 100%;
+        height: 100%;
+        margin: auto;
+        background-color: black /* #fffff8 */;
+        color: #fafafa;
+        max-width: 65ch;
 
-@font-face {
-    font-family: schola;
-    src: url('texgyreschola-bolditalic-webfont.woff2') format('woff2'),
-         url('texgyreschola-bolditalic-webfont.woff') format('woff');
-    font-weight: bold;
-    font-style: italic;
-
-}
-
-@font-face {
-    font-family: schola;
-    src: url('texgyreschola-italic-webfont.woff2') format('woff2'),
-         url('texgyreschola-italic-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: italic;
-
-}
-
-@font-face {
-    font-family: schola;
-    src: url('texgyreschola-regular-webfont.woff2') format('woff2'),
-         url('texgyreschola-regular-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-
+        font-family: verdana, schola, serif;
+        hyphens: auto;
+        line-height: 1.3rem;
+        font-size: 11pt;
+    }
+    #text {
+        background-color: black;
+        padding: 15px;
+        height: 100%;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        border: 1px solid #fafafa;
+    }
+    a { color: DodgerBlue; text-decoration: none; }
+    a:hover { color: blue; text-decoration: underline; }
 }
