@@ -207,9 +207,9 @@ $P$ does not depend on the direction.
 
 In particular, our assumptions are that
 
-1. **Time is homogenous:** The time axis is homogenous with respect to the 
+1. **Time is homogeneous:** The time axis is homogeneous with respect to the 
 Lagrangian,
-2. **Space is homogenous:** The spatial coordinate system is homogenous
+2. **Space is homogeneous:** The spatial coordinate system is homogeneous
 with respect to the Lagrangian,
 3. **Space is isotropic:** The spatial coordinate system is isotropic with
 respect to the Lagrangian.
