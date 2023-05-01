@@ -491,7 +491,7 @@ differential trickery (hint: product rule), it should be clear that
 $$
 2T = \frac{\d}{\d t}\sum_{i=1}^n\vec{p}\_i\cdot\vec{r}\_i - \sum_{i=1}^n\dot{\vec{p}}\_i\cdot\vec{r}\_i
 $$
-One we substitute this into (1), we should care to notice that $\sum\vec{p}\cdot\vec{r}$
+Once we substitute this into (1), we should care to notice that $\sum\vec{p}\cdot\vec{r}$
 is always finite in a finite region of space. As such
 $$
 2\langle T \rangle 
