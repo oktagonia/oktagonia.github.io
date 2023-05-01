@@ -1,15 +1,17 @@
 %{(Post "Notes on Landau and Lifshitz: Conservation Laws" "April 2023")}%
-In this second installment, we'll go over the second chapter of the
-first volume of Landau and Lifshitz—conservation laws. As anyone with
-a knowledge of physics knows, these are very important laws, despite
-having deceptively simple proofs. So much so that I practically 
-stumbled upon the proof of conservation of momentum by accident. The
-key idea of this chapter seems to be that to each invariance—i.e.,
-homogeneity, isotropy, etc.—there corresponds a law of conservation.
-This makes sense on an intuitive level. For instance, the homogeneity
-of time is mathematically stated as $\partial L/\partial t = 0$. It's
-understandable if we use this fact in a long of chain of derivatives to
-deduce that $\d C/\d t = 0$ wherein $C$ would be a conserved quantity.
+In this second installment (here's the 
+[first installment](../lanlifshitz_1/notes.html)), we'll go over the
+second chapter of the first volume of Landau and Lifshitz—conservation 
+laws. As anyone with a knowledge of physics knows, these are very
+important laws, despite having deceptively simple proofs. So much so 
+that I practically stumbled upon the proof of conservation of 
+momentum by accident. The key idea of this chapter seems to be that to 
+each invariance—i.e., homogeneity, isotropy, etc.—there corresponds a 
+law of conservation.  This makes sense on an intuitive level. For 
+instance, the homogeneity of time is mathematically stated as 
+$\partial L/\partial t = 0$. It's understandable if we use this fact 
+in a long of chain of derivatives to deduce that $\d C/\d t = 0$ wherein 
+$C$ would be a conserved quantity.
 
 1. [Energy](#Energy)
 2. [Momentum](#mom)
