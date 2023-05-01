@@ -9,8 +9,8 @@ and its past time I finally cleaned it up and published it.
 Geometrical optics maybe one of the most delightful branches of study one
 encounters while only having an elementary mathematical education. With a very 
 small number of axioms and some knowledge of geometry it is possible to deduce a
-great number theorems regarding the motion and propagation of light. This 
-article is my personal attempt at deriving those propositions which pertain to
+great number theorems regarding the motion and propogation of light. This 
+article is my personal attempt at deriving those propostions which pertain to
 mirrors, lenses, and refraction by only assuming Fermat's principle of least 
 time.
 
@@ -18,16 +18,16 @@ time.
 different depending on its medium of travel.
 
 **Axiom** *(Principle of Least Time)*. The path taken by light between 
-points A and B is the path that is traveled in the least time.
+points A and B is the path that is travelled in the least time.
 
-Assuming that light travels in rays, then we can deduce that in a uniform 
-medium, light travels in straight lines. Let $\varphi$ be the length of the 
+Assuming that light travells in rays, then we can deduce that in a uniform 
+medium, light travells in straight lines. Let $\varphi$ be the length of the 
 path taken by the light ray from $A$ to $B$ and $\nu$ be the velocity of light in 
 the medium, this being uniform across the path. Hence the time, as a function
 of the path length, is $\frac{\varphi}{\nu}$. Since $\nu$ is constant, then
 the minimum travel time is achieved when the path length is smallest. And since
 we are working in a Euclidean space, the path of least length between two points
-is a straight line. Therefore, in a uniform medium, light travels in a straight
+is a straight line. Therefore, in a uniform medium, light travells in a straight
 line.
 
 A question that naturally comes to mind at this moment is the path of light 
@@ -35,11 +35,11 @@ traversing the boundary between two mediums. We know that if the velocity is
 the same in both then light travels in straight lines, however what if these
 media have differing velocities?
 
-Consider two media, with velocities $v_1$ and $v_2$ respectively, separated
+Consider two media, with velocities $v_1$ and $v_2$ respectively, seperated
 by the line $l$. Inside the medium on the top, light takes the path $AB$; and
 on the bottom it takes the path $BC$. By the previous corollary, we know that
 $AB$ and $BC$ are straight lines, however we do not know any specifics about the
-path $ABC$. We may begin to gain some understanding when we have successfully
+path $ABC$. We may begin to gain some understanding when we have succesfully
 found the path of least time
 
 **Theorem** *(Snell's Law)*. When light traverses the boundary of two media,
@@ -73,7 +73,7 @@ This principle, known as *Snell's Law* or the *Law of Refraction* is
 experimentally verified every single day. For instance, when a straw is inserted
 in a cup of water, we can observe the difference between the angle of incidence
 and the angle of refraction. Hence the speed of light differs in water than in
-air or a vacuum. The blurry images seen above hot objects is also a consequence
+air or a vaccuum. The blurry images seen above hot objects is also a consequence
 of this principle, since the speed of light is different in the pockets of hot
 and cool air that circulate around and above hot objects.
 
@@ -163,7 +163,7 @@ parabola by letting $F_1F_2$ approach infinity.
 A more common (synthetic) definition for a parabola is a curve with a focus $F$
 such that for any point $P$ on the curve, $PF + PL$ is contant where $PL$ is the
 shortest distance from $P$ to the directrix (a perpendicular to the axis of the
-parabola). However the definition given above is much more convenient for the
+parabola). However the definition given above is much more convienient for the
 purposes of this article as it retains all the properties of an ellipse.
 
 The previous lemma might have sparked some inspiration in the mind of the 
@@ -209,5 +209,5 @@ the focus, $F_1$, of the parabola. Which is what we wanted to show.
 So far we have discussed the *direction* of light after its reflection by a 
 mirror. We, however, have not discussed how images would *appear* after being
 reflected by mirrors. In short, we have the dynamics of light figured out, but
-we have left the kinematics untouched. I intend to fix this lack sometime in the
+we have left the kinematics untouched. I inted to fix this lack sometime in the
 near future.

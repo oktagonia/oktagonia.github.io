@@ -13,16 +13,16 @@ cause the humans to think that there were creatures like dinosaurs millions of y
 before Adam and Eve. In other words, the theory of the paleontologist-Satan makes
 the exact same predictions as the theory of paleontology; the only difference
 being that propositions of the first start with "To fool us, Satan did ___." Due
-do this effect, no experiment can tell us which one is false. All the observabale
+do this effect, no experiment can tell us which one is false. All the observable
 implications of the two are identical, and the non-observable implications are, well,
 unobservable %{(Note "Satan is assumed to not show his face around the Earth after
 the Jesus incident. Read <i>Paradise Lost</i> for more information.")}%. So how do
 we pick which one to believe in?
 
 Having introduced this dilemma, Scott then goes over some of the
-various unsatisfactory soltions before presenting the standard
+various unsatisfactory solutions before presenting the standard
 rationalist argument: the theory of paleontology is simpler, so it is
-better. This inovcation of Occam's razor is not entirely obvious—it's
+better. This invocation of Occam's razor is not entirely obvious—it's
 certainly not obvious to William of Occam. But I do think that it makes
 sense. The paleontologist-Satan theory is the paleontology theory *plus*
 some of other stuff. This already makes it less likely than the normal
@@ -38,7 +38,7 @@ As such, probability theory tells us that the simpler theory—paleontology—is
 more likely to be true than the more complex theory of the
 paleontologist-Satan.
 
-Well that settles it, right? I don't think so. This whole probability jibber
+Well that settles it, right? I don't think so. This whole probability gibber
 jabber is perfectly true, but it's not especially relevant. If I intend to 
 actually use paleontology to do something, it makes no difference if I use
 one or the other. And since paleontology has very few practical applications,
@@ -50,7 +50,7 @@ direct involvement. If cotton is lit after being put into contact
 with a candle, it's not because of the candle that the cotton catches fire;
 but rather because God willed the candle to be lit in this particular instant.
 In this view, if nature seems to follow certain laws, then it is only because
-God is consistent rather than arbitrary. Though everyonce in a while, when a miracle
+God is consistent rather than arbitrary. Though every once in a while, when a miracle
 is necessary, God will break his own rules and will something other than what
 we have come to expect.
 
@@ -58,7 +58,7 @@ Suppose that Solomon is of this view and that—for whatever reason—he wants t
 build a space temple. After asking God very nicely if He could intervene and
 help his prophet out, and being rejected, he calls a meeting of the Royal 
 Aeronautics and Space Agency of Judah. In this meeting, Solomon and his
-biblical friends use the theory of God-Likes-General-Reletivity—GLGR for
+biblical friends use the theory of God-Likes-General-Relativity—GLGR for
 short—to make their plans for the space temple. The conclusions of GLGR are
 identical to the conclusions of Einstein's theory of general-relativity—hereafter
 known as GR. The only differences between GLGR and GR is that the propositions of 
@@ -92,7 +92,7 @@ your own to ask Solomon: does he prefer GLGR to GR? And if so, why does he?
 His response is that he does indeed prefer GLGR to GR, and he does so because
 of his religious beliefs. That doesn't really help you, so you ask him about why
 he believes in his religion. If he doesn't execute you for blasphemy, then he'll
-sigh. You're the $n$th time traveller that's asked him this and he's tired of it.
+sigh. You're the $n$th time traveler that's asked him this and he's tired of it.
 His prepackaged response is that he has been in communication with God—being a 
 prophet and all—and due to this he is absolutely convinced of all the doctrines of
 Judaism. He, however, cannot give you these pieces of empirical evidence because he 
@@ -100,7 +100,7 @@ can't convince God to talk to you nor will you take his word for it. "And beside
 Solomon continues, "my religion is obviously the best! The people who follow its
 rules rigorously are prosperous, just like my kingdom. We just put a space temple
 into orbit in 940 BCE!" %{(Note "He knows about the Christian era because of the
-sheer number of time travellers he has to deal with.")}%
+sheer number of time travelers he has to deal with.")}%
 
 Solomon has indirectly answered your question. The reason he prefers GLGR
 is because of his religion, and he believes in his religion because he believes

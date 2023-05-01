@@ -1,59 +1,7 @@
-<!doctype html>
-<html lang=en-US>
-<head>
-  <meta charset="utf-8">
-  <link href='/static/style.css' rel='stylesheet'>
-  <link href='/Users/kiand/fun/oktagonia.github.io/docs/static/style.css' rel='stylesheet'>
-  <link href='/home/kiand/fun/oktagonia.github.io/docs/static/style.css' rel='stylesheet'>
-  <link rel="stylesheet" href="https://use.typekit.net/cnp8pzd.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/aaaakshat/cm-web-fonts@latest/fonts.css">
+%{(Post "Comparing Empirically Identical Theories" "April 2023")}%
 
-  <title>Hilbert's Lamentations</title>
-  <!--
-  <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript">
-  </script>
-  <script type='text/x-mathjax-config'>
-    MathJax.Hub.Config({
-      tex2jax: {
-        inlineMath: [['$','$']],
-        processEscapes: true
-      }
-    });
-  </script>
-  -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.2/dist/katex.min.css" integrity="sha384-bYdxxUwYipFNohQlHt0bjN/LCpueqWz13HufFEV1SUatKs1cm4L6fFgCi1jT643X" crossorigin="anonymous">
-<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.2/dist/katex.min.js" integrity="sha384-Qsn9KnoKISj6dI8g7p1HBlNpVx0I8p1SvlwOldgi3IorMle61nQy4zEahWYtljaz" crossorigin="anonymous"></script>
-<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.2/dist/contrib/auto-render.min.js" integrity="sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05" crossorigin="anonymous"></script>
-<script>
-    document.addEventListener("DOMContentLoaded", function() {
-        renderMathInElement(document.body, {
-          // customised options
-          // • auto-render specific keys, e.g.:
-          delimiters: [
-              {left: '$$', right: '$$', display: true},
-              {left: '$', right: '$', display: false},
-              {left: '\\(', right: '\\)', display: false},
-              {left: '\\[', right: '\\]', display: true}
-          ],
-          throwOnError : false,
-        });
-    });
-</script>
-  <meta name='viewport' content="width=device-width,initial-scale=1.0">  
-  <meta charset="utf-8"/>
-</head>
-<body>
-<div id='text'>
-$
-\gdef\vec#1{\mathbf{#1}}
-\gdef\d{\text{d}}
-$
-    <!-- <script src="https://www.geogebra.org/apps/deployggb.js"></script> -->
-<h1>Comparing Empirically Identical Theories</h1>
-<p>April 2023 <br></br></p>
-<p>I recently read a relatively new Slate Star Codex post titled
-<a href="https://slatestarcodex.com/2019/11/06/building-intuitions-on-non-empirical-arguments-in-science/"><em>Building Intuitions on Non-Empirical Arguments in Science</em></a>
+I recently read a relatively new Slate Star Codex post titled
+[*Building Intuitions on Non-Empirical Arguments in Science*](https://slatestarcodex.com/2019/11/06/building-intuitions-on-non-empirical-arguments-in-science/)
 in which Scott Alexander asks a very interesting question: if the
 observational implications of two theories are identical, then how
 do we pick which one to believe in? Scott introduces this dilemma
@@ -65,16 +13,18 @@ cause the humans to think that there were creatures like dinosaurs millions of y
 before Adam and Eve. In other words, the theory of the paleontologist-Satan makes
 the exact same predictions as the theory of paleontology; the only difference
 being that propositions of the first start with "To fool us, Satan did ___." Due
-do this effect, no experiment can tell us which one is false. All the observable
+do this effect, no experiment can tell us which one is false. All the observabale
 implications of the two are identical, and the non-observable implications are, well,
-unobservable <a href="#footnote-1"><sup id="source-1">[1]</sup></a>. So how do
-we pick which one to believe in?</p>
-<p>Having introduced this dilemma, Scott then goes over some of the
-various unsatisfactory solutions before presenting the standard
+unobservable %{(Note "Satan is assumed to not show his face around the Earth after
+the Jesus incident. Read <i>Paradise Lost</i> for more information.")}%. So how do
+we pick which one to believe in?
+
+Having introduced this dilemma, Scott then goes over some of the
+various unsatisfactory soltions before presenting the standard
 rationalist argument: the theory of paleontology is simpler, so it is
-better. This invocation of Occam's razor is not entirely obvious—it's
+better. This inovcation of Occam's razor is not entirely obvious—it's
 certainly not obvious to William of Occam. But I do think that it makes
-sense. The paleontologist-Satan theory is the paleontology theory <em>plus</em>
+sense. The paleontologist-Satan theory is the paleontology theory *plus*
 some of other stuff. This already makes it less likely than the normal
 theory of paleontology. In probability parlance, if the paleontologist
 theory is $\Pi$ and the paleontologist-Satan theory is $\Sigma$, then
@@ -83,42 +33,47 @@ $$P(\Sigma | \Pi) = \frac{P(\Pi | \Sigma)P(\Sigma)}{P(\Pi)}.$$
 But since we know that the paleontologist-Satan theory already has
 the paleontologist theory built in, then $P(\Pi | \Sigma) = 1$. So
 $$P(\Pi)P(\Sigma|\Pi) = P(\Sigma).$$
-And since all of these numbers are smaller than $1$, then $P(\Pi) &gt; P(\Sigma)$.
+And since all of these numbers are smaller than $1$, then $P(\Pi) > P(\Sigma)$.
 As such, probability theory tells us that the simpler theory—paleontology—is
 more likely to be true than the more complex theory of the
-paleontologist-Satan.</p>
-<p>Well that settles it, right? I don't think so. This whole probability gibber
+paleontologist-Satan.
+
+Well that settles it, right? I don't think so. This whole probability jibber
 jabber is perfectly true, but it's not especially relevant. If I intend to 
 actually use paleontology to do something, it makes no difference if I use
 one or the other. And since paleontology has very few practical applications,
-lets use a different example.</p>
-<p>Religious thinkers that want to remain compatible with science <em>and</em> keep
+lets use a different example.
+
+Religious thinkers that want to remain compatible with science *and* keep
 believing in miracles often make the case that nothing happens without God's
 direct involvement. If cotton is lit after being put into contact
 with a candle, it's not because of the candle that the cotton catches fire;
 but rather because God willed the candle to be lit in this particular instant.
 In this view, if nature seems to follow certain laws, then it is only because
-God is consistent rather than arbitrary. Though every once in a while, when a miracle
+God is consistent rather than arbitrary. Though everyonce in a while, when a miracle
 is necessary, God will break his own rules and will something other than what
-we have come to expect.</p>
-<p>Suppose that Solomon is of this view and that—for whatever reason—he wants to
+we have come to expect.
+
+Suppose that Solomon is of this view and that—for whatever reason—he wants to
 build a space temple. After asking God very nicely if He could intervene and
 help his prophet out, and being rejected, he calls a meeting of the Royal 
 Aeronautics and Space Agency of Judah. In this meeting, Solomon and his
-biblical friends use the theory of God-Likes-General-Relativity—GLGR for
+biblical friends use the theory of God-Likes-General-Reletivity—GLGR for
 short—to make their plans for the space temple. The conclusions of GLGR are
 identical to the conclusions of Einstein's theory of general-relativity—hereafter
 known as GR. The only differences between GLGR and GR is that the propositions of 
 GLGR start with "God seems to really like ___" and that the theory is considered
-inapplicable to events before or during creation.</p>
-<p>Since the theory of GLGR has identical results to GR, then Royal Aeronautics
+inapplicable to events before or during creation.
+
+Since the theory of GLGR has identical results to GR, then Royal Aeronautics
 and Space Agency of Judah is successful in putting Solomon's space temple into
 orbit. Right at the moment that the Judeans are about to start celebrating
 their great achievement, you time travel to Jerusalem and frantically shout at
 Solomon: "Wait! But the GLGR theory is more complicated that the theory of general
-relativity, so you should believe in GR instead of GLGR!"</p>
-<p>Solomon isn't too happy to see you again, your 
-<a href="https://slatestarcodex.com/2014/11/21/the-categories-were-made-for-man-not-man-for-the-categories/">last conversation</a>
+relativity, so you should believe in GR instead of GLGR!"
+
+Solomon isn't too happy to see you again, your 
+[last conversation](https://slatestarcodex.com/2014/11/21/the-categories-were-made-for-man-not-man-for-the-categories/)
 was somewhat annoying. But since he learned lots of biology from you, he decides
 to give you a second chance to see what you have to say. He is very disappointed
 once you start going over Bayesian statistics. Just as you're about to finish your
@@ -127,8 +82,9 @@ why should I use GR over GLGR?" And you were just about to get to it, despite th
 fact that GR and GLGR have the exact same conclusions, GR is still more likely to
 be true because of Bayes' theor— "So... GR can't improve the lives of my subjects
 better than GLGR?" And after a long pause, you're forced to say no. Solomon asks
-again: "why should I pick GR?"</p>
-<p>By this point you're beginning to realize that Solomon's criterion for judging
+again: "why should I pick GR?"
+
+By this point you're beginning to realize that Solomon's criterion for judging
 empirically identical theories is very different from yours. You're concerned
 about which theory is more likely to be true, Solomon's been thinking about
 the practical implications of each theory. But now you have some questions of
@@ -136,26 +92,22 @@ your own to ask Solomon: does he prefer GLGR to GR? And if so, why does he?
 His response is that he does indeed prefer GLGR to GR, and he does so because
 of his religious beliefs. That doesn't really help you, so you ask him about why
 he believes in his religion. If he doesn't execute you for blasphemy, then he'll
-sigh. You're the $n$th time traveler that's asked him this and he's tired of it.
+sigh. You're the $n$th time traveller that's asked him this and he's tired of it.
 His prepackaged response is that he has been in communication with God—being a 
 prophet and all—and due to this he is absolutely convinced of all the doctrines of
 Judaism. He, however, cannot give you these pieces of empirical evidence because he 
 can't convince God to talk to you nor will you take his word for it. "And besides,"
 Solomon continues, "my religion is obviously the best! The people who follow its
 rules rigorously are prosperous, just like my kingdom. We just put a space temple
-into orbit in 940 BCE!" <a href="#footnote-2"><sup id="source-2">[2]</sup></a></p>
-<p>Solomon has indirectly answered your question. The reason he prefers GLGR
+into orbit in 940 BCE!" %{(Note "He knows about the Christian era because of the
+sheer number of time travellers he has to deal with.")}%
+
+Solomon has indirectly answered your question. The reason he prefers GLGR
 is because of his religion, and he believes in his religion because he believes
 that it improves his life and the lives of those around him. Though you may disagree
 with his assessment about religion, you must admit that his pragmatic approach
 is quite sound. Judging a theory based on how much it improves you and your life is
 a much more relevant criterion than "more likely to be true." After all, theories
-were made for man, not man for the theories.</p>
-<p><b>Notes</b></p>
-<ol><li><p id="footnote-1">Satan is assumed to not show his face around the Earth after
-the Jesus incident. Read <i>Paradise Lost</i> for more information.</p></li> <li><p id="footnote-2">He knows about the Christian era because of the
-sheer number of time travelers he has to deal with.</p></li></ol>
-</div>
-</body>
-</html>
+were made for man, not man for the theories.
 
+%{(Footnotes)}%

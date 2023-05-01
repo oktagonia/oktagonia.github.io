@@ -61,7 +61,7 @@ which do not allow this dreaded possibility. These are called *paraconsistent lo
 The way ternary logic deals with the principle of explosion is by introducing a third
 value—$\mathbf{X}$, meaning *both true and false*—besides the usual *true* and *false*.
 Then by cleverly defining the usual logical relations, we can obtain a logic which allows
-its user to have contradictictory notions without being punished by Aristotle. The one being
+its user to have contradictory notions without being punished by Aristotle. The one being
 shown here is Kleene-Priest%{(Note "Priest's <i>The Logic of Paradox</i> is a great paper
 and he (obviously) goes into a lot more detail than I do here. So go read it.")}% 
 incantation.  Firstly, we allowed $\mathbf{T}$ and $\mathbf{X}$ to be *designated* values. 
@@ -161,7 +161,7 @@ $$ \begin{aligned}
 \mathbf{F} &:= \lambda xy.y
 \end{aligned} $$
 Then he went on and implemented the usual operations of conjunction, disjunction, negation,
-and implication. We'll also go throuh the process of deriving these. But the first thing
+and implication. We'll also go through the process of deriving these. But the first thing
 you have to notice is that since $\mathbf{T}, \mathbf{F}$ are functions of two arguments,
 and the connectives are taking these as input, then the body of each connective is going to
 be three terms applied to each other. One for the input, the other for the case where the 
@@ -221,7 +221,7 @@ as above, we can assume that $R = yABC$. If $y = \mathbf{T}$, then $R = \mathbf{
 y\mathbf{T}\mathbf{X}\mathbf{X}$. 
 
 As such, $x \lor y := x\mathbf{T}y(y\mathbf{T}\mathbf{X}\mathbf{X})$. With the same 
-procedure we can find the term of conjuction as well: 
+procedure we can find the term of conjunction as well: 
 $x \land y := xyx(y\mathbf{X}\mathbf{F}\mathbf{X})$. Kleene implication is just $\neg x \lor 
 y$ so I didn't bother finding a term for that. I also did Łukasiewicz implication just
 because I could. The results can be found at the top of the page.

@@ -3,9 +3,9 @@
 These are my notes for chapter 1 of the mechanics volume of Landau and Lifshitz. 
 I hope to be able to explain what I've learned and to alleviate some of the 
 confusion I've had with the chapter. I don't recommend reading this if you intend 
-to follow the book. The charm of lanlifshitz so far has been its high expectations 
+to follow the book. The charm of Lanlifshitz so far has been its high expectations 
 from the reader; it expects you to pull out pencil and paper and try to figure out 
-what's being said. My intention is to predigest the material as much as possible to 
+what's being said. My intention is to pre-digest the material as much as possible to 
 reinforce *my own* understanding so the charms of the book are completely lost in
 these notes.
 
@@ -52,7 +52,7 @@ Now we know how to represent the state of the system. But how do we determine
 it? Lets think like a machine learning junkie for a moment. If we want to
 make a model that simulates nature, all we need to find is an error/loss function
 that tells us how unrealistic a mechanical system is. However because we have 
-to look at the unrealistic behaviour of the system *over time*, we need to look 
+to look at the unrealistic behavior of the system *over time*, we need to look 
 at each moment in time and add up the irregularities to get a nice error function.
 Let the error at each moment be a function $L$—called the *Lagrangian*—in terms
 of $q, \dot{q}$, and time $t.$ So the total error of the system from $t_0$ to
@@ -161,7 +161,7 @@ Any two Lagrangians that differ by the time derivative of a function $f(q, t)$
 of coordinates and time will describe the same equations of motion under the 
 principle of least action. So the mechanical system resulting from
 $$L'(q, \dot{q}, t) = L(q, \dot{q}, t) + \frac{\d}{\d t}f(q, t)$$
-is the same as described by $L.$ In percise terms, what this means is that
+is the same as described by $L.$ In precise terms, what this means is that
 $\delta S = 0$ implies $\delta S' = 0$ where
 $S = \int_{t_0}^{t_1} L\,\d t$ and $S' = \int_{t_0}^{t_1}L'\,\d t.$
 From our definition of $L'$ we can see that
@@ -199,7 +199,7 @@ of science. Newton very clearly states it in the *Principia:*
 So if a ball falls at a different velocity on Mars than on Earth, we assume
 that this variety isn't due to the variety of the laws of nature but to the
 variety of the circumstances of measurement. We can state this principle more
-percisely: we say that a coordinate system $K$ is *homogeneous* with respect
+precisely: we say that a coordinate system $K$ is *homogeneous* with respect
 to a property $P$ if $P(\vec{r}) = P(\vec{r} + \vec{s})$ for all $\vec{r}, 
 \vec{s} \in K$; so $P$ does not depend on position. We say that $K$ is *isotropic*
 with respect to $P$ if $P(\vec{r}) = P(|\vec{r}|)$ for all $\vec{r} \in K$; so
@@ -217,7 +217,7 @@ respect to the Lagrangian.
 Suppose we have a particle moving freely through space. Wanting to study
 the motion of this particle, we define a spatial coordinate system $K$ around
 this point so that its position $\vec{r}$ and velocity $\vec{v}$ can be 
-represeneted as vectors in $K$. Furthermore, we want $K$ to be homogeneous
+represented as vectors in $K$. Furthermore, we want $K$ to be homogeneous
 and isotropic with respect to the Lagrangian; i.e., the laws of nature. The
 homogeneity and isotropy of $K$ implies that $\partial L/\partial t =
 \partial L/\partial \vec{r} = 0$. Furthermore, since space is isotropic and the
@@ -329,9 +329,9 @@ And in the section on the Euler-Lagrange equation, we've found that the
 $\vec{r}\_i$ and $\vec{v}\_i$ that describe the true motion of the system
 are those that satisfy
 $$\frac{\partial L}{\partial \vec{r}\_i} = \frac{\d}{\d t}\frac{\partial L}{\partial \vec{v}\_i}$$
-for all $0\leq i\leq N.$ Substituing our first result into the second we can see that
+for all $0\leq i\leq N.$ Substituting our first result into the second we can see that
 $$ -\frac{\partial U}{\partial \vec{r}\_i} = m\dot{\vec{v}}\_i ,$$
-which immedietly reminds us of Newton's second law. So to match this with
+which immediately reminds us of Newton's second law. So to match this with
 our existing intuitions we define the *force* on the $i$th particle to be
 $\vec{F}\_i = -\partial U/\partial \vec{r}\_i.$ Going in the opposite direction,
 if $\vec{F}$ is not defined in terms of $\vec{r}$, then $U = -\vec{F}\cdot \vec{r}.$ So when we
@@ -356,7 +356,7 @@ Having found a form of the Lagrangian in the previous section, we now
 know that, in Cartesian terms,
 $$L = \frac{1}{2}\sum_{i=1}^N m_iv_i^2 - U(\vec{r}\_1, \dots, \vec{r}\_N).$$
 Unfortunately, the potential energy depends too much on the specific physical
-problem for us to be able to give a percise statement of it in generalized coordinates.
+problem for us to be able to give a precise statement of it in generalized coordinates.
 However, we can find the kinetic energy in generalized coordinates by substituting
 our generalized forms for velocities and radius vectors
 $$\begin{aligned}
@@ -430,7 +430,7 @@ T &= \frac{1}{2}m[(\dot{l}\cos\theta - l\dot{\theta}\sin\theta)^2 +
 \end{aligned}$$
 As for the potential energy, we have the gravitational energy which is
 $mgy = mgl\sin\theta.$ Since the spring is $\lambda$ meters long normally,
-when it is $l$ meters long is it either being compressed or streteched by
+when it is $l$ meters long is it either being compressed or stretched by
 $|l - \lambda|$ meters. Therefore the potential energy of the spring is
 $\frac{1}{2}k(l - \lambda)^2$ if the spring's constant is $k.$ So
 $U = mgl\sin\theta + \frac{1}{2}k(l - \lambda)^2.$ Since the Lagrangian
