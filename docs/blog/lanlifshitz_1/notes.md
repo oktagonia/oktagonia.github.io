@@ -34,7 +34,7 @@ such that $f_i(q_1,\dots,q_n) = (x_i,y_i,z_i) = \vec{r}\_i$ is the $i$th Cartesi
 Consequently:
 $$
 \vec{v}\_i
-= \frac{df_i}{dt} = \sum_{j=1}^n\frac{\partial f_i}{\partial q_j}\dot{q}\_j 
+= \frac{\d f_i}{\d t} = \sum_{j=1}^n\frac{\partial f_i}{\partial q_j}\dot{q}\_j 
 = (\dot{x}\_i, \dot{y}\_i,\dot{z}\_i)
 $$
 is the Cartesian velocity of the $i$th parameter. If $f_1, \dots, f_n$ are bijective
@@ -57,7 +57,7 @@ at each moment in time and add up the irregularities to get a nice error functio
 Let the error at each moment be a function $L$—called the *Lagrangian*—in terms
 of $q, \dot{q}$, and time $t.$ So the total error of the system from $t_0$ to
 $t_1$ would be:
-$$S = \int_{t_0}^{t_1} L(q, \dot{q}, t)\,dt.$$
+$$S = \int_{t_0}^{t_1} L(q, \dot{q}, t)\,\d t.$$
 Normal people call this the *action* of the system from $t_0$ to $t_1$, which is
 how I will be referring to it from now on. And to cut all ties with the ML analogy 
 I made, we'll be using analytical methods of minimizing this function as opposed 
@@ -80,7 +80,7 @@ small everywhere except at $t_0$ and $t_1$ where $\delta q(t_0) = \delta q(t_1) 
 From elementary calculus we know that $S$ is minimized when $S(p, \dot{p}, t) -
 S(q, \dot{q}, t) = 0.$ So as we can expand this to see that 
 $$
-\delta S = S(p, \dot{p}, t) - S(q, \dot{q}, t) = \int_{t_0}^{t_1} \delta L\,dt = 0.
+\delta S = S(p, \dot{p}, t) - S(q, \dot{q}, t) = \int_{t_0}^{t_1} \delta L\,\d t = 0.
 $$
 And since 
 $\delta L = L(p, \dot{p}, t) - L(q, \dot{q}, t)$,
@@ -99,8 +99,8 @@ and $\delta \dot{q}^n$ for $n \geq 2.$ As such:
 $$\begin{aligned}
 \delta L &= \frac{\partial L(p, \dot{p}, t)}{\partial \delta q}\delta q +
             \frac{\partial L(p, \dot{p}, t)}{\partial \delta \dot{q}}\delta\dot{q} \\\\
-&= \frac{\partial L(p, \dot{p}, t)}{\partial p}\frac{dp}{d\delta q}\delta q +
-   \frac{\partial L(p, \dot{p}, t)}{\partial \dot{p}}\frac{d\dot{p}}{d\delta \dot{q}}\delta \dot{q}
+&= \frac{\partial L(p, \dot{p}, t)}{\partial p}\frac{\d p}{\d \delta q}\delta q +
+   \frac{\partial L(p, \dot{p}, t)}{\partial \dot{p}}\frac{\d \dot{p}}{\d \delta \dot{q}}\delta \dot{q}
 \end{aligned}$$
 Since we have $p = q + \delta q$ and $\dot{p} = \dot{q} + \delta \dot{q}$, then we can 
 say that
@@ -117,38 +117,38 @@ $$
 \delta L = \frac{\partial L}{\partial q}\delta q + \frac{\partial L}{\partial \dot{q}}\delta \dot{q} 
 $$
 We can now use this expression for $\delta L$ to optimize the action. Recall that 
-$\delta S = \int_{t_0}^{t_1} \delta Ldt = 0.$ 
+$\delta S = \int_{t_0}^{t_1} \delta L\,\d t = 0.$ 
 We can further expand this by using the expression we derived for $\delta L$,
 $$\begin{aligned}
 \delta S &= \int_{t_0}^{t_1} \left(\frac{\partial L}{\partial q}\delta q +
-            \frac{\partial L}{\partial \dot{q}}\delta\dot{q}\right)\,dt \\\\
+            \frac{\partial L}{\partial \dot{q}}\delta\dot{q}\right)\,\d t \\\\
 &= \int_{t_0}^{t_1} \left(\frac{\partial L}{\partial q}\delta q +
-   \frac{\partial L}{\partial \dot{q}}\frac{d\delta q}{dt}\right)\,dt \\\\
-&= \int_{t_0}^{t_1} \frac{\partial L}{\partial q}\delta q\,dt +
-   \int_{t_0}^{t_1} \frac{\partial L}{\partial \dot{q}}\frac{d\delta q}{dt}\,dt.
+   \frac{\partial L}{\partial \dot{q}}\frac{\d \delta q}{\d t}\right)\,\d t \\\\
+&= \int_{t_0}^{t_1} \frac{\partial L}{\partial q}\delta q\,\d t +
+   \int_{t_0}^{t_1} \frac{\partial L}{\partial \dot{q}}\frac{\d \delta q}{\d t}\,\d t.
 \end{aligned}$$
 As you can see, the right side of the addition is an integral of a product of derivatives.
-So it makes sense to use integration by parts: $\int_a^b uv'dx = 
-\left[uv\right]\_a^b - \int_a^b u'vdx.$ In this case $x = t$, $u = \partial L/\partial \dot{q}$,
-and $v' = d\delta q/dt.$
+So it makes sense to use integration by parts: $\int_a^b uv'\,\d x = 
+\left[uv\right]\_a^b - \int_a^b u'v\,\d x.$ In this case $x = t$, $u = \partial L/\partial \dot{q}$,
+and $v' = \d\delta q/\,\d t.$
 $$
-\delta S = \int_{t_0}^{t_1} \frac{\partial L}{\partial q}\delta q\,dt + 
+\delta S = \int_{t_0}^{t_1} \frac{\partial L}{\partial q}\delta q\,\d t + 
            \left[ \frac{\partial L}{\partial\dot{q}}\delta q \right]\_{t_0}^{t_1} -
-           \int_{t_0}^{t_1} \frac{d}{dt}\frac{\partial L}{\partial\dot{q}}\delta q\,dt
+           \int_{t_0}^{t_1} \frac{\d}{\d t}\frac{\partial L}{\partial\dot{q}}\delta q\,\d t
 $$
 But since we defined $\delta q$ in such a way as $\delta q(t_0) = \delta q(t_1) = 0$, then 
 $\left[ \frac{\partial L}{\partial\dot{q}}\delta q \right]\_{t_0}^{t_1} = 0.$  As such,
 $$
 \delta S = \int_{t_0}^{t_1} \left(\frac{\partial L}{\partial q} - 
-                                  \frac{d}{dt}\frac{\partial L}{\partial\dot{q}}\right)
-           \delta q\,dt = 0.
+                                  \frac{\d}{\d t}\frac{\partial L}{\partial\dot{q}}\right)
+           \delta q\,\d t = 0.
 $$
 Since we're working in an integral domain, and $\delta q \neq 0$ everywhere but at $t_0$ and $t_1$, 
 then we know that
 $$
-\frac{\partial L}{\partial q} - \frac{d}{dt}\frac{\partial L}{\partial\dot{q}} = 0
+\frac{\partial L}{\partial q} - \frac{\d}{\d t}\frac{\partial L}{\partial\dot{q}} = 0
 \text{\ \ \ \ which implies that\ \ \ \ }
-\frac{\partial L}{\partial q} = \frac{d}{dt}\frac{\partial L}{\partial\dot{q}}
+\frac{\partial L}{\partial q} = \frac{\d}{\d t}\frac{\partial L}{\partial\dot{q}}
 $$
 on the interval $(t_0, t_1).$ This equation is called the *Euler-Lagrange Equation*.
 The function $q$ and $\dot{q}$ that satisfy this differential equation determine
@@ -160,13 +160,13 @@ It's note worthy that the laws of nature do not mandate a unique Lagrangian.
 Any two Lagrangians that differ by the time derivative of a function $f(q, t)$
 of coordinates and time will describe the same equations of motion under the 
 principle of least action. So the mechanical system resulting from
-$$L'(q, \dot{q}, t) = L(q, \dot{q}, t) + \frac{d}{dt}f(q, t)$$
+$$L'(q, \dot{q}, t) = L(q, \dot{q}, t) + \frac{\d}{\d t}f(q, t)$$
 is the same as described by $L.$ In percise terms, what this means is that
 $\delta S = 0$ implies $\delta S' = 0$ where
-$S = \int_{t_0}^{t_1} L\,dt$ and $S' = \int_{t_0}^{t_1}L'\,dt.$
+$S = \int_{t_0}^{t_1} L\,\d t$ and $S' = \int_{t_0}^{t_1}L'\,\d t.$
 From our definition of $L'$ we can see that
 $$\begin{aligned}
-S' &= \int_{t_0}^{t_1}L\,dt + \int_{t_0}^{t_1}\frac{d}{dt}f(q, t)\,dt, \\\\
+S' &= \int_{t_0}^{t_1}L\,\d t + \int_{t_0}^{t_1}\frac{\d}{\d t}f(q, t)\,\d t, \\\\
    &= S + f(q(t_1), t_1) - f(q(t_0), t_0).
 \end{aligned}$$
 Supposing that $\delta S = 0$, then $\delta S' = \delta S + \delta f(q(t_0), t_0) + \delta f(q(t_1), t_1).$
@@ -224,23 +224,23 @@ homogeneity and isotropy of $K$ implies that $\partial L/\partial t =
 direction of velocity is the same as the direction of the position vector, then
 $L$ cannot depend on the direction of velocity in $K$. As such, $L = L(v^2)$. 
 So by the Euler-Lagrange equation
-$$ \frac{d}{dt}\frac{\partial L}{\partial \vec{v}} = 0. $$
+$$ \frac{\d}{\d t}\frac{\partial L}{\partial \vec{v}} = 0. $$
 Let $f(\vec{v}) = \partial L/\partial \vec{v}$. We know that $f$ is constant,
 and since it's probably an interesting function—i.e., not equal to $\vec{v}/\vec{v}$
 or $1$ or something of this sort—then we can safely assume that $\vec{v}$ is
-also constant: $\dot{v} = \vec{a} = 0.$
+also constant: $\dot{\vec{v}} = \vec{a} = 0.$
 
 For a free particle, it would make sense for the Lagrangian to be constant.
 After all, what kind of information do we have to indicate that the motion
 is erroneous? If $L$ is constant, then
-$$ \frac{dL}{dt} = \frac{\partial L}{\partial r}v + 
-                   \frac{\partial L}{\partial v}a + 
+$$ \frac{\d L}{\d t} = \frac{\partial L}{\partial \vec{r}}\vec{v} + 
+                   \frac{\partial L}{\partial \vec{v}}\vec{a} + 
                    \frac{\partial L}{\partial t} = 0. $$
-By the homogeneity of time and space, we know that $\partial L/\partial r 
+By the homogeneity of time and space, we know that $\partial L/\partial \vec{r} 
 = \partial L/\partial t = 0.$ Therefore
-$$ \frac{dL}{dt} = \frac{\partial L}{\partial v}a = 0. $$
-Since we deduced in the previous paragraph that $\partial L/\partial v$ is
-a constant, then most likely $a = 0$. Note that none of these two explanations
+$$ \frac{\d L}{\d t} = \frac{\partial L}{\partial \vec{v}}\vec{a} = 0. $$
+Since we deduced in the previous paragraph that $\partial L/\partial \vec{v}$ is
+a constant, then most likely $\vec{a} = 0$. Note that none of these two explanations
 are rigorous proofs, rather they are heuristics to guide our discovery.
 
 Any reference frame $K$ that is homogeneous and isotropic is known as an
@@ -250,7 +250,8 @@ first law,* or, *the law of inertia.*
 
 To move to and from different inertial frames $K, K'$ with velocities $v, v'$,
 we can translate all the coordinates of $K$ to coordinates of $K'$ with the
-*Galilean Transformation:* for $r \in K$ and $r' \in K'$: $r' = r + (v' - v)t.$
+*Galilean Transformation:* for $\vec{r} \in K$ and $\vec{r}' \in K'$:
+$\vec{r}' = \vec{r} + (\vec{v}' - \vec{v})t.$
 However, the time in the two frames is assumed to be the same: $t' = t.$ This
 is one of the fundamental assumptions of classical mechanics.
 
@@ -273,7 +274,7 @@ $L(v'^2) = L((v+\varepsilon)^2) = L(v^2 + \varepsilon^2 + 2\vec{v}\vec{\varepsil
 L(v^2 + 2\vec{v}\vec{\varepsilon}).$ Expanding the Taylor series of this expression
 in terms of $\vec{\varepsilon}$ results in
 $$\begin{aligned}
-L(v'^2) &= L(v^2) + \frac{\partial L}{\partial v'}\frac{dv'}{d\varepsilon}\vec{\varepsilon} + \dots \\\\
+L(v'^2) &= L(v^2) + \frac{\partial L}{\partial v'}\frac{\d v'}{\d\varepsilon}\vec{\varepsilon} + \dots \\\\
 &= L(v^2) + \frac{\partial L}{\partial v^2}2\vec{v}\vec{\varepsilon}.
 \end{aligned}$$
 We can ignore the $\dots$ because $\varepsilon^n = 0$ for $n > 1.$ As such,
@@ -281,7 +282,7 @@ $L(v^2)$ and $L(v'^2)$ differ by $(\partial L/\partial v^2)2\vec{v}\vec{\varepsi
 is a time derivative of coordinates and time.
 $$
 \frac{\partial L}{\partial v^2}2\vec{v}\vec{\varepsilon} 
-= \frac{d}{dt}f(\vec{r}, t) 
+= \frac{\d}{\d t}f(\vec{r}, t) 
 = \frac{\partial f}{\partial \vec{r}}\vec{v}.
 $$
 After we cancel out $\vec{v}$ from both sides, we can see that the right side does
@@ -298,7 +299,7 @@ formulas to make them work with our intuitions.
 One curious fact about the real world is that we don't have negative mass. So if
 we wish to find the laws of nature then our laws must not give rise to negative 
 mass. In this case we can see this because if we *did* allow for negative mass then
-$S = \int_{t_0}^{t_1} \frac{1}{2}mv^2$ would have no lower bound, and as such would
+$S = \int_{t_0}^{t_1} \frac{1}{2}mv^2\,\d t$ would have no lower bound, and as such would
 never achieve a minimum; contradicting our assumption about Lagrangians.
 
 In general, we may say that the Lagrangian of $N$ non-interacting particles
@@ -327,13 +328,13 @@ $$L = \frac{1}{2}mv_i^2 - U(\vec{r}\_1,\dots,\vec{r}\_N).$$
 And in the section on the Euler-Lagrange equation, we've found that the
 $\vec{r}\_i$ and $\vec{v}\_i$ that describe the true motion of the system
 are those that satisfy
-$$\frac{\partial L}{\partial \vec{r}\_i} = \frac{d}{dt}\frac{\partial L}{\partial \vec{v}\_i}$$
+$$\frac{\partial L}{\partial \vec{r}\_i} = \frac{\d}{\d t}\frac{\partial L}{\partial \vec{v}\_i}$$
 for all $0\leq i\leq N.$ Substituing our first result into the second we can see that
-$$ -\frac{\partial U}{\partial \vec{r}\_i} = m\dot{v}\_i ,$$
+$$ -\frac{\partial U}{\partial \vec{r}\_i} = m\dot{\vec{v}}\_i ,$$
 which immedietly reminds us of Newton's second law. So to match this with
 our existing intuitions we define the *force* on the $i$th particle to be
 $\vec{F}\_i = -\partial U/\partial \vec{r}\_i.$ Going in the opposite direction,
-if $\vec{F}$ is not defined in terms of $r$, then $U = -\vec{F}\cdot r.$ So when we
+if $\vec{F}$ is not defined in terms of $\vec{r}$, then $U = -\vec{F}\cdot \vec{r}.$ So when we
 wish to determine the potential energy of a particle under constant downwards 
 acceleration—such as on Earth—we can do so by finding the dot product of the force
 $m(0,-g)$ and position $(x, y)$ which results in $U = mgy$, as we were expecting.

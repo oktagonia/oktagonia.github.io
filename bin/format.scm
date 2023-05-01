@@ -56,6 +56,18 @@
     (if (null? posts) l
         (loop (append l (list (format (car posts)))) (cdr posts)))))
 
+(define (table-posts)
+  (define *posts* 
+    (sort (blog-posts) 
+          (lambda (x y) (date> (post-date x) (post-date y)))))
+  (define (format post)
+    `(tr (td (p (a (@ (href ,(post-path post)))
+                   ,(string-append (post-title post) "."))))
+         (td (p "Tuesday, April 18th, 2023"))))
+  (let loop ((l '(ul)) (posts *posts*))
+    (if (null? posts) l
+        (loop (append l (list (format (car posts)))) (cdr posts)))))
+
 (define (read-stdin)
   (let loop ((acc "") (char (read-char)))
     (if (eof-object? char) acc
