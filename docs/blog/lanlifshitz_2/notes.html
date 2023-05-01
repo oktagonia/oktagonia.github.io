@@ -523,11 +523,13 @@ and potential energy: $2\langle T\rangle = k\langle U\rangle.$</p>
 <p><a name="noether"></a></p>
 <h2>Addendum: Noether's theorem</h2>
 <p><strong>Problem.</strong> Find the quantity which is conserved if 
-$q_i \to q_i + \varepsilon Q_i(q_1,\dots,q_n)$ is a symmetry.</p>
+$q_i \to q_i + \varepsilon Q_i(q_1,\dots,q_n)$ is a 
+symmetry—i.e., if the Lagrangian is not affected by
+this transformation.</p>
 <details>
 <summary>See hint</summary>
-Let $\delta q = \varepsilon Q_i(q_1,\dots,q_n)$ and 
-$\delta \dot{q} = \d \delta q/\d t.$ 
+Let $\delta q_i = \varepsilon Q_i(q_1,\dots,q_n)$ and 
+$\delta \dot{q}_i = \d \delta q_i/\d t.$ 
 </details>
 
 <details>
@@ -544,15 +546,15 @@ $$
 Expanding the left side in terms of $\delta q$ as we did in the proof for
 conservation of angular momentum gives us
 $$
-\sum_{i=1}^n\left( \frac{\partial L}{\partial q}\delta q + 
-                   \frac{\partial L}{\partial \dot{q}}\delta \dot{q} 
+\sum_{i=1}^n\left( \frac{\partial L}{\partial q_i}\delta q_i + 
+                   \frac{\partial L}{\partial \dot{q}_i}\delta \dot{q}_i
             \right) = 0.
 $$
 We can rewrite this term with the Euler-Lagrange equation, and rearrange
 using the product rule to attain
 $$
-\sum_{i=1}^n\frac{\d}{\d t}\left( \frac{\partial L}{\partial \dot{q}}\delta q\right) 
-= \varepsilon\frac{\d}{\d t}\sum_{i=1}^n \frac{\partial L}{\partial \dot{q}}Q_i(q_1,\dots,q_n)
+\sum_{i=1}^n\frac{\d}{\d t}\left( \frac{\partial L}{\partial \dot{q}_i}\delta q_i\right) 
+= \varepsilon\frac{\d}{\d t}\sum_{i=1}^n \frac{\partial L}{\partial \dot{q}_i}Q_i(q_1,\dots,q_n)
 = 0.
 $$
 As such we have found that $\sum_{i=1}^n(\partial L/\partial \dot{q}_i)Q_i$ is
