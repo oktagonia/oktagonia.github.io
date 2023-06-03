@@ -63,13 +63,13 @@ What's interesting is that it all can be skipped by some simple programming.</p>
 $S_5$ is insoluble, and also show that the insolubility of $S_n$ implies the
 insolubility of $S_{n+1},$ then we have shown that $S_n$ is insoluble for all
 $n \geq 5.$</p>
-<p>Look, I'm not gonna go through all the basics of group-theory here, all you 
+<p>Look, I'm not going to go through all the basics of group-theory here, all you 
 need to know is that the <em>commutant</em> 
 $K(G) := \{aba^{-1}b^{-1}\,:\,\forall a, b\in G\}$ of a group $G$ is 
 a normal subgroup of it. The other thing you need to know is that a group 
 is <em>soluble</em> if $K(K(\dots K(G)\dots))$ is the trivial group after some finite
 number of iterations of $K.$ We denote the $n$th iteration as $K_n(G).$ So
-$G$ is solubale if there exists an $r \in \N$ such that $K_r(G)$ is the trivial
+$G$ is soluble if there exists an $r \in \N$ such that $K_r(G)$ is the trivial
 group.</p>
 <p>Well, actually, one more thing you need to know is that subgroups
 of a soluble group are all soluble. So suppose $G$ is soluble and
@@ -78,7 +78,7 @@ $H \subseteq G.$ Notice that $K(H) \subseteq K(G),$ and similarly $K_n(H)
 As such, if $K_r(G)$ is the trivial group, then $K_r(H)$—being a group—must
 also be the trivial group. Therefore $H\subseteq G$ is a soluble group.</p>
 <p>The contrapositive of this statement—that the insolubility 
-of $H \subseteq G$ imples the insolubility of $G$—gives us the
+of $H \subseteq G$ implies the insolubility of $G$—gives us the
 inductive step of our proof. We wish to show that the insolubility 
 of $S_n$ implies the insolubility of $S_{n+1}.$ If we can show that 
 $S_n$ is isomorphic to some subgroup of $S_{n+1},$ then we have shown 
@@ -101,7 +101,7 @@ quite a long detour through cyclic permutations and alternating groups and whatn
 to prove that $S_5$ is insoluble. But, remember that $S_5$ is just some finite set 
 with a binary operation—something that can be represented as a computational object. 
 What I'm trying to say is that brute force is really fun.</p>
-<p>So after aquiring your group-theory software of choice (I wrote one for myself
+<p>So after acquiring your group-theory software of choice (I wrote one for myself
 but then threw it away after I realized that <a href="https://www.sagemath.org/">sage</a>
 does group theory), implement a function that gives you the commutant of a group.
 This is my solution in sage+python:</p>
