@@ -80,7 +80,7 @@ sage: S = SymmetricGroup(5)
 My instinct at this point was to play around with the sizes of this group
 and its commutant. The idea was that if the order of the commutants stops
 decreasing at some point then that means that the group is insoluble. And,
-as it happens, the order of the commutants stops increasing instantly.
+as it happens, the order of the commutants stops decreasing instantly.
 
 ```
 sage: len(K(S)) == len(K(K(S))
