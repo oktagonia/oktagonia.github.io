@@ -109,4 +109,6 @@ sage: K(K(K(S)))
 That is only $4$ iterations!
 
 Well, there you have it dear readers. That's the show for tonight. If only
-Abel had an m1 macbook air.
+Abel had an m1 macbook air. He could've skipped four pages!
+
+![](four.png)
