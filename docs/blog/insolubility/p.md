@@ -83,7 +83,7 @@ decreasing at some point then that means that the group is insoluble. And,
 as it happens, the order of the commutants stops decreasing instantly.
 
 ```
-sage: len(K(S)) == len(K(K(S))
+sage: len(K(S)) == len(K(K(S)))
 True
 ```
 
