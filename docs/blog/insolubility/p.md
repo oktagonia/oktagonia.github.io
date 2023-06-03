@@ -97,7 +97,7 @@ True
 ```
 
 Bam! Just what we wanted. And as we would expect, $K(K(S_4)) \neq K(S_4)$ which
-leaves allows $S_4$ to be soluble. In fact we can see how long it takes for $S_4$
+allows $S_4$ to be soluble. In fact we can see how long it takes for $S_4$
 to get to the trivial group:
 
 ```
