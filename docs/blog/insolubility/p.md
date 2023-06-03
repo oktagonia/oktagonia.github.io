@@ -87,7 +87,7 @@ sage: len(K(S)) == len(K(K(S))
 True
 ```
 
-Well, why stop are the sizes of the commutants? If we can show—sorry, I meant
+Well, why stop at the sizes of the commutants? If we can show—sorry, I meant
 compute—that $K(S_5) = K(K(S_5)),$ then it's obvious that $K_n(S_5) = K(S_5)$
 which means that $S_5$ is not soluble. So I tried it out:
 
