@@ -88,7 +88,7 @@ $S_4.$ Just take a good look at
 $$S_3 = \{123, 132, 213, 231, 312, 321\}$$
 and then look at
 $$H = \{ 1234, 1324, 2134, 2314, 3124, 3214 \} \subseteq S_4$$
-Can you convince yourself and $H\cong S_3?$ If not, consider
+Can you convince yourself that $H\cong S_3?$ If not, consider
 this map from $S_3$ to $H$ where $a,b,c$ are digits $\phi(abc) = abc4.$
 This idea can easily be generalized to arbitrary $n.$ The symmetric group
 $S_n$ is isomorphic to a subset of $S_{n+1}$ via $\phi(i_1i_2\dots i_n) = i_1i_1\dots i_n(n+1).$</p>
@@ -116,7 +116,7 @@ This is my solution in sage+python:</p>
 <p>My instinct at this point was to play around with the sizes of this group
 and its commutant. The idea was that if the order of the commutants stops
 decreasing at some point then that means that the group is insoluble. And,
-as it happens, then order of the commutants stops increasing instantly.</p>
+as it happens, the order of the commutants stops increasing instantly.</p>
 <p><code>sage: len(K(S)) == len(K(K(S))
 True</code></p>
 <p>Well, why stop are the sizes of the commutants? If we can show—sorry, I meant
