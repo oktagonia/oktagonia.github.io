@@ -1,4 +1,4 @@
-%{(Post "A Dubiously-Simple Proof of the Insolubility of Symmetric Groups"
+%{(Post "A Dubiously Simple Proof of the Insolubility of Symmetric Groups"
    "June 2023")}%
 *Abel's Theorem in Problems and Solutions* by V.B. Alekseev is a great problem-oriented
 textbook that leads the reader to naturally rediscover the titular theorem for himself.
