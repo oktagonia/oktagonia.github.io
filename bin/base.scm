@@ -10,18 +10,18 @@
 
 (define (make-counter! name start)
   (hashtable-set! *counters* name start)
-  (lambda (body)
+  (lambda ()
     (step-counter! name)
-    `(p (b ,(string-append 
-              (symbol->string name) " "
-              (number->string (counter-ref name)) "."))
-        ,body)))
+    `(b ,(string-append 
+              name (if (string=? name "") "" " ")
+              (number->string (counter-ref name)) "."))))
 
 ; Some useful academic counters.
-(define Definition  (make-counter! 'Definition   0))
-(define Theorem     (make-counter! 'Theorem      0))
-(define Observation (make-counter! 'Observation  0))
-(define Proposition (make-counter! 'Proposition  0))
+(define Definition  (make-counter! "Definition"   0))
+(define Theorem     (make-counter! "Theorem"      0))
+(define Observation (make-counter! "Observation"  0))
+(define Proposition (make-counter! "Proposition"  0))
+(define Problem     (make-counter! ""             0))
 
 ;; Footnotes
 ;; Note makes a footnote, Footnote displays the footnotes.
