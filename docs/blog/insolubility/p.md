@@ -30,7 +30,7 @@ $H \subseteq G.$ Notice that $K(H) \subseteq K(G),$ and similarly $K_n(H)
 As such, if $K_r(G)$ is the trivial group, then $K_r(H)$—being a group—must
 also be the trivial group. Therefore $H\subseteq G$ is a soluble group.
 
-Notice that the contrapositive of this statement—that the insolubility 
+The contrapositive of this statement—that the insolubility 
 of $H \subseteq G$ imples the insolubility of $G$—gives us the
 inductive step of our proof. We wish to show that the insolubility 
 of $S_n$ implies the insolubility of $S_{n+1}.$ If we can show that 
