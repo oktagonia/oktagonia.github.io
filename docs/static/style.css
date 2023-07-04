@@ -131,7 +131,7 @@ and (max-device-width : 568px) {
 
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
     img {
         opacity: .75;
         transition: opacity .5s ease-in-out;
@@ -140,7 +140,7 @@ and (max-device-width : 568px) {
         width: 100%;
         height: 100%;
         margin: auto;
-        background-color: black /* #fffff8 */;
+        background-color: black;
         color: #fafafa;
         max-width: 70ch;
 
@@ -159,4 +159,4 @@ and (max-device-width : 568px) {
     }
     a { color: DodgerBlue; text-decoration: none; }
     a:hover { color: blue; text-decoration: underline; }
-}
+}*/
