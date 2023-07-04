@@ -23,7 +23,7 @@ header {
     color: white;
     font-family: "Gill Sans";
     background-repeat: no-repeat;
-    background-position: 50% 0%;
+    background-position: 100% 0%;
     background-color: rgb(32, 51, 105);
 }
 
@@ -46,7 +46,7 @@ pre {
     margin-top: 20px;
     margin-bottom: 20px;
     border-radius: 10px;
-    box-shadow: 0 0px 20px hsl(0deg 0% 0% / 1);
+    box-shadow: 0 0px 12px hsl(0deg 0% 0% / 0.7);
 }
 
 p {
