@@ -1,0 +1,252 @@
+<!doctype html>
+<html lang=en-US>
+<head>
+  <meta charset="utf-8">
+  <link href='/static/style.css' rel='stylesheet'>
+  <link href='/Users/kiand/fun/oktagonia.github.io/docs/static/style.css' rel='stylesheet'>
+  <link href='/home/kiand/fun/oktagonia.github.io/docs/static/style.css' rel='stylesheet'>
+  <link rel="stylesheet" href="https://use.typekit.net/cnp8pzd.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/aaaakshat/cm-web-fonts@latest/fonts.css">
+
+  <title>Hilbert's Lamentations</title>
+  <!--
+  <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript">
+  </script>
+  <script type='text/x-mathjax-config'>
+    MathJax.Hub.Config({
+      tex2jax: {
+        inlineMath: [['$','$']],
+        processEscapes: true
+      }
+    });
+  </script>
+  -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.2/dist/katex.min.css" integrity="sha384-bYdxxUwYipFNohQlHt0bjN/LCpueqWz13HufFEV1SUatKs1cm4L6fFgCi1jT643X" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.2/dist/katex.min.js" integrity="sha384-Qsn9KnoKISj6dI8g7p1HBlNpVx0I8p1SvlwOldgi3IorMle61nQy4zEahWYtljaz" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.2/dist/contrib/auto-render.min.js" integrity="sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05" crossorigin="anonymous"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        renderMathInElement(document.body, {
+          // customised options
+          // • auto-render specific keys, e.g.:
+          delimiters: [
+              {left: '$$', right: '$$', display: true},
+              {left: '$', right: '$', display: false},
+              {left: '\\(', right: '\\)', display: false},
+              {left: '\\[', right: '\\]', display: true}
+          ],
+          throwOnError : false,
+        });
+    });
+</script>
+  <meta name='viewport' content="width=device-width,initial-scale=1.0">  
+  <meta charset="utf-8"/>
+</head>
+<body>
+$
+\gdef\vec#1{\mathbf{#1}}
+\gdef\d{\text{d}}
+$
+<div id='stuff'>
+  <header>
+      <h1>
+          Hilbert's Lamentations
+      </h1>
+
+      <a style='color:white;' href='/'>Home</a> |
+      <a style='color:white;' href='/blog/blog.html'>Blog</a> |
+      <a style='color:white;' href='/archive/archive.html'>Archive</a>
+  </header>
+  <div id='text'>
+    <!-- <script src="https://www.geogebra.org/apps/deployggb.js"></script> -->
+<h1>Analytical Optics</h1>
+<p>July 2023 <br></br>
+The calculus of variations provides a very nice abstraction barrier
+for studying nature. Step one, find a variational principle for the
+phenomena you're studying. Step two, use conservation laws, generalized
+force, momentum, energy, etc. to make some deductions. Lagrange and
+Hamilton already did this to classical mechanics (I've got 
+<a href="../lanlifshitz_1/notes.html">two</a> <a href="../lanlifshitz_2/notes.html">posts</a>
+about that) and Fermat found a variational principle for optics back
+in the 17th century. A few months ago, when I finised by post about 
+<a href="../optics/optics.html">geometrical optics</a> I thought of joining in the 
+fun and finishing what Fermat started by doing some optics analytically.
+Watch me use no figures in this entire post.</p>
+<p>Fermat's mathematical superpower was definitely his skill of asking "what if?"
+appropriately. He was looking at Pythagorean triples, "what if the power isn't 
+two?" Later on he was reading an old optics book that said that the movement
+of light in a uniform medium can be described as the path of least <em>length,</em>
+"well that doesn't work for non-uniform media, what if its the path of least
+<em>time?</em>" He also knew some basic calculus by then so he got to work and managed
+to prove Snell's law this way. In short, he found a variational principle
+for optics.</p>
+<p><b>Axiom 1.</b> The path $\gamma : [0,1] \to \R^2$ taken by light is the path
+that satisfies $\delta T = 0$ where $T$ is the time it takes light to traverse
+$\gamma.$ This is often called <em>Fermat's principle</em> or <em>the principle of least 
+time.</em></p>
+<p>Suppose that $\gamma(t) = (x(t), y(t)).$ The time it takes for light
+to traverse an infinity small part $\d s$ of $\gamma$ is $\d T = \d s/v(x,y)$ 
+where $v(x,y)$ is used to indicate the speed of light at the point $(x,y).$ It 
+is clear that $\d s = \sqrt{\d x^2 + \d y^2}.$ Since $\d x = \dot{x}\,\d t$ 
+and $\d y = \dot{y}\,\d t,$ then $\d s = \sqrt{\dot{x}^2 + \dot{y}^2}\,\d t.$
+Restating $\d T$ in this way results in $\d T = \d t\sqrt{\dot{x}^2 + 
+\dot{y}^2}/v(x,y).$ Therefore the time it takes for light to traverse $\gamma$ 
+is
+$$
+\begin{equation}
+T = \int_0^1 \frac{\sqrt{\dot{x}^2 + \dot{y}^2}}{v(x,y)}\,\d t.
+\end{equation}
+$$
+This integral is clearly analogous to the action of classical mechanics. The
+integrand is also analogous to the Lagrangian. So we will be calling
+$$\begin{equation}
+L = \frac{\sqrt{\dot{x}^2 + \dot{y}^2}}{v(x,y)}
+\end{equation}$$ 
+the <em>optical Lagrangian</em> from now on. We have now officially crossed the
+abstraction barrier of the variational calculus, and now can use its results
+to make some deductions.</p>
+<p>The greatest result of the calculus of variations is the <em>Euler-Lagrange 
+equation.</em>
+$$
+\begin{equation}
+\frac{\d}{\d t}\frac{\partial L}{\partial \dot{q}} = \frac{\partial L}{\partial q}.
+\end{equation}
+$$
+Where $\partial L/\partial \dot{q}$ is the <em>generalized momentum</em> and 
+$\partial L/\partial q$ is the <em>generalized force</em>. We may find the momentum
+and force in an optical system by substituting (2) to attain
+$$
+\begin{align}
+\vec{p} &amp;= \left(\frac{\dot{x}}{v\sqrt{\dot{x}^2 + \dot{y}^2}}, 
+                 \frac{\dot{y}}{v\sqrt{\dot{x}^2 + \dot{y}^2}}\right), \\
+\vec{F} &amp;= \left(\frac{-\sqrt{\dot{x}^2 + \dot{y}^2}}{v^2}\frac{\partial v}{\partial x},
+                 \frac{-\sqrt{\dot{x}^2 + \dot{y}^2}}{v^2}\frac{\partial v}{\partial y}
+           \right).
+\end{align}
+$$
+Using these expressions and the fact that $\vec{F} = \dot{\vec{p}}$ we can find the
+differential equations for the motion of light.
+$$
+\begin{aligned}
+\frac{(\dot{x}^2+\dot{y}^2)(\ddot{x}v-\dot{x}\dot{v}) -
+\dot{x}v(\dot{x}\ddot{x}+\dot{y}\ddot{y})}
+{v^2(\dot{x}^2+\dot{y}^2)^{3/2}} &amp;= 
+\frac{-\sqrt{\dot{x}^2 + \dot{y}^2}}{v^2}\frac{\partial v}{\partial x}, \\
+\frac{(\dot{x}^2+\dot{y}^2)(\ddot{y}v-\dot{y}\dot{v})
+- \dot{y}v(\dot{x}\ddot{x}+\dot{y}\ddot{y})}
+{v^2(\dot{x}^2+\dot{y}^2)^{3/2}} &amp;= 
+\frac{-\sqrt{\dot{x}^2 + \dot{y}^2}}{v^2}\frac{\partial v}{\partial y}.
+\end{aligned}
+$$
+Yikes. If you're brave enough you can try to do something with this, but this
+ain't for me. Especially because—as we'll see shortly—$v(x,y)$ is almost never
+differentiable in a real world scenario. </p>
+<p>For example, when we're consider light's traversal through the boundary
+of two different media, we encounter a scenario where $v$ is not differentiable.</p>
+<p>Suppose that the line $x = 0$ is the boundary of two regions of space.
+To the left of $x=0$ the speed of light is $v_1$ and to the right of it
+the speed of light is $v_2.$ Therefore
+$$
+v(x) = \begin{cases}v_0 &amp; x &lt; 0 \\ v_1 &amp; x &gt; 0 \end{cases}
+$$
+which is obviously not differentiable. Luckily, we can continue to study
+this scenario because we can use momentum. Let $\vec{p}_0$ be the momentum
+to the left of $x=0$ and $\vec{p}_1$ be the momentum to the right of $x=0.$
+Plugging this in (4) gives
+$$\begin{aligned}
+\vec{p}_0 = \left(\frac{\dot{x}_0}{v_0\sqrt{\dot{x}_0^2 + \dot{y}_0^2}}, 
+                 \frac{\dot{y}_0}{v_0\sqrt{\dot{x}_0^2 + \dot{y}_0^2}}\right), \\
+\vec{p}_1 = \left(\frac{\dot{x}_1}{v_1\sqrt{\dot{x}_1^2 + \dot{y}_1^2}}, 
+                 \frac{\dot{y}_1}{v_1\sqrt{\dot{x}_1^2 + \dot{y}_1^2}}\right).
+\end{aligned}$$
+In polar coordinates these may be written as $\vec{p}_0 = 
+|\vec{p}_0|(\cos\theta_0,\sin\theta_0)$ and $\vec{p}_1 = 
+|\vec{p}_1|(\cos\theta_1,\sin\theta_1)$ for some $\theta_0$ and $\theta_1.$
+In this sense, conservation of momentum $\vec{p}_0 = \vec{p}_1$ implies
+that $|\vec{p}_0|\sin\theta_0 = |\vec{p}_1|\sin\theta_1.$ Furthermore,
+since $|\vec{p}_0| = 1/v_0$ and $|\vec{p}_1| = 1/v_1,$ then
+$$\begin{equation}
+\frac{\sin\theta_0}{v_0} = \frac{\sin\theta_1}{v_1}
+\end{equation}$$
+which is known as <em>Snell's law</em> or the <em>law of refraction.</em></p>
+<p><b>Theorem 1.</b> When light traverses the boundary between two media,
+$\sin\theta_0/v_0 = \sin\theta_1/v_1$ where $\theta_0$ is the angle
+of incidence, $\theta_1$ is the angle of refraction, and $v_0$ and 
+$v_1$ are the speeds of light in the the first and second medium 
+respectively.</p>
+<p>A similar argument suffices to show the law of reflection. Suppose 
+that—in a uniform medium where $v = v_0$—a mirror is placed on the 
+line $y=0.$ A path of light starts at $P=(x_0, y_0),$ hits the mirror,
+and ends up at $Q=(x_1, y_1).$ Before hitting the mirror, the momentum
+of light is
+$$
+\vec{p}_0 = \left(\frac{\dot{x}_0}{v_0\sqrt{\dot{x}_0^2 + \dot{y}_0^2}}, 
+                   \frac{\dot{y}_0}{v_0\sqrt{\dot{x}_0^2 + \dot{y}_0^2}}\right).
+$$
+And after hitting the mirror the momentum becomes
+$$
+\vec{p}_1 = \left(\frac{\dot{x}_1}{v_0\sqrt{\dot{x}_1^2 + \dot{y}_1^2}}, 
+                   \frac{\dot{y}_1}{v_0\sqrt{\dot{x}_1^2 + \dot{y}_1^2}}\right).
+$$
+Just as in our discussion of refraction, the conservation of momentum
+$\vec{p}_0 = \vec{p}_1$ implies that $|\vec{p}_0|\sin\theta_0 = 
+|\vec{p}_1|\sin\theta_1.$ Since this time $|\vec{p}_0| = |\vec{p}_1| = 1/v_0,$
+then it follows that $\sin\theta_0 = \sin\theta_1.$ As both angles are less than
+$180^\circ,$ we can say that $\theta_1 + 90^\circ = \theta_0$ without loss of
+generality. As $\theta_0$ is the angle of incidence, and $\theta_1 + 90^\circ$
+is the angle of reflection, then the angle of incidence equals to the angle
+of reflection.</p>
+<p>This fact can also be shown with Snell's law. Since light is travelling in a
+uniform medium, the law of reflection reduces to the case where $\sin\theta_0
+= \sin\theta_1.$ From which it follows that $\theta_1 + 90^\circ = \theta_0.$</p>
+<p><b>Theorem 2.</b> When light bounces off of a mirror, the angle of incidence
+is equal to the angle of reflection.</p>
+<p>I have freely used conservation of momentum in these proofs. This is because
+that the laws of optics—i.e., Fermat's principle—are homogeneous with respect
+to space, and the homogeneity of space implies the conservation of momentum
+as discussed <a href="../lanlifshitz_2/notes.html#mom">here</a>. However, since 
+$\partial L/\partial t = 0,$ then optics is also homogeneous with respect to "time"
+<a href="#footnote-1"><sup id="source-1">[1]</sup></a>. As such we must also be able 
+to use conservation of energy
+$$\begin{equation}
+E = \frac{\partial L}{\partial \dot{x}}\dot{x} + \frac{\partial L}{\partial \dot{y}}\dot{y}
+- L
+\end{equation}$$
+to solve some problems. But things get a little weird when we expand (7) with (2)
+$$\begin{aligned}
+E &amp;= \frac{\partial L}{\partial \dot{x}}\dot{x} + \frac{\partial L}{\partial \dot{y}}\dot{y} - L
+\\
+&amp;= \frac{\dot{x}^2}{v\sqrt{\dot{x}^2 + \dot{y}^2}} + 
+   \frac{\dot{y}^2}{v\sqrt{\dot{x}^2 + \dot{y}^2}} -
+   \frac{\sqrt{\dot{x}^2 + \dot{y}^2}}{v} \\
+&amp;= \frac{\dot{x}^2 + \dot{y}^2 - \dot{x}^2 - \dot{y}^2}{v\sqrt{\dot{x}^2 + \dot{y}^2}} \\
+&amp;= 0.
+\end{aligned}$$
+I guess this means that the conservation of optical energy is much
+simpler than I thought!</p>
+<p>A simpler derivation of this can be given by some geometric intuition. Since
+the direction of $\vec{p}$ is the same as $\vec{v} = (\dot{x}, \dot{y}),$
+then $|\vec{p}||\vec{v}| = \vec{p}\cdot\vec{v}.$ Expanding both sides of
+this equality results in
+$$
+L = \frac{\sqrt{\dot{x}^2 + \dot{y}^2}}{v(x,y)} = 
+\frac{\partial L}{\partial \dot{x}}\dot{x} + \frac{\partial L}{\partial \dot{y}}\dot{y}
+$$
+which can be further simplified to show that the optical energy is always zero.
+There is another way to prove this using 
+<a href="../lanlifshitz_2/notes.html#Energy">Euler's theorem on homogeneous functions</a>
+which I leave as an exercise to the reader.</p>
+<p>And that's about it for this very theory heavy post. No new results, all of
+it just a fancy restatement of what we knew in <a href="../optics/optics.html">the last post</a>.
+To compensate I'll make a post about some of the nice exercises in 
+<a href="https://archive.org/details/atreatiseongeom00hermgoog/page/n22/mode/1up"><em>A Treatise on Geometrical Optics</em></a> sometime in the near future.</p>
+<hr>
+<ol><li><p id="footnote-1">The variable $t$ isn't really time. It's just a parameter with which we 
+define the path of light parametrically. I would've used another symbol like 
+$\tau$ if it wasn't hard to type repeatedly.</p></li></ol>
+</div>
+</div>
+</body>
+</html>
+

@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang=en-US>
+<head>
+  <meta charset="utf-8">
+  <link href='/static/style.css' rel='stylesheet'>
+  <link href='/Users/kiand/fun/oktagonia.github.io/docs/static/style.css' rel='stylesheet'>
+  <link href='/home/kiand/fun/oktagonia.github.io/docs/static/style.css' rel='stylesheet'>
+  <link rel="stylesheet" href="https://use.typekit.net/cnp8pzd.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/aaaakshat/cm-web-fonts@latest/fonts.css">
+
+  <title>Hilbert's Lamentations</title>
+  <!--
+  <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript">
+  </script>
+  <script type='text/x-mathjax-config'>
+    MathJax.Hub.Config({
+      tex2jax: {
+        inlineMath: [['$','$']],
+        processEscapes: true
+      }
+    });
+  </script>
+  -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.2/dist/katex.min.css" integrity="sha384-bYdxxUwYipFNohQlHt0bjN/LCpueqWz13HufFEV1SUatKs1cm4L6fFgCi1jT643X" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.2/dist/katex.min.js" integrity="sha384-Qsn9KnoKISj6dI8g7p1HBlNpVx0I8p1SvlwOldgi3IorMle61nQy4zEahWYtljaz" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.2/dist/contrib/auto-render.min.js" integrity="sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05" crossorigin="anonymous"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        renderMathInElement(document.body, {
+          // customised options
+          // • auto-render specific keys, e.g.:
+          delimiters: [
+              {left: '$$', right: '$$', display: true},
+              {left: '$', right: '$', display: false},
+              {left: '\\(', right: '\\)', display: false},
+              {left: '\\[', right: '\\]', display: true}
+          ],
+          throwOnError : false,
+        });
+    });
+</script>
+  <meta name='viewport' content="width=device-width,initial-scale=1.0">  
+  <meta charset="utf-8"/>
+</head>
+<body>
+$
+\gdef\vec#1{\mathbf{#1}}
+\gdef\d{\text{d}}
+$
+<div id='stuff'>
+  <header>
+      <h1>
+          Hilbert's Lamentations
+      </h1>
+
+      <a style='color:white;' href='/'>Home</a> |
+      <a style='color:white;' href='/blog/blog.html'>Blog</a> |
+      <a style='color:white;' href='/archive/archive.html'>Archive</a>
+  </header>
+  <div id='text'>
+    <!-- <script src="https://www.geogebra.org/apps/deployggb.js"></script> -->
+<h1>What is a Riemann Surface?</h1>
+<p>July 2023 <br></br>
+Riemann surfaces are considered to be some of the most important
+concepts in modern mathematics, but no one can really explain what
+they even are. The advanced approaches which usually rely on topology 
+are beyond my current level of understanding and elementary approaches
+treat Riemann Surfaces as fairy dust. "Look here's this magical thing 
+with a fancy name" but no "here's what Riemann surfaces help you 
+discover". This post seeks to be an elementary, yet motivated, 
+introduction to Riemann surfaces.  I hope to actually understand what 
+they are when I'm done writing this.</p>
+<p>This post assumes the basic properties of the complex numbers such
+as the geometric interpretation of the complex numbers, the roots of
+unity, continuous functions, continuous curves, and the fundamental 
+theorem of algebra.</p>
+<ol>
+<li>Multivalued functions</li>
+<li>Surfaces and their properties</li>
+<li>The function $\sqrt z$</li>
+<li>The Riemann surface of $\sqrt z$</li>
+<li>Riemann surfaces of other functions</li>
+<li>Monodromy</li>
+</ol>
+<hr />
+<h2>Multivalued functions</h2>
+<p>A function $f:A\to B$ is commonly defined to be a rule that associates 
+an element of its domain $A$ to an element of its range $B$ in such a 
+way that if $x = y,$ then $f(x) = f(y).$ In other words, for any 
+$x \in A,$ there is only one value $y \in B$ such that $f(x) = y.$ The
+intuition behind this choice of definition is that, when a function 
+encounters two possible outputs for the same input, it gets stuck. For
+example The function $C(x) = 5(x - 32)/9$ that converts Farenheit to 
+Celsius is such a function. It would be very strange if the same 
+Farenheit temprature was converted to two different Celsius ones.</p>
+<p>However, there are certain areas where it makes sense for a function to 
+have multiple valid outputs. One such area is in solving equations. For
+instance, the equation $x^2 = 1$ has two solutions: $1,$ and $-1.$ So
+if we define $f(y) = \sqrt y$ to be the solution of the equation 
+$x^2 = y,$ then we have a function that can have two values at once:
+$f(1) = -1$ and $f(1) = 1.$ We call these kinds of functions <em>multivalued,</em>
+and denote the output as a set: $f(1) = \{ 1, -1 \}.$</p>
+<p>These are some other examples of multivalued functions.</p>
+<ol>
+<li>
+<p>Let $\arcsin x$ be the function such that $x = \arcsin y$ is a 
+solution to the equation $\sin x = y.$ So 
+$\arcsin(0) = \{k\pi\,|\,k \in \mathbb{N}\}.$ Similarly for $\arccos x,$
+and $\arctan x.$</p>
+</li>
+<li>
+<p>Let $\arg z$ be a function such that $\theta = \arg z$ is a solution
+to the equation $z = |z|(\cos\theta + i\sin\theta).$</p>
+</li>
+<li>
+<p>Suppose that in a knowledge representation system there is a binary
+predicate $\text{Parent}(x,y)$ which states that $x$ is a child of $y.$
+Then let $y = \text{Children}(x)$ be the solution to the logical equation 
+$\text{Parent}(y,x).$ Therefore
+$$
+\text{Children}(\text{Charlotte Ebell}) = 
+\{ \text{Ida}, \text{Helene}, \text{Clara}, \text{Wilhelm}, \text{Marie}, \text{Georg} \}.
+$$</p>
+</li>
+<li>
+<p>Let $f(a, b, c) = (-b \pm \sqrt{b^2 - 4ac})/2a$ be the solution to the
+equation $ax^2 + bx + c = 0.$ Therefore
+$$f(1, -1, -1) = \{(1+\sqrt 5)/2, (1-\sqrt 5)/2\}.$$</p>
+</li>
+</ol>
+<p>Example (4) exposes a problem with multivalued functions. When doing
+arithmetic with the multivalued function $\sqrt z,$ it is not clear
+which one of the values we should use. In the quadratic formula this 
+problem is fixed by using $\pm$ as a way to indicate that there are
+two possible solutions. In other cases we only use the <em>principal value</em>
+of the function, which is a way of choosing a single output based on
+some conventional rule. In $\sqrt x$ this is usually the positive value
+when the domain is $\mathbb{R}$ and the value on the right side of the
+plane when the domain is $\mathbb{C}.$</p>
+<p>One of the ways to choose one of the output values of a multivalued function
+$f(z)$ is by using continuity. In [1] this is called the <em>variation</em> of $f(z).$
+An example of this is the </p>
+<h2>Sources</h2>
+<p>[1] Alekseev, V. B., and Vladimir Igorevich Arnol’d. <em>Abel’s Theorem in Problems and Solutions Based on the Lectures of Professor V.I. Arnold</em>. Kluwer Academic Publishers, 2010. </p>
+</div>
+</div>
+</body>
+</html>
+

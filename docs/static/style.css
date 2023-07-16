@@ -3,6 +3,10 @@ span.smallcaps {font-variant: small-caps;}
 span.underline {text-decoration: underline;}
 div.column{display: inline-block; vertical-align: top; width: 50%;}
 
+.katex {
+    overflow: auto hidden;
+}
+
 a { color: blue; text-decoration: none; }
 a:hover { color: blue; text-decoration: underline; }
 

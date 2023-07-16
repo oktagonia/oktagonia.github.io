@@ -18,6 +18,7 @@
 
 ; Some useful academic counters.
 (define Definition  (make-counter! "Definition"   0))
+(define Axiom       (make-counter! "Axiom"        0))
 (define Theorem     (make-counter! "Theorem"      0))
 (define Observation (make-counter! "Observation"  0))
 (define Proposition (make-counter! "Proposition"  0))
@@ -37,7 +38,7 @@
 (define (Footnotes)
   (define (format note c) 
     `(li (p (@ (id ,(string-append "footnote-" (number->string c)))) ,note)))
-  `((p (b "Notes") )
+  `("<hr>"
     ,(let loop ((l '(ol)) (notes *footnotes*) (c 1))
        (if (null? notes) l
          (loop (append l (list (format (car notes) c)))

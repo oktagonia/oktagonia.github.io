@@ -51,7 +51,7 @@
           (lambda (x y) (date> (post-date x) (post-date y)))))
   (define (format post)
     `(li (p (a (@ (href ,(post-path post)))
-               ,(string-append (post-title post) ".")))))
+               ,(string-append (post-title post) "")))))
   (let loop ((l '(ul)) (posts *posts*))
     (if (null? posts) l
         (loop (append l (list (format (car posts)))) (cdr posts)))))
