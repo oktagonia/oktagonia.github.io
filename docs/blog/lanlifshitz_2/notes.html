@@ -126,7 +126,7 @@ a conserved quantity. So it makes sense to call it <em>energy.</em> We
 have now established the principle of conservation of energy.</p>
 <p>Lanlifshitz uses the theory of homogeneous functions to find the nature
 of this quantity. A function $f(x_1,\dots,x_n)$ is called <em>homogeneous</em>
-if, for all $s$, $f(ax_1,\dots,ax_n) = a^kf(x_1,\dots,x_n)$ for some 
+if, for all $a$, $f(ax_1,\dots,ax_n) = a^kf(x_1,\dots,x_n)$ for some 
 number $k$ which is called the <em>degree</em> of the function. We may obtain
 a very important result by differentiating both sides of this definition
 with respect to $a$.
@@ -140,9 +140,9 @@ An example that might lead us to the general definition of the homogeneous
 polynomial is the binomial distribution $p(x,y) = (x+y)^n$. We can see that
 this is a homogeneous function since $p(ax,ay) = (ax + ay)^n = a^n(x+y)^n.$
 This, however, isn't particularly revealing. Most polynomials look like sums,
-and the sum that determines $p$ is given by $\sum_{i=0}^n \binom{n}{i}x^ny^{n-i}.$
+and the sum that determines $p$ is given by $\sum_{i=0}^n \binom{n}{i}x^iy^{n-i}.$
 This makes things much clearer. We can see that $p$ is homogeneous because
-$(ax^n)(ay)^{n-i} = a^na^{n-i}x^ny^{n-i} = a^nx^ny^{n-i}$ which allows us to factor
+$(ax)^i(ay)^{n-i} = a^ia^{n-i}x^iy^{n-i} = a^nx^iy^{n-i}$ which allows us to factor
 out $a^n$. So whenever all terms of a polynomial have degree $n$, like
 in the binomial distribution, then we can always factor out an $a^n$ in every term.
 As such, we can see that any polynomial whose every term has the same degree is
