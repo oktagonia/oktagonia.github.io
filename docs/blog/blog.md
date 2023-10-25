@@ -4,8 +4,9 @@
 others in order to better express yourself." The second said "to make light of
 blogging is to be a true blogger."-->
 
-"I am myself the subject of my blog," false attributed to Montaigne. Blogging 
-was obviously not invented back then.
+> *I am myself the subject of my blog.*
+
+Falsely attributed to Montaigne. Blogging was obviously not invented back then.
 
 <!--
 Some say that being self-deprecating in writing isn't good, but they also say
