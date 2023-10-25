@@ -1,13 +1,8 @@
-
-
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-
-<center style='font-size: 40pt; font-family: "Baskerville"'>
-Hilbert's Lamentations
-</center>
+<style>
+body {
+  background-image: url('https://upload.wikimedia.org/wikipedia/commons/0/0e/Newton-WilliamBlake.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+</style> 
