@@ -1,11 +1,12 @@
 # My Blog
 
+![Me after proving that $f(x) = x$ is continuous.](https://upload.wikimedia.org/wikipedia/commons/0/0e/Newton-WilliamBlake.jpg)
+
 <!-- A novice blogger once asked two masters for advice. The first said "only quote
 others in order to better express yourself." The second said "to make light of
 blogging is to be a true blogger."-->
 
 *"I am myself the subject of my blog."* Falsely attributed to Michel de Montaigne.
-
 
 <!--
 Some say that being self-deprecating in writing isn't good, but they also say
