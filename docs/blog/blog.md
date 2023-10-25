@@ -4,7 +4,7 @@
 others in order to better express yourself." The second said "to make light of
 blogging is to be a true blogger."-->
 
-*"I am myself the subject of my blog."* This quote is falsely attributed to Montaigne.
+*"I am myself the subject of my blog."* Falsely attributed to Montaigne by Kian Dianati.
 
 
 <!--
