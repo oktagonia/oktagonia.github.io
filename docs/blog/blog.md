@@ -1,6 +1,7 @@
 # My Blog
 
-<img src='https://upload.wikimedia.org/wikipedia/commons/0/0e/Newton-WilliamBlake.jpg'>
+<img src='https://upload.wikimedia.org/wikipedia/commons/0/0e/Newton-WilliamBlake.jpg'
+width='100%'>
 
 <!-- A novice blogger once asked two masters for advice. The first said "only quote
 others in order to better express yourself." The second said "to make light of
