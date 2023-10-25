@@ -42,24 +42,20 @@
 </script>
   <meta name='viewport' content="width=device-width,initial-scale=1.0">  
   <meta charset="utf-8"/>
-</head>
-<body>
 $
 \gdef\vec#1{\mathbf{#1}}
-\gdef\d{\text{d}}
+\gdef\d{d}
 $
-<div id='stuff'>
-  <header>
-      <h1>
-          Hilbert's Lamentations
-      </h1>
+</head>
+<body>
 
-      <a style='color:white;' href='/'>Home</a> |
-      <a style='color:white;' href='/blog/blog.html'>Blog</a> |
-      <a style='color:white;' href='/archive/archive.html'>Archive</a>
-  </header>
-  <div id='text'>
-    <!-- <script src="https://www.geogebra.org/apps/deployggb.js"></script> -->
+<div class="navbar">
+  <div style='display: table-cell; vertical-align: middle;'>
+    <a href="/">Home</a> • <a href="/blog/blog.html">Blog</a> • <a href="/archive/archive.html">Archive</a>
+  </div>
+</div>
+
+<div class="main">
 <h1>A Proof of Lemma XIV of the First Book of Newton's Principia</h1>
 <p>September 2022 <br></br></p>
 <p><center><b>Lemma XIV</b></center>
@@ -270,7 +266,7 @@ the vertex and the perpendicular dropped from the point of tangency.</em></p>
 <p>Drop a perpendicular from $P$ to $O$.  Notice that since $\angle PNS$ and 
 $\angle POS$ are both right angles, then $NPOS$ is a cyclic quadrilateral. As 
 such, $\angle SON = \angle NPS$ which is in turn equal to $\angle NSM$.
-<a href="#footnote-1"><sup id="source-1">[1]</sup></a>
+<a href="#footnote-1" style="text-decoration: none;"><sup id="source-1">1</sup></a>
 It should be clear now that $MN = NO$.</p>
 <p><img alt="" src="lemma14-2.png" /></p>
 <p>By this point the clear next step is to show that $\triangle MNA \cong 
@@ -322,7 +318,6 @@ equal to the angle between the opposite side and diagonal.</p></li></ol>
 
 <p>With many thanks to discord user <code>NO MORE ALGEBRA</code> for giving me crucial 
 feedback on this writeup.</p>
-</div>
 </div>
 </body>
 </html>

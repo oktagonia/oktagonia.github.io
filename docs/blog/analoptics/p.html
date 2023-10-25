@@ -42,24 +42,20 @@
 </script>
   <meta name='viewport' content="width=device-width,initial-scale=1.0">  
   <meta charset="utf-8"/>
-</head>
-<body>
 $
 \gdef\vec#1{\mathbf{#1}}
-\gdef\d{\text{d}}
+\gdef\d{d}
 $
-<div id='stuff'>
-  <header>
-      <h1>
-          Hilbert's Lamentations
-      </h1>
+</head>
+<body>
 
-      <a style='color:white;' href='/'>Home</a> |
-      <a style='color:white;' href='/blog/blog.html'>Blog</a> |
-      <a style='color:white;' href='/archive/archive.html'>Archive</a>
-  </header>
-  <div id='text'>
-    <!-- <script src="https://www.geogebra.org/apps/deployggb.js"></script> -->
+<div class="navbar">
+  <div style='display: table-cell; vertical-align: middle;'>
+    <a href="/">Home</a> • <a href="/blog/blog.html">Blog</a> • <a href="/archive/archive.html">Archive</a>
+  </div>
+</div>
+
+<div class="main">
 <h1>Analytical Optics</h1>
 <p>July 2023 <br></br>
 The calculus of variations provides a very nice abstraction barrier
@@ -207,7 +203,7 @@ that the laws of optics—i.e., Fermat's principle—are homogeneous with respec
 to space, and the homogeneity of space implies the conservation of momentum
 as discussed <a href="../lanlifshitz_2/notes.html#mom">here</a>. However, since 
 $\partial L/\partial t = 0,$ then optics is also homogeneous with respect to "time"
-<a href="#footnote-1"><sup id="source-1">[1]</sup></a>. As such we must also be able 
+<a href="#footnote-1" style="text-decoration: none;"><sup id="source-1">1</sup></a>. As such we must also be able 
 to use conservation of energy
 $$\begin{equation}
 E = \frac{\partial L}{\partial \dot{x}}\dot{x} + \frac{\partial L}{\partial \dot{y}}\dot{y}
@@ -245,7 +241,6 @@ To compensate I'll make a post about some of the nice exercises in
 <ol><li><p id="footnote-1">The variable $t$ isn't really time. It's just a parameter with which we 
 define the path of light parametrically. I would've used another symbol like 
 $\tau$ if it wasn't hard to type repeatedly.</p></li></ol>
-</div>
 </div>
 </body>
 </html>

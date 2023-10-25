@@ -15,7 +15,7 @@ the exact same predictions as the theory of paleontology; the only difference
 being that propositions of the first start with "To fool us, Satan did ___." Due
 do this effect, no experiment can tell us which one is false. All the observable
 implications of the two are identical, and the non-observable implications are, well,
-unobservable %{(Note "Satan is assumed to not show his face around the Earth after
+unobservable%{(Note "Satan is assumed to not show his face around the Earth after
 the Jesus incident. Read <i>Paradise Lost</i> for more information.")}%. So how do
 we pick which one to believe in?
 
@@ -99,7 +99,7 @@ Judaism. He, however, cannot give you these pieces of empirical evidence because
 can't convince God to talk to you nor will you take his word for it. "And besides,"
 Solomon continues, "my religion is obviously the best! The people who follow its
 rules rigorously are prosperous, just like my kingdom. We just put a space temple
-into orbit in 940 BCE!" %{(Note "He knows about the Christian era because of the
+into orbit in 940 BCE!"%{(Note "He knows about the Christian era because of the
 sheer number of time travelers he has to deal with.")}%
 
 Solomon has indirectly answered your question. The reason he prefers GLGR

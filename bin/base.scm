@@ -30,10 +30,11 @@
 (define (Note str) 
   (set! *footnotes* (append *footnotes* (list str))) 
  `(a (@ (href ,(string-append "#footnote-" 
-                (number->string (length *footnotes*)))))
+                 (number->string (length *footnotes*))))
+        (style "text-decoration: none;"))
      (sup 
        (@ (id ,(string-append "source-" (number->string (length *footnotes*)))))
-       ,(string-append "[" (number->string (length *footnotes*)) "]"))))
+       ,(string-append (number->string (length *footnotes*))))))
 
 (define (Footnotes)
   (define (format note c) 

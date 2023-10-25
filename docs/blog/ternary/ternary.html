@@ -42,24 +42,20 @@
 </script>
   <meta name='viewport' content="width=device-width,initial-scale=1.0">  
   <meta charset="utf-8"/>
-</head>
-<body>
 $
 \gdef\vec#1{\mathbf{#1}}
-\gdef\d{\text{d}}
+\gdef\d{d}
 $
-<div id='stuff'>
-  <header>
-      <h1>
-          Hilbert's Lamentations
-      </h1>
+</head>
+<body>
 
-      <a style='color:white;' href='/'>Home</a> |
-      <a style='color:white;' href='/blog/blog.html'>Blog</a> |
-      <a style='color:white;' href='/archive/archive.html'>Archive</a>
-  </header>
-  <div id='text'>
-    <!-- <script src="https://www.geogebra.org/apps/deployggb.js"></script> -->
+<div class="navbar">
+  <div style='display: table-cell; vertical-align: middle;'>
+    <a href="/">Home</a> • <a href="/blog/blog.html">Blog</a> • <a href="/archive/archive.html">Archive</a>
+  </div>
+</div>
+
+<div class="main">
 <h1>Three-Valued Logic in the λ-Calculus</h1>
 <p>January 2023 <br></br></p>
 <style>
@@ -140,7 +136,7 @@ which do not allow this dreaded possibility. These are called <em>paraconsistent
 value—$\mathbf{X}$, meaning <em>both true and false</em>—besides the usual <em>true</em> and <em>false</em>.
 Then by cleverly defining the usual logical relations, we can obtain a logic which allows
 its user to have contradictory notions without being punished by Aristotle. The one being
-shown here is Kleene-Priest<a href="#footnote-1"><sup id="source-1">[1]</sup></a> 
+shown here is Kleene-Priest<a href="#footnote-1" style="text-decoration: none;"><sup id="source-1">1</sup></a> 
 incantation.  Firstly, we allowed $\mathbf{T}$ and $\mathbf{X}$ to be <em>designated</em> values. 
 That is, we are allowed to use a sentence for further deduction if its truth-value is either 
 $\mathbf{X}$ or $\mathbf{T}$. Then we define the common logical relations as follows:</p>
@@ -193,7 +189,7 @@ further deductions! Besides that, $P$ has to be $\mathbf{X}$, indicating that it
 modus ponens. Which is unfortunate because I really like modus ponens.</p>
 <h2>What is the λ-calculus?</h2>
 <p>The λ-calculus is a simple language capable of universal computation. I won't go into full
-detail about that here because it's been covered better else where<a href="#footnote-2"><sup id="source-2">[2]</sup></a>. For now I'll give a brief overview of the basics of the language and the 
+detail about that here because it's been covered better else where<a href="#footnote-2" style="text-decoration: none;"><sup id="source-2">2</sup></a>. For now I'll give a brief overview of the basics of the language and the 
 encoding of booleans into it.</p>
 <figure>
 <img src='https://imgs.xkcd.com/comics/excel_lambda.png' alt='xkcd 2563'>
@@ -291,7 +287,6 @@ probably the best place to start. Though my own
 <a href='https://oktagonia.github.io/archive/lambda-notes.pdf'>notes</a> 
 aren't too bad either. In fact this post is the solution to one of the exercises in my 
 notes.</p></li></ol>
-</div>
 </div>
 </body>
 </html>
