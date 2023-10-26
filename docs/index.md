@@ -4,5 +4,8 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
+  padding:0px;
 }
+
+.main {padding:0px;}
 </style> 

@@ -103,6 +103,10 @@ and (max-device-width : 568px) {
     figure {
     }
 
+    p {
+        text-align:left;
+    }
+
     div > img {
         text-align: left !important;
     }
