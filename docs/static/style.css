@@ -10,6 +10,7 @@ code {
 
 .katex {
     overflow: auto hidden;
+    font-size: 0.9em;
 }
 
 a { color: black; text-decoration: underline; }
