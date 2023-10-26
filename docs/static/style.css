@@ -59,6 +59,8 @@ body {
     margin-right: auto;
     padding-top:70px;
     padding-bottom:100px;
+    padding-left: 1em;
+    padding-right: 1em;
     background-color: white;
     color: black;
     max-width: 65ch;
