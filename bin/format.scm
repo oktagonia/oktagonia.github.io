@@ -38,6 +38,10 @@
                  (readdir dir)))
           (else (loop posts (readdir dir))))))
 
+(define (sorted-blog-posts)
+  (sort (blog-posts)
+        (lambda (x y) (date> (post-date x) (post-date y)))))
+
 (define (Post title date) 
   `((h1  ,title) ,date (br "")))
 
@@ -73,6 +77,20 @@
     (if (eof-object? char) acc
         (loop (string-append acc (string char))
               (read-char)))))
+
+(define (RSS post)
+  `(rss (@ (version "2.0"))
+        (channel
+          (title "Oktagonia")
+          (link "https://oktagonia.github.io")
+          (lastBuildDate ,(strftime "%c" (localtime (current-time))))
+          (pubDate ,(strftime "%c" (localtime (current-time))))
+          (item
+            (title ,(post-title post))
+            (link ,(string-append "/blog/" (post-path post)))
+            (pubDate ,(string-append (number->string (cadr (post-date post))) " "
+                                     (symbol->string (car (post-date post))) " "
+                                     (number->string (caddr (post-date post)))))))))
         
 ;; dump it all in STDOUT.
 ; (display (compile-string (read-stdin)))

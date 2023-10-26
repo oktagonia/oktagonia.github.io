@@ -17,3 +17,5 @@ b () {
 }
 
 b "docs/*"
+
+./bin/format.scm "docs/feed" > "docs/"feed.xml

@@ -1,8 +1,7 @@
 # My Blog
 
-<figure>
-<img src='https://upload.wikimedia.org/wikipedia/commons/0/0e/Newton-WilliamBlake.jpg'
-style='max-width:100%;width:100%;height:auto;'>
+<figure style='width:100%; padding:0;margin:0;'>
+<img src='https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Newton-WilliamBlake.jpg/2808px-Newton-WilliamBlake.jpg'>
 <figcaption>Me trying to figure out which hole matches the shape of the block.</figcaption>
 </figure>
 
