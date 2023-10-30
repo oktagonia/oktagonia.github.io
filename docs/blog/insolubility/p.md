@@ -60,15 +60,10 @@ What I'm trying to say is that brute force is really fun.
 So after acquiring your group-theory software of choice (I wrote one for myself
 but then threw it away after I realized that [sage](https://www.sagemath.org/)
 does group theory), implement a function that gives you the commutant of a group.
-This is my solution in sage+python:
+Sage already has a method for this task so mine is pretty simple:
 
 ```
-sage: def K(G):
-....:     out = set()
-....:     for a in G:
-....:         for b in G:
-....:             out.add(a*b*a^(-1)*b^(-1))
-....:     return out
+sage: K = lambda x: x.commutator()
 ```
 
 Then just play around a little bit. First I loaded $S_5$ onto the system:
@@ -103,7 +98,7 @@ to get to the trivial group:
 ```
 sage: S = SymmetricGroup(4)
 sage: K(K(K(S)))
-{()}
+Permutation Group with generators [()]
 ```
 
 That is only $3$ iterations!

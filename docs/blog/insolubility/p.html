@@ -110,13 +110,8 @@ What I'm trying to say is that brute force is really fun.</p>
 <p>So after acquiring your group-theory software of choice (I wrote one for myself
 but then threw it away after I realized that <a href="https://www.sagemath.org/">sage</a>
 does group theory), implement a function that gives you the commutant of a group.
-This is my solution in sage+python:</p>
-<p><code>sage: def K(G):
-....:     out = set()
-....:     for a in G:
-....:         for b in G:
-....:             out.add(a*b*a^(-1)*b^(-1))
-....:     return out</code></p>
+Sage already has a method for this task so mine is pretty simple:</p>
+<p><code>sage: K = lambda x: x.commutator()</code></p>
 <p>Then just play around a little bit. First I loaded $S_5$ onto the system:</p>
 <p><code>sage: S = SymmetricGroup(5)</code></p>
 <p>My instinct at this point was to play around with the sizes of this group
@@ -135,7 +130,7 @@ allows $S_4$ to be soluble. In fact we can see how long it takes for $S_4$
 to get to the trivial group:</p>
 <p><code>sage: S = SymmetricGroup(4)
 sage: K(K(K(S)))
-{()}</code></p>
+Permutation Group with generators [()]</code></p>
 <p>That is only $3$ iterations!</p>
 <p>Well, there you have it dear readers. That's the show for tonight. If only
 Abel had an m1 macbook air. He could've skipped four pages!</p>
