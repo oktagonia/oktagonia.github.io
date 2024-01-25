@@ -1,4 +1,9 @@
 %{(Post "Analytical Optics" "July 2023")}%
+
+**Epistemic status: A lot of things about this post are
+incorrect. They will be fixed at some point in the future.**
+
+
 The calculus of variations provides a very nice abstraction barrier
 for studying nature. Step one, find a variational principle for the
 phenomena you're studying. Step two, use conservation laws, generalized
