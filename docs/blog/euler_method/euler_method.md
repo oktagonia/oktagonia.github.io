@@ -8,7 +8,7 @@ html so I hope the following pdf and Mathematica notebook will suffice.
 
 <object class="pdf"
 data="finitediff.pdf"
-width="500"
+width="100%"
 height="800">
 </object>
 
