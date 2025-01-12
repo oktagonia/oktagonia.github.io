@@ -16,8 +16,9 @@ func main() {
 }
 
 func handler(w http.ResponseWriter, r *http.Request) {
-	path := "./site" + r.URL.Path
+	path := "./docs" + r.URL.Path
 	content, err := ioutil.ReadFile(path)
+
 	if err != nil {
 		panic(err)
 	}
