@@ -1,0 +1,246 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+      margin: 0;
+      padding: 20px;
+      background-color: #f5f5f5;
+      color: #333;
+    }
+
+    .header {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .header h1 {
+      color: #2c3e50;
+      margin-bottom: 10px;
+    }
+
+    .header p {
+      color: #7f8c8d;
+      margin: 0;
+    }
+
+    .input-container {
+      display: flex;
+      gap: 10px;
+      justify-content: center;
+      margin-bottom: 30px;
+    }
+
+    input[type="text"] {
+      width: 500px;
+      padding: 12px;
+      border: 2px solid #e0e0e0;
+      border-radius: 8px;
+      font-size: 14px;
+      transition: border-color 0.3s ease;
+    }
+
+    input[type="text"]:focus {
+      outline: none;
+      border-color: #3498db;
+    }
+
+    button {
+      padding: 12px 24px;
+      background-color: #3498db;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 14px;
+      font-weight: 500;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #2980b9;
+    }
+
+    .container {
+      display: flex;
+      gap: 30px;
+      justify-content: center;
+      margin: 0 auto;
+      max-width: 1200px;
+    }
+
+    .image-container {
+      background: white;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .image-container:hover {
+      transform: translateY(-5px);
+    }
+
+    .image-container h3 {
+      margin: 0 0 15px 0;
+      color: #2c3e50;
+      font-size: 18px;
+      text-align: center;
+    }
+
+    img, canvas {
+      max-width: 500px;
+      border-radius: 8px;
+      display: block;
+    }
+
+    #canvas {
+      display: none;
+    }
+
+    .loading {
+      display: none;
+      text-align: center;
+      margin: 20px 0;
+      color: #7f8c8d;
+    }
+
+    .loading.active {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <h1>PCA Grayscale Converter</h1>
+    <p>Convert your images to grayscale using Principal Component Analysis</p>
+  </div>
+
+  <div class="input-container">
+    <input type='text' id="url" placeholder="Enter image URL (e.g., https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Van_Gogh_-_Starry_Night_-_Google_Art_Project.jpg/1200px-Van_Gogh_-_Starry_Night_-_Google_Art_Project.jpg"/>
+    <button onclick="load_image()">Convert to Grayscale</button>
+  </div>
+
+  <div class="loading" id="loading">Processing image...</div>
+
+  <div class="container">
+    <div class="image-container">
+      <h3>Original Image</h3>
+      <img id="image" alt="Original image"/>
+    </div>
+    <div class="image-container">
+      <h3>Grayscale (PCA)</h3>
+      <canvas id="grayscale"></canvas>
+    </div>
+  </div>
+
+  <canvas id="canvas" style="display: none;"></canvas>
+
+  <script>
+    const image = document.getElementById('image')
+    const canvas = document.getElementById('canvas')
+    const grayscale = document.getElementById('grayscale')
+    const ctx = canvas.getContext('2d')
+    const grayscaleCtx = grayscale.getContext('2d')
+
+    // PCA implementation
+    function computePCA(data) {
+      const mean = [0,0,0];
+      data.forEach((x) => { mean[0] += x[0]; mean[1] += x[1]; mean[2] += x[2]; });
+      mean[0] /= data.length;
+      mean[1] /= data.length;
+      mean[2] /= data.length;
+
+      const normalized = data.map((x) => [x[0] - mean[0], x[1] - mean[1], x[2] - mean[1]]);
+      const cov = [[0,0,0],[0,0,0],[0,0,0]];
+
+      for (let i = 0; i < data.length; i++) {
+        const x = normalized[i];
+        cov[0][0] += x[0] * x[0];
+        cov[0][1] += x[0] * x[1];
+        cov[0][2] += x[0] * x[2];
+        cov[1][0] += x[1] * x[0];
+        cov[1][1] += x[1] * x[1];
+        cov[1][2] += x[1] * x[2];
+        cov[2][0] += x[2] * x[0];
+        cov[2][1] += x[2] * x[1];
+        cov[2][2] += x[2] * x[2];
+      }
+
+      for (let i = 0; i < 3; i++)
+        for (let j = 0; j < 3; j++)
+          cov[i][j] /= data.length;
+
+      // power method for finding principal component (thanks pourya for putting this)
+      const b = [1,1,1];
+      for (let i = 0; i < 10; i++) {
+        for (let j = 0; j < 3; j++)
+          b[j] = cov[j][0] * b[0] + cov[j][1] * b[1] + cov[j][2] * b[2];
+        const norm = Math.sqrt(b[0]*b[0] + b[1]*b[1] + b[2]*b[2]);
+        for (let j = 0; j < 3; j++) b[j] /= norm;
+      }
+
+      return b
+    }
+
+    function process_image() {
+        canvas.width = image.naturalWidth;
+        canvas.height = image.naturalHeight;
+        grayscale.width = image.naturalWidth;
+        grayscale.height = image.naturalHeight;
+
+        const width = canvas.width;
+        const height = canvas.height;
+
+        ctx.drawImage(image, 0, 0);
+        const img = ctx.getImageData(0, 0, canvas.width, canvas.height).data;
+
+        // Prepare data for PCA
+        const data = [];
+        for (let i = 0; i < height; i++) {
+            for (let j = 0; j < width; j++) {
+                const idx = 4 * (i * width + j);
+                const r = img[idx] / 255;
+                const g = img[idx + 1] / 255;
+                const b = img[idx + 2] / 255;
+                data.push([r, g, b]);
+            }
+        }
+
+        // Perform PCA
+        const firstPC = computePCA(data);
+        console.log('First principal component:', firstPC);
+
+        // Create grayscale image using the first principal component
+        const grayscaleData = grayscaleCtx.createImageData(width, height);
+        for (let i = 0; i < height; i++) {
+            for (let j = 0; j < width; j++) {
+                const idx = 4 * (i * width + j);
+                const r = img[idx] / 255;
+                const g = img[idx + 1] / 255;
+                const b = img[idx + 2] / 255;
+                
+                // Project the RGB values onto the first principal component
+                const grayValue = r * firstPC[0] + g * firstPC[1] + b * firstPC[2];
+                const normalizedGray = Math.min(255, Math.max(0, Math.round(grayValue * 255)));
+                
+                grayscaleData.data[idx] = normalizedGray;
+                grayscaleData.data[idx + 1] = normalizedGray;
+                grayscaleData.data[idx + 2] = normalizedGray;
+                grayscaleData.data[idx + 3] = 255;
+            }
+        }
+        
+        grayscaleCtx.putImageData(grayscaleData, 0, 0);
+    }
+
+    function load_image() {
+        const url = document.getElementById('url').value;
+        image.crossOrigin = 'anonymous';
+        image.onload = process_image;
+        image.src = url;
+    }
+  </script>
+</body>
+</html>
