@@ -28,3 +28,8 @@ Riemann sums has to deal with the subtle special case that $b - c$ and
 $c - a$ are incommensurable and so no two Riemann partitions on the intervals
 $[a,c]$ and $[c,b]$ will have equal equal subintervals. This file contains
 a short proof of this fact using Riemann partitions alone.
+
+5. [The Curse of Monte Carlo](The_Curse_of_Monte_Carlo.pdf). A worksheet
+exploring the curse of dimensionality, numerical integration, and the
+Monte Carlo method. Meant to introduce these ideas to intro probability students
+at the University of Toronto.
