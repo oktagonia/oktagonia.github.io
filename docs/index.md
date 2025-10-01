@@ -18,3 +18,4 @@ body {
 1. No notes for week 1.
 2. [Week 2](a31_week2.pdf)
 3. [Week 3](a31_week3.pdf)
+3. [Week 4](a31_week4.pdf)
