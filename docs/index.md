@@ -19,3 +19,5 @@ body {
 2. [Week 2](a31_week2.pdf)
 3. [Week 3](a31_week3.pdf)
 3. [Week 4](a31_week4.pdf)
+3. [Week 5](a31_week5.pdf)
+3. [Week 6](a31_week6.pdf)
