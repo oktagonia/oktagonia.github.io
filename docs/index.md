@@ -21,3 +21,5 @@ body {
 3. [Week 4](a31_week4.pdf)
 3. [Week 5](a31_week5.pdf)
 3. [Week 6](a31_week6.pdf)
+3. Reading week
+3. [Week 8](a31_week8.pdf)
