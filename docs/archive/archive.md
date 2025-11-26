@@ -6,7 +6,7 @@ th { background: #f9f9f9; }
 
 # Archive
 
-For this that don't belong.
+For things that don't belong.
 
 ## Teaching
 
