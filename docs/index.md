@@ -1,25 +1,18 @@
-<!--
-<style>
-body {
-  background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/Europe_a_Prophecy%2C_copy_D%2C_object_1_%28Bentley_1%2C_Erdman_i%2C_Keynes_i%29_British_Museum.jpg/1564px-Europe_a_Prophecy%2C_copy_D%2C_object_1_%28Bentley_1%2C_Erdman_i%2C_Keynes_i%29_British_Museum.jpg');
-  background-size: 100% auto;
-  background-color: black;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  padding:0px;
-}
+<div style="text-align: center;">
+  <img src="output.png" style="max-width: 100%; height: auto; border: 0px;">
+</div>
 
-.main {padding:0px;}
-</style>
--->
-
-# MATA31 Notes
-
-1. No notes for week 1.
-2. [Week 2](a31_week2.pdf)
-3. [Week 3](a31_week3.pdf)
-3. [Week 4](a31_week4.pdf)
-3. [Week 5](a31_week5.pdf)
-3. [Week 6](a31_week6.pdf)
-3. Reading week
-3. [Week 8](a31_week8.pdf)
+<div style="display: flex; justify-content: center; align-items: flex-end; gap: 60px; margin: 40px 0;">
+  <div style="text-align: center;">
+    <img src="scroll.gif" style="display: block; margin: 0 auto 20px auto; border: 0px;">
+    <a href="blog/blog.html" style="font-size: 16pt; text-decoration: underline;">Blog</a>
+  </div>
+  <div style="text-align: center;">
+    <img src="book.gif" style="display: block; margin: 0 auto 20px auto; border: 0px;">
+    <a href="archive/archive.html" style="font-size: 16pt; text-decoration: underline;">Archive</a>
+  </div>
+  <div style="text-align: center;">
+    <img src="github.gif" style="display: block; margin: 0 auto 20px auto; border: 0px; width: 45px;">
+    <a href="https://github.com/oktagonia" style="font-size: 16pt; text-decoration: underline;">Github</a>
+  </div>
+</div>
