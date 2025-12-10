@@ -1,5 +1,5 @@
 %{(Post "Finding the best regressor using the calculus of variations"
- "January 2025")}%
+ "December 2025")}%
 
 Suppose we have two random variables $(X,Y)$ with a joint distribution
 given by $p.$ We wish to find the function $g$ of $X$ minimizes the expected
