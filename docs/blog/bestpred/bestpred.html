@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang=en-US>
+<head>
+  <meta charset="utf-8">
+  <link href='/static/style.css' rel='stylesheet'>
+  <link href='/Users/kiand/fun/oktagonia.github.io/docs/static/style.css' rel='stylesheet'>
+  <link href='/home/kiand/fun/oktagonia.github.io/docs/static/style.css' rel='stylesheet'>
+  <link rel="stylesheet" href="https://use.typekit.net/cnp8pzd.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/aaaakshat/cm-web-fonts@latest/fonts.css">
+
+  <title>Hilbert's Lamentations</title>
+  <!--
+  <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript">
+  </script>
+  <script type='text/x-mathjax-config'>
+    MathJax.Hub.Config({
+      tex2jax: {
+        inlineMath: [['$','$']],
+        processEscapes: true
+      }
+    });
+  </script>
+  -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.2/dist/katex.min.css" integrity="sha384-bYdxxUwYipFNohQlHt0bjN/LCpueqWz13HufFEV1SUatKs1cm4L6fFgCi1jT643X" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.2/dist/katex.min.js" integrity="sha384-Qsn9KnoKISj6dI8g7p1HBlNpVx0I8p1SvlwOldgi3IorMle61nQy4zEahWYtljaz" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.2/dist/contrib/auto-render.min.js" integrity="sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05" crossorigin="anonymous"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        renderMathInElement(document.body, {
+          // customised options
+          // • auto-render specific keys, e.g.:
+          delimiters: [
+              {left: '$$', right: '$$', display: true},
+              {left: '$', right: '$', display: false},
+              {left: '\\(', right: '\\)', display: false},
+              {left: '\\[', right: '\\]', display: true}
+          ],
+          throwOnError : false,
+        });
+    });
+</script>
+  <meta name='viewport' content="width=device-width,initial-scale=1.0">  
+  <meta charset="utf-8"/>
+$
+\gdef\vec#1{\mathbf{#1}}
+\gdef\d{d}
+$
+</head>
+<body>
+
+<div class="navbar">
+  <div style='display: table-cell; vertical-align: middle;'>
+      <a href="/">Home</a> • <a href="/blog/blog.html">Blog</a> • <a href="/archive/archive.html">Archive</a> • <a href='/feed.xml'>RSS</a>
+  </div>
+</div>
+
+<div class="main">
+<h1>Finding the best regressor using the calculus of variations</h1>
+<p>January 2025 <br></br></p>
+<p>Suppose we have two random variables $(X,Y)$ with a joint distribution
+given by $p.$ We wish to find the function $g$ of $X$ minimizes the expected
+squared loss
+$$
+E(Y - g(X))^2 = \int (y - g(x)^2 p(x, y)\,dxdy.
+$$
+Most of you probably now that the answer is the conditional expectation
+$$
+g(x) = E(Y | X = x) = 
+\frac{\displaystyle\int y p(x, y)\, dxdy}{\displaystyle\int p(x, y)\, dy}
+$$
+but the usual proof is, though nice, general and probabilistic, quite 
+opaque.  You start by adding and subtracting the conditional expectation 
+from the inside of the expected error
+$$\begin{aligned}
+E(Y - g(X))^2 
+&amp;= E(Y - E(Y|X) + E(Y|X) - g(X))^2 \\
+&amp;= E(Y - E(Y|X))^2 + E(E(Y|X) - g(X))^2 \\
+&amp;\geq E(Y - E(Y|X))^2
+\end{aligned}$$
+It almost feels like you're supposed to know the answer before coming up
+with it! I find that unsatisfying. A solution that leads you
+to the right answer, albeit with less generality, can be obtained by using 
+the calculus of variations.</p>
+<p>We wish to find the function $g$ that minimizes the integral
+$$
+J(g) = E(Y - g(X))^2 = \int (y - g(x)^2 p(x, y)\,dxdy.
+$$
+This is a problem for the calculus of variations! Lets try to find the
+first variation of this functional.
+$$\begin{aligned}
+J(g + \eta) 
+&amp;= \int (y - g(x) - \eta(x))^2 p(x,y)\,dxdy \\
+&amp;= \int (y - g(x))^2 p(x,y)\,dxdy \\
+&amp;\quad\quad- 2\int (y - g(x))\eta(x) p(x, y)\,dxdy \\
+&amp;\quad\quad\quad\quad+ \int \eta(x)^2 p(x, y)\,dxdy
+\end{aligned}$$
+It is evident that
+$$
+J(g + \eta) - J(g) 
+= -2\int (y - g(x))\eta(x) p(x, y)\,dxdy + o(\eta^2)
+$$
+which means that the first variation is
+$$
+\delta J_g(\eta) = -2\int (y - g(x))\eta(x) p(x, y)\,dxdy
+$$
+So we must try and find $g$ such that $\delta J_g(\eta) = 0$ for all
+$\eta$. Notice that by Fubini's theorem it follows that
+$$
+\delta J_g(\eta) = \int\left(\int (y - g(x)p(x,y)\,dy\right)\eta(x)\,dx=0
+$$
+for all $\eta$. The fundamental lemma of the calculus of variations then
+implies that
+$$
+\int (y - g(x))p(x, y)\,dy = 0
+$$
+and this means that
+$$
+\int yp(x, y)\,dy = g(x) \int p(x, y)\,dy
+$$
+which is precisely what we wanted to show.</p>
+<p>What about other measures of loss? Another common one is the
+expected absolute loss
+$$
+J(g) = E|Y - g(X)| = \int |y - g(x)|p(x, y)\,dxdy
+$$
+Just like before we begin by finding the first variation
+$$\begin{aligned}
+J(g + \eta) - J(g)
+&amp;= \int\left(|y - g(x) - \eta(x)| - |y - g(x)|\right)p(x,y)\,dxdy \\
+&amp;= \int\left(\frac{\partial|y - g(x) - \eta(x)|}{\partial \eta(x)}\eta(x) + o(\eta(x)^2)\right)p(x,y)\,dxdy \\
+&amp;= \int\operatorname{sgn}(y - g(x))\eta(x)p(x,y)\,dxdy + o(\eta^2)
+\end{aligned}$$
+which means that
+$$
+\delta J_g(\eta) = \int\operatorname{sgn}(y - g(x))\eta(x)p(x,y)\,dxdy.
+$$
+Just like before, we apply Fubini and the fundamental lemma to conclude
+that
+$$
+\int\operatorname{sgn}(y - g(x))p(x, y)\,dy = 0
+$$
+Breaking up this integral into two results in
+$$
+\int_{y&gt;g(x)} p(x,y)\,dy-\int_{y \leq g(x)}p(x, y)\,dy = 0
+$$
+that is, $g(x)$ is the number such that the distribution of $Y|X=x$ has the
+same mass to the left of $g(x)$ as it has to the right of $g(x)$. This
+number is called the <em>conditional median</em> of $Y$ at $X = x$.</p>
+</div>
+</body>
+</html>
+
