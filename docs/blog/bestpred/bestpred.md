@@ -5,7 +5,7 @@ Suppose we have two random variables $(X,Y)$ with a joint distribution
 given by $p.$ We wish to find the function $g$ of $X$ minimizes the expected
 squared loss
 $$
-E(Y - g(X))^2 = \int (y - g(x)^2 p(x, y)\,dxdy.
+E(Y - g(X))^2 = \int (y - g(x))^2 p(x, y)\,dxdy.
 $$
 Most of you probably now that the answer is the conditional expectation
 $$
