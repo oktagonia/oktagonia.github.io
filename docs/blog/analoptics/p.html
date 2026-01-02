@@ -58,8 +58,6 @@ $
 <div class="main">
 <h1>Analytical Optics</h1>
 <p>July 2023 <br></br></p>
-<p><strong>Epistemic status: A lot of things about this post are
-incorrect. They will be fixed at some point in the future.</strong></p>
 <p>The calculus of variations provides a very nice abstraction barrier
 for studying nature. Step one, find a variational principle for the
 phenomena you're studying. Step two, use conservation laws, generalized
@@ -148,62 +146,46 @@ the speed of light is $v_2.$ Therefore
 $$
 v(x) = \begin{cases}v_0 &amp; x &lt; 0 \\ v_1 &amp; x &gt; 0 \end{cases}
 $$
-which is obviously not differentiable. Luckily, we can continue to study
-this scenario because we can use momentum. Let $\vec{p}_0$ be the momentum
-to the left of $x=0$ and $\vec{p}_1$ be the momentum to the right of $x=0.$
-Plugging this in (4) gives
+which is obviously not differentiable. That the optical Lagrangian $L$ given by this
+choice of the speed of light has symmetry in the $y$-axis. That is, if $\Delta y$ is any
+constant
 $$\begin{aligned}
-\vec{p}_0 = \left(\frac{\dot{x}_0}{v_0\sqrt{\dot{x}_0^2 + \dot{y}_0^2}}, 
-                 \frac{\dot{y}_0}{v_0\sqrt{\dot{x}_0^2 + \dot{y}_0^2}}\right), \\
-\vec{p}_1 = \left(\frac{\dot{x}_1}{v_1\sqrt{\dot{x}_1^2 + \dot{y}_1^2}}, 
-                 \frac{\dot{y}_1}{v_1\sqrt{\dot{x}_1^2 + \dot{y}_1^2}}\right).
+L(x, y + \Delta y, \dot{x}, \dot{y})
+= \frac{\sqrt{\dot{x}^2 + \dot{y}^2}}{v(x, y + \Delta y)}
+= \frac{\sqrt{\dot{x}^2 + \dot{y}^2}}{v(x, y)}
+= L(x, y)
 \end{aligned}$$
-In polar coordinates these may be written as $\vec{p}_0 = 
-|\vec{p}_0|(\cos\theta_0,\sin\theta_0)$ and $\vec{p}_1 = 
-|\vec{p}_1|(\cos\theta_1,\sin\theta_1)$ for some $\theta_0$ and $\theta_1.$
-In this sense, conservation of momentum $\vec{p}_0 = \vec{p}_1$ implies
-that $|\vec{p}_0|\sin\theta_0 = |\vec{p}_1|\sin\theta_1.$ Furthermore,
-since $|\vec{p}_0| = 1/v_0$ and $|\vec{p}_1| = 1/v_1,$ then
-$$\begin{equation}
+This means that $L$ is constant with respect to $y$. Using this and the Euler-Lagrange equation
+we can see that
+$$
+\frac{d}{dt}\frac{\partial L}{\partial\dot{y}} = \frac{\partial L}{\partial y} = 0
+$$
+so that the second component of generalized momentum, $\partial L/\partial\dot{y}$ is a
+conserved quantity; which we could have also seen by Noether's theorem.
+This means that if $(x_0, y_0)$ and $(x_1, y_1)$ are on opposite sides of the $y$-axis, then
+by (4)
+$$
+\frac{\dot{y}_0}{v_0\sqrt{\dot{x}_0^2 + \dot{y}_0^2}}
+= \frac{\dot{y}_1}{v_1\sqrt{\dot{x}_1^2 + \dot{y}_1^2}}
+$$
+Now, notice that $\dot{y} / \sqrt{\dot{x}^2 + \dot{y}^2}$ is equal to the sine of the
+angle $\theta$ made by the tangent vector $(\dot{x},\dot{y})$ and the $x$-axis. At $(x_0, y_0)$
+we denote this angle by $\theta_0$ and call it the <em>angle of incidence.</em> Similarly, we denote
+it by $\theta_1$ and call it the <em>angle of refraction</em>. We conclude that
+$$
 \frac{\sin\theta_0}{v_0} = \frac{\sin\theta_1}{v_1}
-\end{equation}$$
-which is known as <em>Snell's law</em> or the <em>law of refraction.</em></p>
-<p><b>Theorem 1.</b> When light traverses the boundary between two media,
-$\sin\theta_0/v_0 = \sin\theta_1/v_1$ where $\theta_0$ is the angle
-of incidence, $\theta_1$ is the angle of refraction, and $v_0$ and 
-$v_1$ are the speeds of light in the the first and second medium 
-respectively.</p>
-<p>A similar argument suffices to show the law of reflection. Suppose 
-that—in a uniform medium where $v = v_0$—a mirror is placed on the 
-line $y=0.$ A path of light starts at $P=(x_0, y_0),$ hits the mirror,
-and ends up at $Q=(x_1, y_1).$ Before hitting the mirror, the momentum
-of light is
 $$
-\vec{p}_0 = \left(\frac{\dot{x}_0}{v_0\sqrt{\dot{x}_0^2 + \dot{y}_0^2}}, 
-                   \frac{\dot{y}_0}{v_0\sqrt{\dot{x}_0^2 + \dot{y}_0^2}}\right).
-$$
-And after hitting the mirror the momentum becomes
-$$
-\vec{p}_1 = \left(\frac{\dot{x}_1}{v_0\sqrt{\dot{x}_1^2 + \dot{y}_1^2}}, 
-                   \frac{\dot{y}_1}{v_0\sqrt{\dot{x}_1^2 + \dot{y}_1^2}}\right).
-$$
-Just as in our discussion of refraction, the conservation of momentum
-$\vec{p}_0 = \vec{p}_1$ implies that $|\vec{p}_0|\sin\theta_0 = 
-|\vec{p}_1|\sin\theta_1.$ Since this time $|\vec{p}_0| = |\vec{p}_1| = 1/v_0,$
-then it follows that $\sin\theta_0 = \sin\theta_1.$ As both angles are less than
-$180^\circ,$ we can say that $\theta_1 + 90^\circ = \theta_0$ without loss of
-generality. As $\theta_0$ is the angle of incidence, and $\theta_1 + 90^\circ$
-is the angle of reflection, then the angle of incidence equals to the angle
-of reflection.</p>
-<p>This fact can also be shown with Snell's law. Since light is travelling in a
-uniform medium, the law of reflection reduces to the case where $\sin\theta_0
-= \sin\theta_1.$ From which it follows that $\theta_1 + 90^\circ = \theta_0.$</p>
-<p><b>Theorem 2.</b> When light bounces off of a mirror, the angle of incidence
+which is the widely known <em>Snell's law</em> or the <em>law of refraction.</em></p>
+<p>The law of reflection follows as a special case of the law of refraction. If the $y$-axis
+is a mirror instead of the boundary between two media, then $v_0 = v_1$ implying that
+$\theta_0 = \theta_1$ Therefore, the angle of incidence is equal to the angle of reflection
+(which takes the place of the angle of refraction).</p>
+<p><b>Theorem 1.</b> When light bounces off of a mirror, the angle of incidence
 is equal to the angle of reflection.</p>
-<p>I have freely used conservation of momentum in these proofs. This is because
+<!-- I have freely used conservation of momentum in these proofs. This is because
 that the laws of optics—i.e., Fermat's principle—are homogeneous with respect
 to space, and the homogeneity of space implies the conservation of momentum
-as discussed <a href="../lanlifshitz_2/notes.html#mom">here</a>. However, since 
+as discussed [here](../lanlifshitz_2/notes.html#mom). However, since 
 $\partial L/\partial t = 0,$ then optics is also homogeneous with respect to "time"
 <a href="#footnote-1" style="text-decoration: none;"><sup id="source-1">1</sup></a>. As such we must also be able 
 to use conservation of energy
@@ -213,17 +195,18 @@ E = \frac{\partial L}{\partial \dot{x}}\dot{x} + \frac{\partial L}{\partial \dot
 \end{equation}$$
 to solve some problems. But things get a little weird when we expand (7) with (2)
 $$\begin{aligned}
-E &amp;= \frac{\partial L}{\partial \dot{x}}\dot{x} + \frac{\partial L}{\partial \dot{y}}\dot{y} - L
-\\
-&amp;= \frac{\dot{x}^2}{v\sqrt{\dot{x}^2 + \dot{y}^2}} + 
+E &= \frac{\partial L}{\partial \dot{x}}\dot{x} + \frac{\partial L}{\partial \dot{y}}\dot{y} - L
+\\\\
+&= \frac{\dot{x}^2}{v\sqrt{\dot{x}^2 + \dot{y}^2}} + 
    \frac{\dot{y}^2}{v\sqrt{\dot{x}^2 + \dot{y}^2}} -
-   \frac{\sqrt{\dot{x}^2 + \dot{y}^2}}{v} \\
-&amp;= \frac{\dot{x}^2 + \dot{y}^2 - \dot{x}^2 - \dot{y}^2}{v\sqrt{\dot{x}^2 + \dot{y}^2}} \\
-&amp;= 0.
+   \frac{\sqrt{\dot{x}^2 + \dot{y}^2}}{v} \\\\
+&= \frac{\dot{x}^2 + \dot{y}^2 - \dot{x}^2 - \dot{y}^2}{v\sqrt{\dot{x}^2 + \dot{y}^2}} \\\\
+&= 0.
 \end{aligned}$$
 I guess this means that the conservation of optical energy is much
-simpler than I thought!</p>
-<p>A simpler derivation of this can be given by some geometric intuition. Since
+simpler than I thought!
+
+A simpler derivation of this can be given by some geometric intuition. Since
 the direction of $\vec{p}$ is the same as $\vec{v} = (\dot{x}, \dot{y}),$
 then $|\vec{p}||\vec{v}| = \vec{p}\cdot\vec{v}.$ Expanding both sides of
 this equality results in
@@ -233,8 +216,9 @@ L = \frac{\sqrt{\dot{x}^2 + \dot{y}^2}}{v(x,y)} =
 $$
 which can be further simplified to show that the optical energy is always zero.
 There is another way to prove this using 
-<a href="../lanlifshitz_2/notes.html#Energy">Euler's theorem on homogeneous functions</a>
-which I leave as an exercise to the reader.</p>
+[Euler's theorem on homogeneous functions](../lanlifshitz_2/notes.html#Energy)
+which I leave as an exercise to the reader. -->
+
 <p>And that's about it for this very theory heavy post. No new results, all of
 it just a fancy restatement of what we knew in <a href="../optics/optics.html">the last post</a>.
 To compensate I'll make a post about some of the nice exercises in 
