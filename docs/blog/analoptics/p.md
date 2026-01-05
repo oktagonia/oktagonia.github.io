@@ -101,7 +101,7 @@ $$\begin{aligned}
 L(x, y + \Delta y, \dot{x}, \dot{y})
 = \frac{\sqrt{\dot{x}^2 + \dot{y}^2}}{v(x, y + \Delta y)}
 = \frac{\sqrt{\dot{x}^2 + \dot{y}^2}}{v(x, y)}
-= L(x, y)
+= L
 \end{aligned}$$
 This means that $L$ is constant with respect to $y$. Using this and the Euler-Lagrange equation
 we can see that
@@ -118,12 +118,11 @@ $$
 $$
 Now, notice that $\dot{y} / \sqrt{\dot{x}^2 + \dot{y}^2}$ is equal to the sine of the
 angle $\theta$ made by the tangent vector $(\dot{x},\dot{y})$ and the $x$-axis. At $(x_0, y_0)$
-we denote this angle by $\theta_0$ and call it the *angle of incidence.* Similarly, we denote
-it by $\theta_1$ and call it the *angle of refraction*. We conclude that
+we denote this angle by $\theta_0$ and call it the *angle of incidence.* Similarly, at $(x_1, y_1)$ we denote it by $\theta_1$ and call it the *angle of refraction*. We conclude that
 $$
 \frac{\sin\theta_0}{v_0} = \frac{\sin\theta_1}{v_1}
 $$
-which is the widely known *Snell's law* or the *law of refraction.*
+which is the widely known *Snell's law of refraction*.
 
 The law of reflection follows as a special case of the law of refraction. If the $y$-axis
 is a mirror instead of the boundary between two media, then $v_0 = v_1$ implying that
