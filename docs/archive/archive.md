@@ -33,6 +33,7 @@ For things that don't belong.
 
 ## Miscellany
 
+1. [Talk about sampling](saman.html) points from manifolds given at the UTSC CMS Colloquium.
 1. [The Curse of Monte Carlo](The_Curse_of_Monte_Carlo.pdf). A worksheet
   exploring the curse of dimensionality, numerical integration, and the
   Monte Carlo method. Meant to introduce these ideas to intro probability students
