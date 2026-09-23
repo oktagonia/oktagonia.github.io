@@ -106,7 +106,7 @@ make a model that simulates nature, all we need to find is an error/loss functio
 that tells us how unrealistic a mechanical system is. However because we have 
 to look at the unrealistic behavior of the system <em>over time</em>, we need to look 
 at each moment in time and add up the irregularities to get a nice error function.
-Let the error at each moment be a function $L$—called the <em>Lagrangian</em>—in terms
+Let the error at each moment be a function $L$???called the <em>Lagrangian</em>???in terms
 of $q, \dot{q}$, and time $t.$ So the total error of the system from $t_0$ to
 $t_1$ would be:
 $$S = \int_{t_0}^{t_1} L(q, \dot{q}, t)\,\d t.$$
@@ -266,8 +266,8 @@ $L$ cannot depend on the direction of velocity in $K$. As such, $L = L(v^2)$.
 So by the Euler-Lagrange equation
 $$ \frac{\d}{\d t}\frac{\partial L}{\partial \vec{v}} = 0. $$
 Let $f(\vec{v}) = \partial L/\partial \vec{v}$. We know that $f$ is constant,
-and since it's probably an interesting function—i.e., not equal to $\vec{v}/\vec{v}$
-or $1$ or something of this sort—then we can safely assume that $\vec{v}$ is
+and since it's probably an interesting function???i.e., not equal to $\vec{v}/\vec{v}$
+or $1$ or something of this sort???then we can safely assume that $\vec{v}$ is
 also constant: $\dot{\vec{v}} = \vec{a} = 0.$</p>
 <p>For a free particle, it would make sense for the Lagrangian to be constant.
 After all, what kind of information do we have to indicate that the motion
@@ -351,7 +351,7 @@ just let it be for now. We call $U(\vec{r_1},\dots,\vec{r_N})$ the <em>potential
 energy</em> of the system. </p>
 <p>Now that we have deduced the full form of the Lagrangian, the natural next step
 is to combine this with the Euler-Lagrange equation and see the fruits of our labor.
-In this section we've found—by the additivity of the Lagrangian—that the motion of
+In this section we've found???by the additivity of the Lagrangian???that the motion of
 a single particle in an interacting system can be deduced from
 $$L = \frac{1}{2}mv_i^2 - U(\vec{r}_1,\dots,\vec{r}_N).$$
 And in the section on the Euler-Lagrange equation, we've found that the
@@ -365,7 +365,7 @@ our existing intuitions we define the <em>force</em> on the $i$th particle to be
 $\vec{F}_i = -\partial U/\partial \vec{r}_i.$ Going in the opposite direction,
 if $\vec{F}$ is not defined in terms of $\vec{r}$, then $U = -\vec{F}\cdot \vec{r}.$ So when we
 wish to determine the potential energy of a particle under constant downwards 
-acceleration—such as on Earth—we can do so by finding the dot product of the force
+acceleration???such as on Earth???we can do so by finding the dot product of the force
 $m(0,-g)$ and position $(x, y)$ which results in $U = mgy$, as we were expecting.
 Similarly, we can find the potential energy of a spring by using Hooke's law: $\vec{F} = -k\vec{x}.$
 However, since this time force depends on position, we can't use $U = \vec{F}\cdot \vec{x}$, but

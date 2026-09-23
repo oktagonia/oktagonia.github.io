@@ -29,6 +29,21 @@ For things that don't belong.
     <td><a href="mata31/a31_week10.pdf">10</a></td>
     <td><a href="mata31/a31_week11.pdf">11</a></td>
   </tr>
+  <tr>
+    <td>STAB52</td>
+    <td><a href="stab52/STAB52_Tutorials_1.pdf" aria-label="STAB52 tutorial 1 worksheet">1</a></td>
+    <td><a href="stab52/STAB52_Tutorial_2.pdf" aria-label="STAB52 tutorial 2 worksheet">2</a></td>
+    <!-- Replace each dash with a worksheet link as tutorials 3-11 are added. -->
+    <td>-</td>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td>
+  </tr>
 </table>
 
 ## Miscellany

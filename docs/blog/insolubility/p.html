@@ -61,9 +61,9 @@ $
 <em>Abel's Theorem in Problems and Solutions</em> by V.B. Alekseev is a great problem-oriented
 textbook that leads the reader to naturally rediscover the titular theorem for himself.
 And as all roads to the solvability of equations passes through symmetric groups, even 
-Vladimir Arnold—whose lectures the book is based on—is forced to make the pilgrimage.</p>
+Vladimir Arnold???whose lectures the book is based on???is forced to make the pilgrimage.</p>
 <p>The important detail about symmetric groups $S_n$ is that they are insoluble
-for all $n \geq 5.$ Alekseev spends quite a few pages—about four—proving this fact.
+for all $n \geq 5.$ Alekseev spends quite a few pages???about four???proving this fact.
 What's interesting is that it all can be skipped by some simple programming.</p>
 <p>One approach to proving this theorem is by simple induction. If we show that
 $S_5$ is insoluble, and also show that the insolubility of $S_n$ implies the
@@ -81,10 +81,10 @@ group.</p>
 of a soluble group are all soluble. So suppose $G$ is soluble and
 $H \subseteq G.$ Notice that $K(H) \subseteq K(G),$ and similarly $K_n(H) 
 \subseteq K_n(G).$ These facts are easy to verify from the definitions.
-As such, if $K_r(G)$ is the trivial group, then $K_r(H)$—being a group—must
+As such, if $K_r(G)$ is the trivial group, then $K_r(H)$???being a group???must
 also be the trivial group. Therefore $H\subseteq G$ is a soluble group.</p>
-<p>The contrapositive of this statement—that the insolubility 
-of $H \subseteq G$ implies the insolubility of $G$—gives us the
+<p>The contrapositive of this statement???that the insolubility 
+of $H \subseteq G$ implies the insolubility of $G$???gives us the
 inductive step of our proof. We wish to show that the insolubility 
 of $S_n$ implies the insolubility of $S_{n+1}.$ If we can show that 
 $S_n$ is isomorphic to some subgroup of $S_{n+1},$ then we have shown 
@@ -105,7 +105,7 @@ usual proof is quite tedious, while the proof I present here is incredibly easy 
 though it's not really <em>math</em> in the traditional sense. Usually, one would take 
 quite a long detour through cyclic permutations and alternating groups and whatnot
 to prove that $S_5$ is insoluble. But, remember that $S_5$ is just some finite set 
-with a binary operation—something that can be represented as a computational object. 
+with a binary operation???something that can be represented as a computational object. 
 What I'm trying to say is that brute force is really fun.</p>
 <p>So after acquiring your group-theory software of choice (I wrote one for myself
 but then threw it away after I realized that <a href="https://www.sagemath.org/">sage</a>
@@ -120,8 +120,8 @@ decreasing at some point then that means that the group is insoluble. And,
 as it happens, the order of the commutants stops decreasing instantly.</p>
 <p><code>sage: len(K(S)) == len(K(K(S)))
 True</code></p>
-<p>Well, why stop at the sizes of the commutants? If we can show—sorry, I meant
-compute—that $K(S_5) = K(K(S_5)),$ then it's obvious that $K_n(S_5) = K(S_5)$
+<p>Well, why stop at the sizes of the commutants? If we can show???sorry, I meant
+compute???that $K(S_5) = K(K(S_5)),$ then it's obvious that $K_n(S_5) = K(S_5)$
 which means that $S_5$ is not soluble. So I tried it out:</p>
 <p><code>sage: K(S) == K(K(S))
 True</code></p>
