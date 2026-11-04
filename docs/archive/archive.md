@@ -37,9 +37,9 @@ For things that don't belong.
     <td><a href="stab52/STAB52_Tutorials_4.pdf" aria-label="STAB52 tutorial 4 worksheet">4</a></td>
     <td><a href="stab52/STAB52_Tutorial_5.pdf" aria-label="STAB52 tutorial 5 worksheet">5</a></td>
     <td><a href="stab52/STAB52_Tutorials_6.pdf" aria-label="STAB52 tutorial 6 worksheet">6</a></td>
-    <!-- Replace each dash with a worksheet link as tutorials 7-11 are added. -->
+    <!-- Replace each dash with a worksheet link as tutorials 7 and 9-11 are added. -->
     <td>-</td>
-    <td>-</td>
+    <td><a href="stab52/STAB52_Tutorials_8.pdf" aria-label="STAB52 tutorial 8 worksheet">8</a></td>
     <td>-</td>
     <td>-</td>
     <td>-</td>
