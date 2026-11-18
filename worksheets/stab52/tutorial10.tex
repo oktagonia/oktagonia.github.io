@@ -1,0 +1,202 @@
+\documentclass[11pt]{article}
+
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{amsfonts,amsmath,amssymb,amsthm}
+\usepackage{enumitem}
+\usepackage{geometry}
+\usepackage[compact]{titlesec}
+\usepackage{lipsum}
+\usepackage[protrusion=true,expansion=true]{microtype}
+\usepackage{dsfont}
+\usepackage{graphicx}
+\usepackage{physics}
+\usepackage[style=numeric]{biblatex}
+\usepackage[colorlinks=true]{hyperref}
+
+\addbibresource{references.bib}
+
+\frenchspacing
+\newcommand{\flatcaps}[1]{\textsc{\MakeLowercase{#1}}}
+\setlist{nosep}
+\setlist[1]{labelindent=\parindent}
+\setlist[description]{font=\normalfont\flatcaps,labelindent=0pt}
+
+\newlength{\alphabet}
+\settowidth{\alphabet}{\normalfont abcdefghijklmnopqrstuvwxyz}
+\geometry{bottom=1in,top=1in,textwidth=2.5\alphabet}
+
+% \AddToHook{cmd/section/before}{\clearpage}
+\titleformat{\section}{\bfseries\large}{}{0em}{}
+% \titleformat{\subsection}[runin]{}{(\alph{subsection})}{0.5em}{}
+\titleformat{\paragraph}[runin]{\itshape}{\theparagraph}{0em}{}
+
+\newcommand\vol{\operatorname{vol}}
+\newcommand\Geom{\operatorname{Geom}}
+\newcommand\Exp{\operatorname{Exp}}
+\newcommand\Pareto{\operatorname{Pareto}}
+\newcommand\Uniform{\operatorname{Uniform}}
+\newcommand\Pois{\operatorname{Pois}}
+\newcommand\Bin{\operatorname{Bin}}
+\newcommand*{\horzbar}{\rule[.5ex]{2.5ex}{0.5pt}}
+\newcommand\Hom{\mathcal{L}}
+\renewcommand\P{\operatorname{P}}
+\newcommand\E{\operatorname{E}}
+\newcommand\Var{\operatorname{Var}}
+\renewcommand\vec[1]{\mathbf{#1}}
+\newcommand\disc{\operatorname{disc}}
+\newcommand\interior{\operatorname{interior}}
+\newcommand\exterior{\operatorname{ext}}
+\newcommand\closure{\operatorname{cl}}
+\newcommand\R{\mathbb{R}}
+\newcommand\Span{\operatorname{span}}
+\newcommand\Ker{\operatorname{ker}}
+\renewcommand\grad{\nabla}
+\newcommand\Set[1]{\left\{#1\right\}}
+\newcommand\Matrix[1]{\begin{pmatrix}#1\end{pmatrix}}
+\newcommand\inner[1]{\left\langle#1\right\rangle}
+\renewcommand{\norm}[1]{\left\lVert#1\right\rVert}
+\newenvironment{amatrix}[1]{%
+  \left(\begin{array}{@{}*{#1}{c}|c@{}}%
+}{%
+  \end{array}\right)%
+}
+\newcommand*{\vertbar}{\rule[-1ex]{0.5pt}{2.5ex}}
+
+\newtheorem{lemma}{Lemma}
+\newtheorem{theorem}{Theorem}
+\theoremstyle{definition}
+\newtheorem{problem}{}
+\newtheorem{definition}{Definition}
+\theoremstyle{remark}
+\newtheorem{remark}{Remark}
+\newtheorem{example}{Example}
+\newenvironment{solution}{%
+  \renewcommand{\proofname}{Solution}\begin{proof}%
+}{\end{proof}}
+
+% Change the tutorial number here if needed.
+\newcommand{\tutorialnumber}{10}
+
+\begin{document}
+
+\begin{problem}
+Discrete random variables $X$ and $Y$ have the following joint PMF, with
+$p_{X,Y}(x,y)=0$ for all other pairs $(x,y)$:
+\[
+  \begin{array}{c|cc}
+    p_{X,Y}(x,y) & y=0 & y=2 \\ \hline
+    x=1 & 0.1 & 0.1 \\
+    x=2 & 0.1 & 0.3 \\
+    x=3 & 0.3 & 0.1
+  \end{array}
+\]
+\begin{enumerate}[label=(\alph*)]
+  \item Compute $\E[Y\mid X=x]$ for each $x\in\{1,2,3\}$.
+  \item Let $Z=\E[Y\mid X]$. Find the PMF of $Z$ and compute its mean
+    $\E[Z]$.
+  \item Find $\E[Y]$.
+\end{enumerate}
+\end{problem}
+
+\begin{solution}
+(a) Summing each row gives
+\[
+  \P(X=1)=\frac15,\qquad \P(X=2)=\frac25,\qquad \P(X=3)=\frac25.
+\]
+Since $Y$ takes values $0$ and $2$, we have
+\[
+  \E[Y\mid X=x]=2\P(Y=2\mid X=x)
+  =\frac{2p_{X,Y}(x,2)}{p_X(x)}.
+\]
+Thus
+\[
+  \E[Y\mid X=1]=1,\qquad
+  \E[Y\mid X=2]=\frac32,\qquad
+  \E[Y\mid X=3]=\frac12.
+\]
+(b) The random variable $Z$ takes these values with the corresponding
+probabilities of $X$. Its PMF is
+\[
+  \begin{array}{c|ccc}
+    z & 1/2 & 1 & 3/2 \\ \hline
+    p_Z(z) & 2/5 & 1/5 & 2/5
+  \end{array}
+\]
+and is zero elsewhere. Therefore
+\[
+  \E[Z]=\frac12\cdot\frac25+1\cdot\frac15+\frac32\cdot\frac25=1.
+\]
+(c) Summing the columns gives $\P(Y=0)=\P(Y=2)=1/2$. Thus
+\[
+  \E[Y]=0\cdot\frac12+2\cdot\frac12=1.
+\]
+\end{solution}
+
+\clearpage
+
+
+\begin{problem}
+Suppose $X$ and $Y$ are jointly Gaussian with
+\[
+  \begin{pmatrix}X\\Y\end{pmatrix}
+  \sim N\!\left(
+    \begin{pmatrix}\mu_X\\\mu_Y\end{pmatrix},
+    \Sigma=\begin{pmatrix}
+      \sigma_X^2 & \sigma_{XY}\\
+      \sigma_{XY} & \sigma_Y^2
+    \end{pmatrix}
+  \right),
+\]
+where $\sigma_X,\sigma_Y>0$ and
+$\sigma_{XY}^2<\sigma_X^2\sigma_Y^2$.
+Find the conditional distribution of $Y$ given $X=x$, including its mean
+and variance.
+\end{problem}
+
+\begin{solution}
+The joint density is
+\begin{multline*}
+ f_{X,Y}(x,y)=\frac{1}{2\pi\sqrt{\det\Sigma}}
+ \exp\Bigl\{-\frac{1}{2\det\Sigma}\Bigl[
+ \sigma_Y^2(x-\mu_X)^2\\
+ {}-2\sigma_{XY}(x-\mu_X)(y-\mu_Y)
+ +\sigma_X^2(y-\mu_Y)^2\Bigr]\Bigr\}.
+\end{multline*}
+Completing the square gives
+\begin{align*}
+ &\sigma_Y^2(x-\mu_X)^2-2\sigma_{XY}(x-\mu_X)(y-\mu_Y)
+      +\sigma_X^2(y-\mu_Y)^2\\
+ &\qquad=\sigma_X^2\left(y-\mu_Y-
+          \frac{\sigma_{XY}}{\sigma_X^2}(x-\mu_X)\right)^2
+          +\frac{\det\Sigma}{\sigma_X^2}(x-\mu_X)^2.
+\end{align*}
+Since $X\sim N(\mu_X,\sigma_X^2)$, dividing by its marginal density
+cancels the factor involving only $x$. Thus, for $y\in\R$,
+\begin{align*}
+ f_{Y\mid X}(y\mid x)
+ &=\frac{f_{X,Y}(x,y)}{f_X(x)}\\
+ &=\frac{1}{\sqrt{2\pi\det\Sigma/\sigma_X^2}}
+ \exp\left\{-\frac{
+ \left(y-\mu_Y-\frac{\sigma_{XY}}{\sigma_X^2}(x-\mu_X)\right)^2
+ }{2\det\Sigma/\sigma_X^2}\right\}.
+\end{align*}
+This is a normal density, so
+\[
+ Y\mid X=x\sim N\!\left(
+ \mu_Y+\frac{\sigma_{XY}}{\sigma_X^2}(x-\mu_X),\,
+ \frac{\det\Sigma}{\sigma_X^2}\right).
+\]
+In particular,
+\begin{align*}
+ \E[Y\mid X=x]&=\mu_Y+\frac{\sigma_{XY}}{\sigma_X^2}(x-\mu_X),\\
+ \Var(Y\mid X=x)&=\frac{\det\Sigma}{\sigma_X^2}
+ =\sigma_Y^2-\frac{\sigma_{XY}^2}{\sigma_X^2}.
+\end{align*}
+\end{solution}
+
+
+% Uncomment when references are used:
+% \printbibliography
+
+\end{document}
